@@ -1,7 +1,7 @@
 ---
 name: the-morphism
-description: "Anti-slop morphism & aesthetic design skill covering Glassmorphism, Neumorphism, Claymorphism, Minimalism, Maximalism, Brutalism, Skeuomorphism, and Apple Liquid Glass. The agent reads the brief, picks the right aesthetic style, and ships depth-rich interfaces with TailwindCSS v4 and Motion + GSAP. Works with any framework (Next.js, Astro, Vite, Svelte, Remix, or plain HTML). Framework-agnostic CSS recipes. Zero em-dash, zero emoji-as-icon. Strict contrast and a11y enforcement."
-version: 2.2.0
+description: "Eight aesthetic styles, one skill. Glassmorphism, Neumorphism, Claymorphism, Minimalism, Maximalism, Brutalism, Skeuomorphism, Liquid Glass. Exact CSS recipes, named anti-patterns, framework-agnostic. The agent reads the brief, picks the right language, and ships interfaces that don't look AI-generated. Zero em-dash, zero emoji-as-icon."
+version: 2.3.0
 author: XEM
 license: MIT
 metadata:
@@ -9,55 +9,63 @@ metadata:
     tags: [frontend, design, morphism, glassmorphism, neumorphism, claymorphism, minimalism, maximalism, brutalism, skeuomorphism, liquid-glass, css, tailwindcss]
 ---
 
-# The Morphism: Aesthetic Design Skill for AI Frontend Agents
+# The Morphism
 
-> Glassmorphism, Neumorphism, Claymorphism, Minimalism, Maximalism, Brutalism, Skeuomorphism, and Apple Liquid Glass.
-> Landing pages, portfolios, SaaS surfaces, dashboards, creative sites, and product UI.
-> Every rule below is **contextual**. First read the brief, then pick the one style that fits. Never mix styles on the same page.
-
----
-
-## 0. BRIEF INFERENCE (Read the Room Before Anything Else)
-
-Before touching code, **infer which aesthetic style the user actually wants**. Most LLM design output is bad because the model defaults to AI-purple gradients and three equal cards instead of reading the brief.
-
-### 0.A Read these signals first
-1. **Page kind** -- landing page, SaaS dashboard, portfolio, product card, mobile app shell, creative/agency site, editorial, settings panel.
-2. **Aesthetic vibe words** the user used -- "glass", "frosted", "translucent", "blur", "neumorphic", "soft 3D", "clay", "chunky", "pillowy", "plush", "minimal", "clean", "simple", "maximalist", "dense", "loud", "brutalist", "raw", "mono", "skeuomorphic", "realistic", "liquid glass", "Apple", "Vision Pro", "depth", "layered", "floating".
-3. **Reference signals** -- URLs they linked, screenshots, Dribbble shots, products they named (Apple Vision Pro = liquid glass, Linear = minimal, macOS = frosted, early iOS = skeuomorphic).
-4. **Audience** -- design-forward consumer vs. enterprise dashboard vs. accessibility-required audience. Accessibility-critical audiences OVERRIDE high-translucency and low-contrast styles.
-5. **Existing brand** -- logo, colors, type. The style must work WITH the brand, not fight it.
-
-### 0.B Output a one-line "Design Read" before generating
-Before any code, state: **"Reading this as: <page kind> with a <aesthetic style> language, at depth <N>/10, softness <N>/10, translucency <N>/10."**
-
-Example reads:
-- *"Reading this as: SaaS landing page with a Glassmorphism language, at depth 6/10, softness 4/10, translucency 8/10."*
-- *"Reading this as: creative agency site with a Brutalism language, at depth 3/10, softness 2/10, translucency 0/10."*
-- *"Reading this as: kids' education landing with a Claymorphism language, at depth 8/10, softness 9/10, translucency 0/10."*
-- *"Reading this as: premium product showcase with a Liquid Glass language, at depth 7/10, softness 5/10, translucency 9/10."*
-
-### 0.C If the brief is ambiguous, ask one question
-Ask exactly **one** clarifying question: *"Should this feel more like frosted glass, soft 3D, chunky/playful, clean/minimal, dense/maximal, raw/brutalist, or realistic/skeuomorphic?"*
-
-If you can confidently infer, **do not ask**. Declare the design read and proceed.
-
-### 0.D Anti-Default Discipline
-Do NOT default to: AI-purple gradients, centered hero over dark mesh, three equal feature cards, generic glassmorphism on everything, infinite-loop micro-animations everywhere, Inter + slate-900, em-dash as punctuation, emoji as icons. These are the LLM defaults. Reach past them deliberately based on the design read.
+> Eight aesthetic styles. One page, one style. The agent reads the brief, picks the right language, and ships depth-rich interfaces that don't look AI-generated.
+> The CSS recipes are exact. The rules are opinionated. The bans are named. Everything else is taste — and taste is contextual.
 
 ---
 
-## 1. THE THREE DIALS (Aesthetic Configuration)
+## Read the Room
 
-After the design read, set three dials. Every shadow, blur, radius, and layout decision below is gated by these.
+Most AI design output is bad because the model defaults to the same purple gradient, three equal cards, and Inter on slate-900 before it even reads the brief. Don't.
+
+### Before you touch code
+
+Read the brief for five signals:
+
+1. **What kind of page?** Landing page, dashboard, portfolio, product card, mobile shell, creative/agency, editorial, settings panel.
+2. **What words did they use?** "glass", "frosted", "blur" = Glassmorphism. "soft 3D", "neumorphic", "extruded" = Neumorphism. "clay", "chunky", "pillowy", "squishy" = Claymorphism. "minimal", "clean", "Linear-style" = Minimalism. "loud", "dense", "Dribbble", "maximal" = Maximalism. "raw", "brutalist", "ugly on purpose" = Brutalism. "realistic", "leather", "metal", "wood" = Skeuomorphism. "Apple", "Vision Pro", "spatial", "liquid" = Liquid Glass.
+3. **Did they link something?** Reference URLs, screenshots, named products. Apple Vision Pro = Liquid Glass. Linear = Minimalism. macOS = frosted glass. Early iOS = skeuomorphic.
+4. **Who's the audience?** Design-forward consumers or enterprise buyers or accessibility-required users. A11y-critical audiences override high-translucency and low-contrast styles immediately.
+5. **Does a brand already exist?** Logo, colors, type. The style works WITH the brand or it's wrong.
+
+### Say it out loud
+
+Before any code, pause and state the Design Read — one sentence that sounds like a human said it:
+
+*"Reading this as: a SaaS landing for technical founders, done as frosted glass — cool, precise, nothing extra."*
+*"Reading this as: a creative agency site that wants to feel raw and unpolished — Brutalism, hard edges, monospace."*
+*"Reading this as: a kids' education brand that should feel like you could squeeze it — Claymorphism, deep squish, pastels."*
+*"Reading this as: a premium product showcase for people who care about materials — Liquid Glass, floating, layered."*
+
+The Design Read isn't a spec. It's a sentence. If you can't say it in one breath, you haven't read the room.
+
+### If you're not sure, ask once
+
+Exactly one question: *"Should this feel more like frosted glass, soft 3D, chunky/playful, clean/minimal, dense/loud, raw/brutalist, or realistic/skeuomorphic?"*
+
+If you can confidently infer, don't ask. Declare the read and go.
+
+### The defaults you will not reach for
+
+Purple-to-blue gradients. Centered hero on dark mesh. Three equal feature cards with icons above headings. Glassmorphism applied to everything because it looks "premium." Infinite-loop micro-animations on cards that don't need them. Inter as the only font. Em-dashes as punctuation. Emoji as icons.
+
+These are the LLM defaults. Every model reaches for them. You know better. The Design Read tells you what to reach for instead.
+
+---
+
+## The Three Dials
+
+After the Design Read, set three dials. Every shadow, blur, radius, and layout decision in the recipes below is gated by these. Don't skip this — the dials are what turn "a glass card" into "THIS glass card."
 
 * **`DEPTH_INTENSITY: 5`** -- 1 = Completely flat (no shadows, no depth), 10 = Extreme 3D (heavy shadows, strong layering)
 * **`SOFTNESS: 5`** -- 1 = Sharp / Crisp / Hard edges, 10 = Pillowy / Plush / Extreme rounding
-* **`TRANSLUCENCY: 0`** -- 1 = Fully opaque (solid backgrounds), 10 = Fully transparent (glass, see-through). **WARNING: TRANSLUCENCY greater than 5 requires a11y fallbacks (Section 6).**
+* **`TRANSLUCENCY: 0`** -- 1 = Fully opaque (solid backgrounds), 10 = Fully transparent (glass, see-through). **WARNING: TRANSLUCENCY greater than 5 requires a11y fallbacks (see The Rules That Keep It Usable).**
 
 **Baseline:** `5 / 5 / 0`. Override per style below.
 
-### 1.A Aesthetic Style to Dial Presets
+### Style to Dial Presets
 
 | Style | DEPTH | SOFTNESS | TRANSLUCENCY | Best for |
 |---|---|---|---|---|
@@ -70,7 +78,7 @@ After the design read, set three dials. Every shadow, blur, radius, and layout d
 | **Skeuomorphism** | 8-10 | 3-6 | 0 | Niche retro, music production UIs, game interfaces, realistic tool simulations |
 | **Liquid Glass** | 6-8 | 4-6 | 8-10 | Apple Vision Pro-style, premium product, immersive experiences, spatial UI |
 
-### 1.B Use-Case Presets (quick reference)
+### Use-Case Presets
 
 | Use case | Style | DEPTH | SOFTNESS | TRANSLUCENCY |
 |---|---|---|---|---|
@@ -90,15 +98,13 @@ After the design read, set three dials. Every shadow, blur, radius, and layout d
 
 ---
 
-## 2. AESTHETIC CSS RECIPES (The Core Reference)
+## The Recipes
 
-This is the heart of the skill. Each style gets an **exact CSS recipe**. Do not approximate. Use these as your baseline, then tune dials.
-
-All recipes are **framework-agnostic CSS**. Tailwind utility equivalents are provided in Section 3.
+This is the heart of the skill. Each style gets an exact CSS recipe — not a suggestion, not a starting point. Start here, then tune the dials. These are framework-agnostic CSS; Tailwind equivalents follow in the next section.
 
 ---
 
-### 2.A Glassmorphism Recipe
+### Glassmorphism
 
 ```css
 /* === GLASSMORPHISM: The Frosted Glass Look === */
@@ -150,7 +156,7 @@ See `references/gsap-setup.md` for the GSAP ScrollTrigger pattern — framework-
 
 ---
 
-### 2.B Neumorphism Recipe
+### Neumorphism
 
 ```css
 /* === NEUMORPHISM: Soft Extruded 3D === */
@@ -203,7 +209,7 @@ See `references/gsap-setup.md` for the GSAP ScrollTrigger pattern — framework-
 
 ---
 
-### 2.C Claymorphism Recipe
+### Claymorphism
 
 ```css
 /* === CLAYMORPHISM: Chunky, Pillowy, Playful 3D === */
@@ -242,7 +248,7 @@ See `references/gsap-setup.md` for the GSAP ScrollTrigger pattern — framework-
 
 ---
 
-### 2.D Minimalism Recipe
+### Minimalism
 
 ```css
 /* === MINIMALISM: Clean, Restrained, High-Contrast === */
@@ -287,7 +293,7 @@ See `references/gsap-setup.md` for the GSAP ScrollTrigger pattern — framework-
 
 ---
 
-### 2.E Maximalism Recipe
+### Maximalism
 
 ```css
 /* === MAXIMALISM: Dense, Loud, Layered, Expressive === */
@@ -340,7 +346,7 @@ See `references/gsap-setup.md` for the GSAP ScrollTrigger pattern — framework-
 
 ---
 
-### 2.F Brutalism Recipe
+### Brutalism
 
 ```css
 /* === BRUTALISM: Raw, Mechanical, Unapologetic === */
@@ -393,7 +399,7 @@ See `references/gsap-setup.md` for the GSAP ScrollTrigger pattern — framework-
 
 ---
 
-### 2.G Skeuomorphism Recipe
+### Skeuomorphism
 
 ```css
 /* === SKEUOMORPHISM: Realistic, Textured, Physical === */
@@ -450,7 +456,7 @@ See `references/gsap-setup.md` for the GSAP ScrollTrigger pattern — framework-
 
 ---
 
-### 2.H Liquid Glass Recipe (Apple Design)
+### Liquid Glass
 
 ```css
 /* === LIQUID GLASS: Apple Vision Pro-Style Spatial Material === */
@@ -546,11 +552,11 @@ See `references/gsap-setup.md` for the GSAP ScrollTrigger pattern — framework-
 
 ---
 
-## 3. TAILWIND CSS V4 INTEGRATION
+## Tailwind Equivalents
 
-All recipes above work as standalone CSS. These are Tailwind v4 utility equivalents for common patterns. Tailwind v4 uses CSS-first configuration (no `tailwind.config.js` needed). Use `@tailwindcss/postcss` or the Vite plugin.
+Same recipes, Tailwind v4 utility classes. CSS-first config — no `tailwind.config.js`. Use `@tailwindcss/postcss` or the Vite plugin.
 
-### 3.A Glassmorphism (Tailwind)
+### Glassmorphism
 
 ```html
 <div class="
@@ -567,7 +573,7 @@ All recipes above work as standalone CSS. These are Tailwind v4 utility equivale
 </div>
 ```
 
-### 3.B Neumorphism (Tailwind)
+### Neumorphism
 
 ```html
 <div class="
@@ -595,7 +601,7 @@ All recipes above work as standalone CSS. These are Tailwind v4 utility equivale
 </button>
 ```
 
-### 3.C Claymorphism (Tailwind)
+### Claymorphism
 
 ```html
 <div class="
@@ -610,7 +616,7 @@ All recipes above work as standalone CSS. These are Tailwind v4 utility equivale
 </div>
 ```
 
-### 3.D Minimalism (Tailwind)
+### Minimalism
 
 ```html
 <div class="
@@ -622,7 +628,7 @@ All recipes above work as standalone CSS. These are Tailwind v4 utility equivale
 </div>
 ```
 
-### 3.E Maximalism (Tailwind)
+### Maximalism
 
 ```html
 <div class="
@@ -635,7 +641,7 @@ All recipes above work as standalone CSS. These are Tailwind v4 utility equivale
 </div>
 ```
 
-### 3.F Brutalism (Tailwind)
+### Brutalism
 
 ```html
 <div class="
@@ -657,7 +663,7 @@ All recipes above work as standalone CSS. These are Tailwind v4 utility equivale
 </button>
 ```
 
-### 3.G Skeuomorphism (Tailwind)
+### Skeuomorphism
 
 ```html
 <!-- Wood texture card -->
@@ -670,7 +676,7 @@ All recipes above work as standalone CSS. These are Tailwind v4 utility equivale
 </div>
 ```
 
-### 3.H Liquid Glass (Tailwind)
+### Liquid Glass
 
 ```html
 <div class="
@@ -696,10 +702,32 @@ All recipes above work as standalone CSS. These are Tailwind v4 utility equivale
 
 ---
 
-## 4. STACK & CONVENTIONS
+## Scan the Project First
 
-### 4.A Framework
-- **Any framework** with TailwindCSS v4: Next.js, Astro, Vite + React, Svelte, Remix, or plain HTML. The CSS recipes in Section 2 are pure CSS — they work everywhere. Tailwind utility equivalents in Section 3 use standard Tailwind classes (no framework lock-in).
+Before you generate anything, read what's already there. Stomping on an existing font stack or palette with your defaults is the fastest way to make the user uninstall this skill.
+
+Check these four things in order:
+
+1. **package.json** — what framework? Next.js, Astro, Vite, Svelte, Remix, or vanilla? What motion library is installed (motion, gsap, framer-motion)?
+2. **Font stack** — is `next/font` importing Geist? Is `@fontsource` pulling Inter? Is there a `tailwind.config` with `theme.extend.fontFamily`? Whatever is there, preserve it.
+3. **Palette** — any `:root` CSS custom properties? OKLCH values in global CSS? Tailwind `@theme` block with color tokens? Don't overwrite them.
+4. **Icons** — `lucide-react` or `@phosphor-icons/react` in dependencies? Use what's installed. Don't install a second library mid-session.
+
+State what you found in one line before the Design Read. If the project is empty, say so and proceed.
+
+```
+Found: Next.js + Tailwind v4, Geist Sans via next/font, lucide-react, no motion lib.
+Preserving: font stack, icon library. I'll introduce: the morphism style, GSAP for scroll.
+```
+
+If the user says "ignore the existing project," skip this. Otherwise, the scan is non-negotiable.
+
+---
+
+## The Toolbox
+
+### Framework
+- **Any framework** with TailwindCSS v4: Next.js, Astro, Vite + React, Svelte, Remix, or plain HTML. The CSS recipes in The Recipes section are pure CSS — they work everywhere. Tailwind utility equivalents in Tailwind Equivalents use standard classes (no framework lock-in).
 - **Tailwind v4 notes:** CSS-first config. Use `@tailwindcss/postcss` or Vite plugin. No `tailwind.config.js`. Dark mode via `dark:` variant. Container queries and arbitrary values work natively.
 - **Font loading by framework:**
   - **Next.js:** `next/font/google` for automatic subsetting and `font-display: swap`.
@@ -726,7 +754,7 @@ Then reference tokens with template literals: `className={NEU.card}`, `className
 
 **TIP -- Design token const pattern.** For morphism pages, the Tailwind class strings are long and repeated across many elements (cards, buttons, inputs, tags). Centralize all tokens into a single `const TOKENS = { card: "...", btn: "...", input: "..." }` object at the top of the component file. Reference tokens with `${TOKENS.card}` in template literals. This makes the file scannable, keeps every element on the same recipe, and makes dial-tuning trivial (change one shadow offset and every element updates). Use this for Neumorphism and Claymorphism especially; Glassmorphism can get away with inline classes if only a few glass surfaces exist.
 
-### 4.B Fonts (shadcn/ui ecosystem)
+### Fonts (shadcn/ui ecosystem)
 - **Next.js:** Use `next/font/google` for automatic subsetting and `font-display: swap`.
 - **Other frameworks (Astro, Vite, Svelte, Remix):** Use `@fontsource` packages (e.g. `npm install @fontsource/geist-sans`) or self-host with `@font-face` + `font-display: swap`. Never link Google Fonts via `<link>` in production. `@fontsource` packages come pre-configured with `font-display: swap` and subsetting.
 
@@ -747,7 +775,7 @@ Then reference tokens with template literals: `className={NEU.card}`, `className
 - Skeuomorphism: varies by texture (serif for vintage, mono for tech)
 - Liquid Glass: Geist, SF Pro (via system font stack), Outfit
 
-### 4.C Icons
+### Icons
 **Allowed libraries (pick one per project):**
 - `lucide-react` -- clean, consistent, most popular with shadcn/ui
 - `@phosphor-icons/react` -- extensive, multiple weights (Thin through Fill)
@@ -772,7 +800,7 @@ Then reference tokens with template literals: `className={NEU.card}`, `className
 
 **PITFALL: lucide-react 1.x removed all brand icons.** `Github`, `Twitter`, `Facebook`, `Linkedin`, `Youtube`, `Instagram`, `Slack`, `Discord`, `Twitch`, and similar brand-name exports do NOT exist in lucide-react 1.0+. If you need brand/social icons, either (a) use generic alternatives (`Globe`, `MessageCircle`, `Link`, `AtSign`, `Rss`) or (b) install `@phosphor-icons/react` alongside Lucide specifically for brand glyphs (Phosphor retains them). Do NOT guess brand icon names -- if the build fails with "Export X doesn't exist in target module", it is always this issue.
 
-### 4.D Responsiveness
+### Responsiveness
 - `min-h-[100dvh]` -- NEVER `h-screen` (iOS Safari address bar collapse).
 - CSS Grid over flexbox math (`grid grid-cols-1 md:grid-cols-3 gap-6`).
 - Morphism effects MUST degrade gracefully on mobile: fewer shadow layers, simpler blur.
@@ -780,9 +808,9 @@ Then reference tokens with template literals: `className={NEU.card}`, `className
 
 ---
 
-## 5. STYLE DECISION TREE
+## How to Read a Brief in 10 Seconds
 
-Use this logic before picking a style:
+When you're not sure which style fits, run this:
 
 ```
 1. Is the brief a11y-critical (public sector, healthcare, fintech, government)?
@@ -819,18 +847,18 @@ Use this logic before picking a style:
 
 ---
 
-## 6. ACCESSIBILITY & FALLBACKS (Non-Negotiable)
+## The Rules That Keep It Usable
 
-Morphism styles are notorious for a11y failures. These rules are **mandatory**.
+Morphism styles are a11y traps. These rules are mandatory — skip them and you shipped broken work.
 
-### 6.A Contrast Enforcement
+### Contrast
 - Neumorphic buttons with shadow-only affordance are invisible to low-vision users. Every neumorphic interactive MUST have a visible text/icon with 4.5:1 contrast OR a visible border OR a distinct fill color.
 - Glass/Liquid Glass text over variable backgrounds MUST have a text-shadow or subtle scrim.
 - Clay pastel-on-pastel schemes MUST pass 4.5:1 contrast between text and background.
 - Maximalism high-saturation color combos MUST pass contrast. Bright yellow text on white = fail.
 - Brutalism black-on-white is inherently high contrast. Ensure dark mode inverts cleanly.
 
-### 6.B Reduced Motion
+### Reduced Motion
 ```css
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -844,7 +872,7 @@ Morphism styles are notorious for a11y failures. These rules are **mandatory**.
 - Clay `:active` squish must be instant or removed.
 - Maximalism marquees must pause.
 
-### 6.C Reduced Transparency (Glassmorphism and Liquid Glass only)
+### Reduced Transparency
 ```css
 @media (prefers-reduced-transparency: reduce) {
   .glass, .liquid-glass, [class*="glass"] {
@@ -856,7 +884,7 @@ Morphism styles are notorious for a11y failures. These rules are **mandatory**.
 ```
 Every glass/liquid-glass element MUST ship a solid fallback. Never ship glass without it.
 
-### 6.D Focus States
+### Focus States
 - Neumorphic: visible outline (not shadow change). `outline: 2px solid #4A90D9; outline-offset: 2px;`
 - Glass/Liquid Glass: `outline: 2px solid rgba(255,255,255,0.8);` dark bg, `outline: 2px solid rgba(0,0,0,0.6);` light bg.
 - Clay: thick colored outline. `outline: 3px solid var(--clay-accent); outline-offset: 3px;`
@@ -866,66 +894,75 @@ Every glass/liquid-glass element MUST ship a solid fallback. Never ship glass wi
 
 ---
 
-## 7. ANTI-PATTERNS & SLOP BANS
+## The Things We Don't Do
 
-### 7.A Universal Bans (all styles)
-- **MIXING STYLES ON ONE PAGE.** One page = one aesthetic style. Glass nav + neumorphic cards + clay buttons = chaos. Pick one.
-- **Morphism without fallback.** Every glass/liquid-glass panel gets a solid-fill fallback. Every neumorphic button gets a visible border or fill.
-- **Shadow-only affordance.** If removing shadows makes the element invisible, the design is broken.
-- **Excessive shadow layers.** Max 4 box-shadow declarations per element (performance).
-- **EM-DASH (`--`) is COMPLETELY BANNED.** Use a period, comma, colon, or hyphen instead. Zero em-dashes in headlines, body, captions, buttons, alt text, anywhere visible to the user. En-dash (`-`) banned as separator too. Only regular hyphen `-` is permitted.
-- **EMOJI AS ICONS IS BANNED.** Use icon library glyphs (Lucide, Phosphor, Tabler). Emoji may ONLY be used when the user explicitly asks for a playful/chat-style/social-native vibe, and even then, sparingly.
-- **Inter as unconditional default.** Inter is acceptable for Minimalism and enterprise. For every other style, pick a font with character from Section 4.B.
-- **No `h-screen`.** Use `min-h-[100dvh]`.
-- **No generic AI copy cliches:** "Elevate", "Seamless", "Unleash", "Next-Gen", "Game-changer", "Delve", "Revolutionize". Write plain, specific language.
-- **No generic placeholder names:** "John Doe", "Acme Corp", "Lorem Ipsum". Use realistic, contextual content.
-- **PILL BADGE (`rounded-full bg-white/10 backdrop-blur-md border ... px-4 py-1.5`) IS AI SLOP.** This exact pattern -- a frosted-glass rounded-full chip with a small icon -- is one of the most common AI-generated hero micro-labels. It shows up in nearly every Glassmorphism/Liquid Glass hero as a "New in beta" / "Now available" / "Developer preview" badge. **Never use this pattern.** Replace it with a simple text label: `flex items-center gap-2 text-sm font-medium tracking-wide text-white/60` plus the icon. No background, no border, no rounded-full, no padding wrapper. The icon alone carries the visual weight.
+### The Universal Tells (any style)
 
-### 7.B Glassmorphism Bans
+**THE STYLE MASH-UP.** Glass nav bar + neumorphic cards + clay buttons on one page. This is the #1 AI tell — the model used every trick it knows at once. Pick one style. The whole page gets that style.
+
+**THE PILL BADGE.** `rounded-full bg-white/10 backdrop-blur-md border px-4 py-1.5` — a frosted-glass chip with a tiny icon, usually saying "New in beta" or "Now available." This exact pattern appears in nearly every AI-generated Glassmorphism hero. Replace with bare text: `flex items-center gap-2 text-sm font-medium tracking-wide text-white/60` plus the icon. No background wrapper. The icon carries the weight.
+
+**THE EM-DASH.** Completely banned. In headlines, body, captions, buttons — anywhere the user can see it. Use a period, comma, or hyphen. Not an en-dash either. Just a regular hyphen.
+
+**EMOJI AS ICONS.** Banned. Use icon library glyphs. Emoji only when the user explicitly asks for a playful/social-native vibe, and sparingly even then.
+
+**INTER-BY-DEFAULT.** Inter is fine for Minimalism and enterprise. For every other style, pick a font with a pulse — see the Fonts section under The Toolbox. Glassmorphism on Inter reads as "I didn't think about type."
+
+**AI COPY CLICHES.** "Elevate." "Seamless." "Unleash." "Next-Gen." "Game-changer." "Delve." "Revolutionize." These are not words — they're the model filling space because it doesn't know what the product does. Write plain, specific language. If the brief gave you nothing, say so and ask for one concrete noun.
+
+**JOHN DOE SYNDROME.** "John Doe." "Acme Corp." "Lorem Ipsum." Generic placeholder names announce "this was generated." Use realistic, contextual content that could actually belong to the brief.
+
+**MORPHISM WITHOUT FALLBACK.** Glass without `prefers-reduced-transparency` solid fill. Neumorphic buttons with shadow-only affordance and no visible border. If removing the effect makes the element invisible, the design fails.
+
+**H-SCREEN.** Never use `h-screen`. Always `min-h-[100dvh]`. iOS Safari's address bar will break your hero every time.
+
+**SHADOW STACKING.** Max 4 box-shadow declarations per element. Beyond that it's a performance hit and reads as trying too hard.
+
+### Glassmorphism Tells
 - **Glass without blur.** `background: rgba(255,255,255,0.5)` without `backdrop-filter` is NOT glassmorphism. It's a transparent rectangle that makes background content unreadable.
 - **Glass over busy images without text protection.** Add `text-shadow` or a subtle scrim behind text.
 - **Glass on glass on glass.** Max 2 layers of glass overlaid. Three layers = unreadable soup.
 - **`backdrop-filter` without `-webkit-backdrop-filter`.** Safari needs the prefix.
 
-### 7.C Neumorphism Bans
+### Neumorphism Tells
 - **White (`#fff`) or black (`#000`) as the neumorphic background.** Use mid-tones only.
 - **Low-contrast text on neumorphic backgrounds.** Text must be significantly darker (light mode) or lighter (dark mode) than the background.
 - **Neumorphic inputs that look like static cards.** Inputs MUST use the inset (pressed) shadow variant.
 - **Neumorphism as the ONLY visual style on a page.** Use it on interactive surfaces, not structural containers.
 
-### 7.D Claymorphism Bans
+### Claymorphism Tells
 - **Claymorphism on serious/enterprise briefs.** If the brief is fintech, healthcare, government, legal -- claymorphism is wrong. Say so.
 - **Too many clay elements.** Max 6 clay cards per page. Beyond that, visual noise.
 - **Clay without `:active` squish.** Interactive clay MUST have a pressed state. Static clay = cheap plastic.
 - **Pastel color soup.** Pick ONE pastel family (warm: peach/coral, cool: lavender/mint, or neutral: warm grey/beige).
 
-### 7.E Minimalism Bans
+### Minimalism Tells
 - **"Minimal" as an excuse for incomplete.** Minimalism is intentional restraint, not lazy half-finished UI.
 - **Minimal but unreadable.** Light grey text (`#ccc`) on white is not minimal. It's inaccessible.
 - **No visual hierarchy.** If every element has the same weight, the page is flat soup, not minimalist. Use typographic scale and spacing.
 
-### 7.F Maximalism Bans
+### Maximalism Tells
 - **Loud without intent.** Random color vomit is not maximalism. Maximalism is dense with purpose.
 - **Unreadable due to contrast.** High-saturation combos must still pass readability.
 - **Animation overload.** Maximalism is dense visually, not necessarily heavy on motion. One marquee per page max.
 
-### 7.G Brutalism Bans
+### Brutalism Tells
 - **Brutalism as an excuse for broken layout.** Raw aesthetic means intentional choices, not missing CSS.
 - **Unreadable type.** Even brutalism must be readable. Monospace at 10px with `line-height: 1` fails.
-- **Functionally broken interactivity.** Brutalist buttons must still work. Focus states are mandatory (Section 6.D).
+- **Functionally broken interactivity.** Brutalist buttons must still work. Focus states are mandatory (see Focus States in The Rules That Keep It Usable).
 
-### 7.H Skeuomorphism Bans
+### Skeuomorphism Tells
 - **Skeuomorphism on modern SaaS.** Leather stitching and wood grain on a fintech dashboard is wrong. Say so.
 - **Performance-ignorant textures.** Heavy gradients + shadows are expensive. Profile on low-end devices.
 
-### 7.I Liquid Glass Bans
+### Liquid Glass Tells
 - **Claiming it's "official Apple."** It is NOT. Label as approximation in code comments.
 - **Using Liquid Glass on high-density data.** The depth effect makes text hard to read. Use for hero sections, cards, and nav, not data tables.
 - **No reduced-transparency fallback.** This is the #1 Liquid Glass a11y violation.
 
 ---
 
-## 8. MOTION RULES PER STYLE
+## How Things Move
 
 **Mount animations** (Motion or CSS `@keyframes`): hero headlines, nav entrance, on-load fades. **Scroll animations** (GSAP ScrollTrigger): features grids, CTAs, demo panels, staggered reveals, parallax.
 
@@ -962,40 +999,40 @@ useEffect(() => {
 
 ---
 
-## 9. COLOR PALETTE RULES PER STYLE
+## Color Per Style
 
-### 9.A Glassmorphism
+### Glassmorphism
 - Background behind glass: rich and varied (gradients, images, videos).
 - Glass transparency: light mode `rgba(255,255,255,0.10-0.25)`, dark mode `rgba(15,23,42,0.30-0.55)`.
 - Text: high contrast. Light mode near-black, dark mode near-white.
 - Accent: one vibrant color (electric blue, emerald, deep rose).
 
-### 9.B Neumorphism
+### Neumorphism
 - Background: MID-TONE. Light mode `#e0e5ec` range, dark mode `#1a1e24` range.
 - Shadows derived from background color.
 - Text: high contrast against mid-tone.
 - Accent: one color, not the same hue as background.
 
-### 9.C Claymorphism
+### Claymorphism
 - Base: pastel. HSL S less than 40%, L greater than 80% (light) or less than 25% (dark).
 - Gradient: +/- 5-10% lightness from base.
 - Shadows: warm-tinted, low opacity. Never pure black on pastels.
 - Accent: saturated pop (coral, electric blue, lime, magenta).
 - BANNED pastel defaults: misty rose + pastel pink ("cute app"), pastel green + pastel blue ("ed-tech"). Rotate.
 
-### 9.D Minimalism
+### Minimalism
 - Max 1 accent color. Saturation less than 80%.
 - Neutral bases: Zinc, Slate, or Stone.
 - ONE palette per project. Do not mix warm and cool grays.
 - Color consistency: same accent across all sections.
 
-### 9.E Maximalism
+### Maximalism
 - 2-4 bold accent colors, intentionally clashing or harmonized.
 - High saturation allowed. S greater than 70%.
 - Full-spectrum gradients. Neon, electric, vibrant.
 - Dark text on light backgrounds, or white/neon on dark.
 
-### 9.F Brutalism
+### Brutalism
 - Black and white as core. One accent max (red `#ff0000`, yellow `#ffff00`, or blue `#0000ff`).
 - No gradients. No opacity tricks. Solid, flat colors only.
 - Pure black (`#000`), pure white (`#fff`). No off-black, no off-white.
@@ -1013,13 +1050,87 @@ useEffect(() => {
 
 ---
 
-## 10. PRE-FLIGHT CHECK (Mandatory Before Shipping)
+## Don't Build the Same Page Twice
 
-Run every box. If any fails, the output is NOT done.
+Two briefs should produce two different page rhythms — not the same hero→features→CTA→footer template with a different color palette. This is the single most important rule and the one most agents break.
+
+### The rhythm rule
+
+If your last build used a full-viewport glass hero with a staggered 3-column feature grid, this build must use a different macro-rhythm. Change at least two of:
+
+- **Hero shape** — full-viewport vs. split-screen vs. content-led vs. no hero at all
+- **Section sequence** — features→CTA→testimonials vs. manifesto→grid→footer vs. single-scroll narrative
+- **Card structure** — 3-column equal grid vs. alternating 2-column vs. bento vs. no cards at all
+- **Nav personality** — sticky glass bar vs. hidden hamburger vs. edge-aligned minimal vs. brutal slab
+- **Footer shape** — 4-column directory vs. single-line statement vs. letter-close vs. marquee
+
+### Track what you built
+
+After every build, note the rhythm in plain text. The agent should remember the last page's shape and deliberately deviate. If you built a glass landing page yesterday with full-viewport hero + 3-card features + CTA + 4-column footer, today's brutalist portfolio should have a split-screen hero + manifesto section + grid + single-line footer. Same skill, different skeleton.
+
+If the brief genuinely calls for the same rhythm ("another glass landing page, same company, different product"), keep the skeleton but change the hero shape and the section sequence. Same language, different sentence structure.
+
+---
+
+## The Words Matter
+
+Design is 50% copy. A great layout with stock copy reads generic. Tight copy in a serviceable layout reads considered. The LLM default is distribution-average marketing prose — "Built for the modern team," "Where design meets function," "Experience the power of..." These are not copy. They're filler.
+
+### Banned opening lines
+
+If you find yourself writing any of these, stop and ask for one concrete noun:
+
+- "Built for the modern team"
+- "Unleash your..."
+- "Where X meets Y"
+- "Empower your..."
+- "Reimagine the way you..."
+- "Seamless integration"
+- "Next-generation"
+- "In today's digital landscape"
+- "Experience the power of..."
+
+### What to do instead
+
+Name something real. A place, a date, a number, a verb that means something:
+
+- *"Creative direction and type since 2003."* (not "We are a design studio")
+- *"23 spans · 4 services · 482 ms."* (not "Built for speed")
+- *"One HTML file."* (not "Lightweight by design")
+- *"We will answer the email ourselves."* (not "Dedicated support")
+
+### Per-style copy voice
+
+| Style | Voice |
+|---|---|
+| Glassmorphism | Precise, modern, one level cooler than the reader. "The API for developers who ship on Fridays." |
+| Neumorphism | Tactile, concrete, slightly technical. "Press. It responds." |
+| Claymorphism | Warm, playful, uses sensory words. "Squishy on the outside, serious on the inside." |
+| Minimalism | Short, declarative, no adjectives that can be cut. "Notes. Fast." |
+| Maximalism | Bold, unapologetic, uses all-caps and rhythm. "WE MAKE THINGS THAT MAKE YOU LOOK." |
+| Brutalism | Raw, direct, mechanical. Refuses metaphor. "This is a button. It does what it says." |
+| Skeuomorphism | Rich, material, names textures. "Turn the knob. Hear the click." |
+| Liquid Glass | Restrained, spatial, implies more than it says. "A page should arrive like a person — composed." |
+
+### The self-audit
+
+Before shipping, re-read every visible string. Flag anything that:
+- Sounds grammatically broken
+- Has unclear referents ("we plan to stay that way" — what way?)
+- Reads like the model tried to be cute (forced wordplay, fake-profound one-liners)
+- Uses invented precision ("92% faster" — says who?)
+
+Rewrite every flagged string. AI-generated cute copy is worse than boring copy. Boring is honest.
+
+---
+
+## Before You Ship
+
+Run every box. If any fails, you're not done.
 
 ### Style Selection
-- [ ] **Design Read** declared (Section 0.B one-liner)?
-- [ ] **Dial values** (DEPTH / SOFTNESS / TRANSLUCENCY) explicit and reasoned?
+- [ ] **Design Read** declared (see Read the Room)?
+- [ ] **Dial values**
 - [ ] **ONE style** per page (no mixing)?
 
 ### Accessibility (CRITICAL)
@@ -1054,10 +1165,12 @@ Run every box. If any fails, the output is NOT done.
 - [ ] **No pill badge** (`rounded-full bg-white/10 backdrop-blur ...`) -- bare text label + icon only?
 - [ ] **Font is NOT Inter** (unless Minimalism/enterprise)?
 - [ ] **No mixing styles** on one page?
+- [ ] **Different page rhythm** than the last build (see Don't Build the Same Page Twice)?
+- [ ] **Copy self-audited** — no banned opening lines, no invented metrics?
 
 ---
 
-## 11. OUT OF SCOPE
+## Out of Scope
 
 This skill is NOT for:
 - Pure flat design with zero depth or aesthetic character (use a different skill).
@@ -1070,7 +1183,7 @@ If the brief is out of scope, **say so** and recommend the right approach.
 
 ---
 
-## Appendix A: Quick Reference
+## Quick Reference
 
 | User says... | Style | Dial preset |
 |---|---|---|
@@ -1083,7 +1196,7 @@ If the brief is out of scope, **say so** and recommend the right approach.
 | "skeuomorphic", "realistic", "like real [object]", "leather", "metal" | Skeuomorphism | 9/4/0 |
 | "Apple", "Vision Pro", "liquid glass", "spatial", "immersive glass" | Liquid Glass | 7/5/9 |
 
-## Appendix B: Real-World References
+## Real-World References
 
 - **Glassmorphism:** Apple Vision Pro UI, macOS Sonoma lock screen, Windows 11 Mica, Stripe dashboard, Linear modals.
 - **Neumorphism:** Dribbble neumorphic concepts (2020 wave), fitness tracking apps, smart home panels, audio mixer UIs.

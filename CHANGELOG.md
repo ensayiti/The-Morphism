@@ -2,6 +2,23 @@
 
 All notable changes to The Morphism will be documented in this file.
 
+## [2.3.0] — 2025-08-12
+
+### Added
+
+- **Pre-flight project scan** — before generating, the agent reads `package.json`, existing font stack, palette, and icon library. States what it found and what it will preserve.
+- **Structural variety rule** — two briefs must produce two different page rhythms (hero shape, section sequence, card structure, nav, footer). Agent tracks what it built last and deliberately deviates.
+- **Copy/voice discipline** — nine banned opening lines (exact strings), per-style copy voice table, positive examples of real-world copy, self-audit checklist.
+- **Named anti-patterns** — every tell now has a memorable capital-letter name: THE STYLE MASH-UP, THE PILL BADGE, THE EM-DASH, INTER-BY-DEFAULT, JOHN DOE SYNDROME, MORPHISM WITHOUT FALLBACK, SHADOW STACKING.
+- Before You Ship checklist expanded with structural variety and copy audit items.
+
+### Changed
+
+- **Section rename for personality** — all numbered section headers replaced with human names: Read the Room, The Recipes, The Toolbox, The Things We Don't Do, How Things Move, The Words Matter, Before You Ship.
+- **Design Read upgraded** — from mechanical template to conversational one-sentence declarations.
+- **CSS Recipes and Tailwind Equivalents** are unchanged (exact code stays exact).
+- Frontmatter description shortened to one breath.
+
 ## [2.2.0] — 2025-08-12
 
 ### Fixed
