@@ -5,7 +5,7 @@
   "author": "XEM",
   "license": "MIT",
   "bin": {
-    "the-morphism": "./bin/cli.js"
+    "the-morphism": "bin/cli.js"
   },
   "files": [
     "bin/",
@@ -36,6 +36,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ensayiti/The-Morphism"
+    "url": "git+https://github.com/ensayiti/The-Morphism.git"
   }
 }

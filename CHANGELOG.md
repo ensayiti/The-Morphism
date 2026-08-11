@@ -4,6 +4,10 @@ All notable changes to The Morphism will be documented in this file.
 
 ## [2.2.0] — 2025-08-12
 
+### Fixed
+
+- YAML frontmatter parse error in SKILL.md — colon in description field quoted to prevent mapping value conflict on GitHub's YAML parser.
+
 ### Added
 
 - `npx the-morphism init --core` option — installs only SKILL.md with no reference files or templates. Ideal for non-Next.js projects (Astro, Vite, Svelte, Remix).

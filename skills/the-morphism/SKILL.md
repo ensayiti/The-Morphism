@@ -1,6 +1,6 @@
 ---
 name: the-morphism
-description: Anti-slop morphism & aesthetic design skill covering Glassmorphism, Neumorphism, Claymorphism, Minimalism, Maximalism, Brutalism, Skeuomorphism, and Apple Liquid Glass. The agent reads the brief, picks the right aesthetic style, and ships depth-rich interfaces with TailwindCSS v4 and Motion + GSAP. Works with any framework: Next.js, Astro, Vite, Svelte, Remix, or plain HTML. Framework-agnostic CSS recipes. Zero em-dash, zero emoji-as-icon. Strict contrast and a11y enforcement.
+description: "Anti-slop morphism & aesthetic design skill covering Glassmorphism, Neumorphism, Claymorphism, Minimalism, Maximalism, Brutalism, Skeuomorphism, and Apple Liquid Glass. The agent reads the brief, picks the right aesthetic style, and ships depth-rich interfaces with TailwindCSS v4 and Motion + GSAP. Works with any framework (Next.js, Astro, Vite, Svelte, Remix, or plain HTML). Framework-agnostic CSS recipes. Zero em-dash, zero emoji-as-icon. Strict contrast and a11y enforcement."
 version: 2.2.0
 author: XEM
 license: MIT
