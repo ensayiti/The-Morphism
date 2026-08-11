@@ -1,7 +1,7 @@
 ---
 name: the-morphism
-description: Anti-slop morphism & aesthetic design skill covering Glassmorphism, Neumorphism, Claymorphism, Minimalism, Maximalism, Brutalism, Skeuomorphism, and Apple Liquid Glass. The agent reads the brief, picks the right aesthetic style, and ships depth-rich interfaces with TailwindCSS v4, React/Next.js, and Motion. Framework-agnostic CSS recipes. Zero em-dash, zero emoji-as-icon. Strict contrast and a11y enforcement.
-version: 2.1.0
+description: Anti-slop morphism & aesthetic design skill covering Glassmorphism, Neumorphism, Claymorphism, Minimalism, Maximalism, Brutalism, Skeuomorphism, and Apple Liquid Glass. The agent reads the brief, picks the right aesthetic style, and ships depth-rich interfaces with TailwindCSS v4 and Motion + GSAP. Works with any framework: Next.js, Astro, Vite, Svelte, Remix, or plain HTML. Framework-agnostic CSS recipes. Zero em-dash, zero emoji-as-icon. Strict contrast and a11y enforcement.
+version: 2.2.0
 author: XEM
 license: MIT
 metadata:
@@ -144,9 +144,9 @@ All recipes are **framework-agnostic CSS**. Tailwind utility equivalents are pro
 
 **When to use:** Rich background (gradients, images, video) behind the glass. The background IS the design; glass is the frame. Flat color behind glass defeats the purpose.
 
-See `references/glass-landing-example.md` for a complete, build-verified Next.js glass landing page implementation (Nav, Hero, Features grid, CTA, Footer) with reusable `GlassCard` component and a11y fallback injection pattern.
+See `references/glass-landing-example.md` for a complete, build-verified glass landing page implementation (Nav, Hero, Features grid, CTA, Footer) with reusable `GlassCard` component and a11y fallback injection pattern.
 
-See `references/gsap-lenis-setup.md` for the LenisProvider boilerplate, root layout wiring, and GSAP ScrollTrigger React pattern (useRef + gsap.context + cleanup).
+See `references/gsap-setup.md` for the GSAP ScrollTrigger pattern — framework-agnostic with React, vanilla JS, and Astro examples.
 
 ---
 
@@ -699,10 +699,14 @@ All recipes above work as standalone CSS. These are Tailwind v4 utility equivale
 ## 4. STACK & CONVENTIONS
 
 ### 4.A Framework
-- **Primary:** React or Next.js with TailwindCSS v4.
+- **Any framework** with TailwindCSS v4: Next.js, Astro, Vite + React, Svelte, Remix, or plain HTML. The CSS recipes in Section 2 are pure CSS — they work everywhere. Tailwind utility equivalents in Section 3 use standard Tailwind classes (no framework lock-in).
 - **Tailwind v4 notes:** CSS-first config. Use `@tailwindcss/postcss` or Vite plugin. No `tailwind.config.js`. Dark mode via `dark:` variant. Container queries and arbitrary values work natively.
-- **Animation:** Motion (the library formerly Framer Motion). Import from `motion/react`. Use for: on-mount entrance animations (hero headlines, nav, initial load). GSAP + Lenis for: scroll-driven reveals (features grids, CTAs, demo panels, parallax, staggered card entrances). The split: **motion/react for mount, GSAP+ScrollTrigger for scroll.** See `references/gsap-lenis-setup.md` for the LenisProvider boilerplate + GSAP ScrollTrigger React pattern.
-- **Framework-agnostic:** All CSS recipes in Section 2 work without React. Apply classes/styles to any framework (Vue, Svelte, Astro, plain HTML). Tailwind utilities are React/Next-focused but the CSS is portable.
+- **Font loading by framework:**
+  - **Next.js:** `next/font/google` for automatic subsetting and `font-display: swap`.
+  - **Astro / Vite / Svelte / Remix:** `@fontsource` packages (e.g. `@fontsource/geist-sans`) or self-host with `@font-face` + `font-display: swap`. Never link Google Fonts via `<link>` in production.
+- **Motion (mount animations):** Works with any React-compatible framework (Next.js, Vite + React, Remix). Import from `motion/react`. Use for: on-mount entrance animations (hero headlines, nav, initial load). For non-React frameworks (Astro, Svelte, plain HTML), use CSS `@keyframes` + `animation` or the Web Animations API (`element.animate()`) for mount effects.
+- **GSAP + ScrollTrigger (scroll animations):** Framework-agnostic. Use for: scroll-driven reveals (features grids, CTAs, demo panels, parallax, staggered card entrances). In React: `useRef` + `gsap.context()` + cleanup in `useEffect`. In vanilla JS / Svelte / Astro: `gsap.context()` in a lifecycle hook or `<script>`. See `references/gsap-setup.md` for patterns across frameworks.
+- **The split:** Motion (or CSS animations) for mount, GSAP+ScrollTrigger for scroll. Never use GSAP for on-mount — it's heavier and imperative; Motion and CSS are declarative and simpler for that job.
 
 **Design token const pattern (strongly recommended).** For Neumorphism, Claymorphism, and Maximalism especially, Tailwind class strings get very long and are repeated across many elements (cards, buttons, inputs, tags, dividers). Centralize all style tokens into a single `const TOKENS` object at the top of the component file:
 
@@ -723,9 +727,10 @@ Then reference tokens with template literals: `className={NEU.card}`, `className
 **TIP -- Design token const pattern.** For morphism pages, the Tailwind class strings are long and repeated across many elements (cards, buttons, inputs, tags). Centralize all tokens into a single `const TOKENS = { card: "...", btn: "...", input: "..." }` object at the top of the component file. Reference tokens with `${TOKENS.card}` in template literals. This makes the file scannable, keeps every element on the same recipe, and makes dial-tuning trivial (change one shadow offset and every element updates). Use this for Neumorphism and Claymorphism especially; Glassmorphism can get away with inline classes if only a few glass surfaces exist.
 
 ### 4.B Fonts (shadcn/ui ecosystem)
-Use `next/font` (Next.js) or self-host with `@font-face` + `font-display: swap`. Never link Google Fonts via `<link>` in production.
+- **Next.js:** Use `next/font/google` for automatic subsetting and `font-display: swap`.
+- **Other frameworks (Astro, Vite, Svelte, Remix):** Use `@fontsource` packages (e.g. `npm install @fontsource/geist-sans`) or self-host with `@font-face` + `font-display: swap`. Never link Google Fonts via `<link>` in production. `@fontsource` packages come pre-configured with `font-display: swap` and subsetting.
 
-**Available via shadcn/ui / next/font/google:**
+**Available typefaces:**
 - **Default:** Geist Sans + Geist Mono (shadcn/ui default)
 - **Sans-serif options:** Inter, Outfit, Plus Jakarta Sans, DM Sans, Manrope, Space Grotesk, Public Sans, Work Sans
 - **Display / wide:** Sora, Clash Display, Cabinet Grotesk (self-host), Satoshi (self-host)
@@ -922,7 +927,7 @@ Every glass/liquid-glass element MUST ship a solid fallback. Never ship glass wi
 
 ## 8. MOTION RULES PER STYLE
 
-**Mount animations** (motion/react): hero headlines, nav entrance, on-load fades. **Scroll animations** (GSAP ScrollTrigger + Lenis): features grids, CTAs, demo panels, staggered reveals, parallax.
+**Mount animations** (Motion or CSS `@keyframes`): hero headlines, nav entrance, on-load fades. **Scroll animations** (GSAP ScrollTrigger): features grids, CTAs, demo panels, staggered reveals, parallax.
 
 | Style | Motion character | Mount (motion) | Scroll (GSAP+ScrollTrigger) |
 |---|---|---|---|
@@ -935,7 +940,7 @@ Every glass/liquid-glass element MUST ship a solid fallback. Never ship glass wi
 | Skeuomorphism | Realistic, weighted, detailed | `duration-300 ease-out`. Complex multi-property transitions | Subtle parallax for depth illusion |
 | Liquid Glass | Floating, ethereal, spatial | `duration-700 ease-out`. Parallax depth, slow floating micro-movements | Staggered card reveals, scale-up CTAs, parallax depth layers |
 
-**GSAP ScrollTrigger React pattern** (see `references/gsap-lenis-setup.md` for full boilerplate):
+**GSAP ScrollTrigger pattern** (see `references/gsap-setup.md` for React, vanilla JS, and Astro examples):
 ```tsx
 const sectionRef = useRef<HTMLElement>(null)
 const cardsRef = useRef<(HTMLDivElement | null)[]>([])

@@ -7,12 +7,14 @@ const USAGE = `
 the-morphism — Anti-slop morphism & aesthetic design skills for Hermes Agent
 
 Usage:
-  npx the-morphism init                  Install the-morphism SKILL.md + references into your project
+  npx the-morphism init                  Install SKILL.md + references + .txt template (full)
+  npx the-morphism init --core           Install only SKILL.md (no refs, no templates)
   npx the-morphism init --templates-only Install only plain-text prompt template (.txt)
 
 Files are copied to:
-  skills/the-morphism/         Hermes-compatible SKILL.md + references/
-  templates/the-morphism.txt   Plain .txt prompt for non-Hermes users
+  skills/the-morphism/SKILL.md           The core skill (--core or default)
+  skills/the-morphism/references/        Framework-specific examples (default only)
+  templates/the-morphism.txt             Plain .txt prompt for non-Hermes users
 
 Aesthetic styles covered (one per page — never mix):
   • Glassmorphism — frosted glass, blur, translucent overlays
@@ -58,17 +60,29 @@ function init(flags) {
       process.exit(1);
     }
 
-    copyDirRecursive(skillsSrc, skillsDest);
-    copiedSkills++;
+    if (flags.core) {
+      // --core: only copy SKILL.md, skip references/
+      const srcFile = path.join(skillsSrc, 'SKILL.md');
+      const destFile = path.join(skillsDest, 'SKILL.md');
+      if (!fs.existsSync(destFile.substring(0, destFile.lastIndexOf(path.sep)))) {
+        fs.mkdirSync(destFile.substring(0, destFile.lastIndexOf(path.sep)), { recursive: true });
+      }
+      fs.copyFileSync(srcFile, destFile);
+      copiedSkills++;
+      console.log(`  ✓ SKILL.md (core only — no reference files)`);
+    } else {
+      // default: copy everything (SKILL.md + references/)
+      copyDirRecursive(skillsSrc, skillsDest);
+      copiedSkills++;
 
-    // Count what was copied
-    const copied = fs.readdirSync(skillsDest, { recursive: true, withFileTypes: false });
-    for (const f of copied) {
-      console.log(`  ✓ the-morphism/${f}`);
+      const copied = fs.readdirSync(skillsDest, { recursive: true, withFileTypes: false });
+      for (const f of copied) {
+        console.log(`  ✓ the-morphism/${f}`);
+      }
     }
   }
 
-  if (!flags.skillsOnly) {
+  if (!flags.core) {
     const templatesDest = path.join(cwd, 'templates');
     console.log(`\nCopying templates → ${path.relative(cwd, templatesDest)}/`);
 
@@ -117,7 +131,7 @@ if (!command || command === '--help' || command === '-h') {
 
 if (command === 'init') {
   const flags = {
-    skillsOnly: args.includes('--skills-only'),
+    core: args.includes('--core'),
     templatesOnly: args.includes('--templates-only'),
   };
   init(flags);

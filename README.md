@@ -18,8 +18,8 @@ This copies `SKILL.md` + reference files into `skills/the-morphism/` in your pro
 
 | Command | What it does |
 |---|---|
-| `npx the-morphism init` | Install SKILL.md + references into your project |
-| `npx the-morphism init --skills-only` | Install only the SKILL.md files |
+| `npx the-morphism init` | Install SKILL.md + references + .txt template (full) |
+| `npx the-morphism init --core` | Install only SKILL.md (no refs, no templates) |
 | `npx the-morphism init --templates-only` | Install only the plain-text prompt template |
 
 ## Aesthetic styles (one per page — never mix)
@@ -37,12 +37,12 @@ This copies `SKILL.md` + reference files into `skills/the-morphism/` in your pro
 
 ## Stack
 
-- TailwindCSS v4 (CSS-first config)
-- React / Next.js (App Router)
+- TailwindCSS v4 (CSS-first config) — works with any framework
+- Next.js, Astro, Vite, Svelte, Remix, or plain HTML
 - Motion (formerly Framer Motion) for mount animations
-- GSAP + Lenis for scroll-driven reveals
+- GSAP + ScrollTrigger for scroll-driven reveals (framework-agnostic)
 - Lucide, Phosphor, or Tabler icons
-- shadcn/ui font ecosystem (Geist, Outfit, Inter, etc.)
+- shadcn/ui font ecosystem (Geist, Outfit, Inter, etc.) via next/font or @fontsource
 
 ## Anti-slop enforcement
 
