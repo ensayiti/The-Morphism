@@ -1,0 +1,41 @@
+{
+  "name": "the-morphism",
+  "version": "2.1.0",
+  "description": "Anti-slop morphism & aesthetic design skill for Hermes Agent. Glassmorphism, Neumorphism, Claymorphism, Minimalism, Maximalism, Brutalism, Skeuomorphism, and Liquid Glass — pick the right aesthetic and ship depth-rich interfaces.",
+  "author": "XEM",
+  "license": "MIT",
+  "bin": {
+    "the-morphism": "./bin/cli.js"
+  },
+  "files": [
+    "bin/",
+    "skills/",
+    "templates/",
+    "README.md"
+  ],
+  "keywords": [
+    "hermes",
+    "hermes-agent",
+    "skills",
+    "design",
+    "ui",
+    "anti-slop",
+    "morphism",
+    "glassmorphism",
+    "neumorphism",
+    "claymorphism",
+    "minimalism",
+    "maximalism",
+    "brutalism",
+    "skeuomorphism",
+    "liquid-glass",
+    "css",
+    "tailwindcss",
+    "frontend",
+    "ai-coding"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ensayiti/The-Morphism"
+  }
+}
