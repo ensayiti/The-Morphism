@@ -16,8 +16,9 @@ Files are copied to:
   skills/the-morphism/references/        Framework-specific examples (default only)
   templates/the-morphism.txt             Plain .txt prompt for non-Hermes users
 
-Aesthetic style covered:
+Aesthetic styles covered (one per page — never mix):
   • Glassmorphism — frosted glass, blur, translucent overlays
+  • Neubrutalism — hard shadows, thick borders, flat color
 `;
 
 function copyDirRecursive(src, dest) {
@@ -105,7 +106,7 @@ function init(flags) {
 
   if (copiedSkills > 0) {
     console.log('\nHermes users: the-morphism skill is ready. Run `hermes` and it will auto-load from skills/the-morphism/.');
-    console.log('Tip: trigger it by describing the glass aesthetic you want (e.g. "frosted glass landing page", "translucent nav bar", "premium glass product card").');
+    console.log('Tip: trigger it by describing the aesthetic you want (e.g. "frosted glass landing page", "translucent nav bar", "neubrutalist portfolio", "blocky hard-shadow startup page").');
   }
   if (copiedTemplates > 0) {
     console.log('Non-Hermes users: paste the .txt contents into your system prompt or project rules.');

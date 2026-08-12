@@ -4,9 +4,9 @@
 
 # The Morphism
 
-**A Glassmorphism design skill for Hermes Agent that refuses to look AI-generated.**
+**A design skill for Hermes Agent that refuses to look AI-generated.**
 
-Frosted glass, done right. Exact CSS recipes. Tailwind v4 equivalents. Named anti-patterns. The agent reads the brief, sets three dials (DEPTH / SOFTNESS / TRANSLUCENCY), and ships glass interfaces with depth — not another purple-gradient hero with three equal cards.
+Multiple aesthetic styles. Exact CSS recipes. A motion system. A typographic scale. Named anti-patterns. The agent reads the brief, sets three dials (DEPTH / SOFTNESS / TRANSLUCENCY), and ships interfaces with depth — not another purple-gradient hero with three equal cards.
 
 ---
 
@@ -28,21 +28,22 @@ Re-run any time to update. Non-Hermes users: use `--templates-only` and paste th
 
 ---
 
-## The skill
+## The styles
 
-**Glassmorphism** — frosted glass, blur, translucent overlays.
+| Style | Character | Best for |
+|---|---|---|
+| **Glassmorphism** | Frosted glass, blur, translucent overlays | SaaS landing, hero overlays, nav bars, modals |
+| **Neubrutalism** | Hard shadows, thick black borders, flat loud color | Portfolios, dev tools, ed-tech, playful brands |
 
-Best for SaaS landing pages, hero overlays, nav bars, modals, and premium product cards. The skill ships:
+One style per page. Never mix. The skill handles the decision — every style comes with an exact CSS recipe, Tailwind v4 equivalents, per-style dial presets, color rules, motion character, copy voice, and named tells of what not to do.
 
-- **Exact CSS recipe** — the `.glass` surface with `backdrop-filter`, light/dark mode, and a mandatory `prefers-reduced-transparency` fallback.
-- **Three dials** — DEPTH, SOFTNESS, and TRANSLUCENCY, with use-case presets so the agent tunes rather than copies.
-- **Tailwind v4 equivalents** — the same recipe as utility classes.
-- **Named anti-patterns** — THE PILL BADGE, THE EM-DASH, INTER-BY-DEFAULT, MORPHISM WITHOUT FALLBACK, and more. Each tell is named so the agent recognizes and avoids it.
-- **A11y enforcement** — contrast, reduced motion, reduced transparency, and focus states.
-- **Structural variety rule** — no two builds share the same page rhythm.
-- **Copy discipline** — banned opening lines, a glass copy voice, and a self-audit.
+Beyond the styles, the skill ships a shared craft layer:
 
-One material per page. Glass is the frame; the background is the design.
+- **A motion system** — easing tokens, a duration canon, page-load orchestration, hover/reveal/loading recipes, and reduced-motion nuance.
+- **A typographic scale** — the 2+1 font rule, ratio-based sizing, measure, and weight contrast.
+- **A layout system** — a spacing scale, z-index levels, and the "one layout family per page" rule.
+- **Named anti-patterns** — THE PILL BADGE, THE EM-DASH, INTER-BY-DEFAULT, THE SOFT SHADOW, THE TRANSITION-ALL, and more. Each tell is named so the agent recognizes and avoids it.
+- **A pre-emit self-critique** — six axes scored before shipping.
 
 ---
 

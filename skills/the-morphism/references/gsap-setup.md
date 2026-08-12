@@ -245,6 +245,52 @@ function Features() {
 
 This split keeps mount animations simple (Motion's declarative API or CSS) while giving scroll animations ScrollTrigger's precision and rich easing.
 
+## CSS vs GSAP: don't let them fight
+
+The #1 source of "the animations feel broken" bugs is CSS and GSAP animating the same property on the same element. Both write `transform` (and often `opacity`), and they overwrite each other. Two specific traps:
+
+### Trap 1: a CSS mount animation on a GSAP scroll-scrubbed element
+
+```tsx
+// WRONG — the rise-in animation keeps owning `transform` after it ends,
+// so GSAP's parallax scrub silently does nothing.
+<div ref={el} style={{ animation: "rise-in 0.7s both" }}>
+```
+
+A CSS animation with `fill-mode: both` (or `forwards`) keeps applying its final `transform` after it finishes, which overrides the inline `transform` GSAP writes every tick. The parallax never moves.
+
+Fix: put the mount animation on a parent, let GSAP own the child.
+
+```tsx
+<div style={{ animation: "rise-in 0.7s both" }}>
+  <div ref={el}> {/* GSAP scrubs this one */}
+```
+
+### Trap 2: a `transition` (especially on `transform`) on a GSAP-tweened element
+
+```tsx
+// WRONG — every GSAP tick gets wrapped in a 500ms CSS transition.
+// The reveal smears and the hover lift fights the leftover transform.
+<div className="transition-all duration-500 hover:-translate-y-1">
+```
+
+When GSAP tweens `transform` (or `opacity`), a CSS transition on the same property re-transitions every frame GSAP writes, producing lag and a mushy reveal.
+
+Fixes, in order of preference:
+
+1. Scope the hover to non-transform properties — the "increased blur" glass hover is really a background/opacity shift:
+   ```tsx
+   className="transition-colors duration-300 hover:bg-white/15"
+   ```
+2. Move the transform hover to a child element GSAP never touches.
+3. Let GSAP own the hover too (mouseenter/mouseleave tweens) — heavier, only when you need spring physics.
+
+### The rule
+
+- CSS `@keyframes` / Motion for mount entrance, GSAP for scroll reveals — on DIFFERENT elements.
+- If an element is a GSAP target, it gets NO CSS `animation` and no `transition` on `transform`/`opacity`.
+- Hover on a GSAP target: transition colors/opacity only, or move the transform to a child.
+
 ## Reduced motion
 
 Always respect the user's motion preference:

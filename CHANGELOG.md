@@ -2,7 +2,41 @@
 
 All notable changes to The Morphism will be documented in this file.
 
+## [3.2.0] — 2026-08-13
+
+### Added
+
+- **Neubrutalism style** — the second style in the skill. Full CSS recipe (hard offset shadow `5px 5px 0 0 #000`, 3px black borders, square corners, flat color), the three-tier shadow system, the signature "press" hover (translate by shadow offset + shadow collapse), dial presets (`6 / 1 / 0`), a Tailwind equivalent, a color system (black + off-white + saturated accents), a copy voice, and six named Neubrutalism tells (THE SOFT SHADOW, THE PILL, THE HAIRLINE, THE GRADIENT, THE BLUR, THE FULL-VOLUME PAGE, THE PASTEL-ON-PASTEL).
+- **Neubrutalism ≠ Brutalism distinction** — explicit note that neubrutalism is colorful, playful, and productized, not raw monochrome brutalism.
+
+### Changed
+
+- **Restored multi-style architecture.** The skill now carries two styles (Glassmorphism + Neubrutalism) instead of being Glassmorphism-only. Read the Room detects both signal sets; The Recipes, Tailwind Equivalents, Color, copy voice, and Before You Ship are all per-style.
+- **Description corrected** to reflect that The Morphism is a multi-design skill, not a Glassmorphism-only skill.
+- **INTER-BY-DEFAULT tell refined** — Inter is now explicitly allowed as the *body* face in Neubrutalism (the body should be boring on purpose), while the display face must still be loud.
+- Fonts and icons sections now carry per-style recommendations.
+
+## [3.1.0] — 2026-08-13
+
+### Added
+
+- **`references/motion.md`** — the full motion language: named easing tokens (`--ease-out` / `--ease-in` / `--ease-in-out`), a three-bucket duration canon (micro / minor / major, exits at ~75%), page-load orchestration (CSS-var stagger capped at ~500ms), glass hover recipe (background/opacity shift, no scale), loading/empty-state guidance, reduced-motion nuance (spatial → opacity crossfade, functional motion keeps running), and 13 named motion tells.
+- **`references/typography.md`** — the 2+1 font rule, the ratio-based scale (1.25 major third), measure (45–75ch), weight contrast (≥300 units), the glass font catalog, and hero-headline-length sizing.
+- **`references/layout.md`** — the 4pt spacing scale, named z-index levels, grid rules, asymmetry techniques, depth guidance, and the "one layout family per page" rule.
+- **Pre-emit self-critique** in Before You Ship — six axes (Philosophy / Hierarchy / Execution / Specificity / Restraint / Variety), scored 1–5, stamped at the top of the artifact, < 3 forces a revision.
+- **New named tells** — THE TRANSITION-ALL, THE UNIVERSAL LIFT, THE BOUNCE, THE EFFECT STACK, THE ANIMATED FOCUS RING, THE CELEBRATORY TOAST, THE GRADIENT TEXT, THE ITALIC HEADER, THE CARD-IN-CARD, THE REDRAWN CHROME, THE INVENTED METRIC.
+
+### Changed
+
+- **How Things Move** rewritten — now points at `references/motion.md`, adds the three-rule summary (max 3 animation primitives, transform/opacity only, when-in-doubt-cut), and corrects the glass hover from `scale(1.02)` to a background/opacity shift.
+- **The Toolbox** Fonts section now points at `references/typography.md` and `references/layout.md`.
+- Before You Ship checklist gained motion and anti-slop gates.
+
 ## [3.0.0] — 2026-08-13
+
+### Added
+
+- **"CSS vs GSAP" pitfall section** in `references/gsap-setup.md` — documents the two ways CSS and GSAP fight over `transform` on the same element (a mount animation with `fill-mode: both`, and a `transition` on a GSAP-tweened property), with the fix pattern for each.
 
 ### Changed
 
