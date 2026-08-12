@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const USAGE = `
-the-morphism — Anti-slop morphism & aesthetic design skills for Hermes Agent
+the-morphism — Anti-slop Glassmorphism design skill for Hermes Agent
 
 Usage:
   npx the-morphism init                  Install SKILL.md + references + .txt template (full)
@@ -16,15 +16,8 @@ Files are copied to:
   skills/the-morphism/references/        Framework-specific examples (default only)
   templates/the-morphism.txt             Plain .txt prompt for non-Hermes users
 
-Aesthetic styles covered (one per page — never mix):
+Aesthetic style covered:
   • Glassmorphism — frosted glass, blur, translucent overlays
-  • Neumorphism — soft extruded 3D, light/shadow embossing
-  • Claymorphism — chunky, pillowy, playful 3D
-  • Minimalism — clean, restrained, high contrast
-  • Maximalism — dense, loud, layered, expressive
-  • Brutalism — raw, mechanical, unapologetic
-  • Skeuomorphism — realistic textures, physical metaphors
-  • Liquid Glass — Apple Vision Pro-style spatial material
 `;
 
 function copyDirRecursive(src, dest) {
@@ -112,7 +105,7 @@ function init(flags) {
 
   if (copiedSkills > 0) {
     console.log('\nHermes users: the-morphism skill is ready. Run `hermes` and it will auto-load from skills/the-morphism/.');
-    console.log('Tip: trigger it by describing the aesthetic you want (e.g. "frosted glass landing page", "soft 3D dashboard", "brutalist portfolio").');
+    console.log('Tip: trigger it by describing the glass aesthetic you want (e.g. "frosted glass landing page", "translucent nav bar", "premium glass product card").');
   }
   if (copiedTemplates > 0) {
     console.log('Non-Hermes users: paste the .txt contents into your system prompt or project rules.');

@@ -2,7 +2,30 @@
 
 All notable changes to The Morphism will be documented in this file.
 
-## [2.3.0] — 2025-08-12
+## [3.0.0] — 2026-08-13
+
+### Changed
+
+- **Narrowed to Glassmorphism only.** Removed Neumorphism, Claymorphism, Minimalism, Maximalism, Brutalism, Skeuomorphism, and Liquid Glass. The skill now covers a single material — frosted glass — in full depth instead of eight styles at a glance.
+- **SKILL.md rewritten for one style.** Read the Room, The Recipe, The Toolbox, The Rules That Keep It Usable, The Things We Don't Do, How Things Move, Color, The Words Matter, and Before You Ship are all now glass-specific. The three-dial system stays, with a glass baseline of `5 / 4 / 8` and use-case presets.
+- **CSS recipe and Tailwind equivalent unchanged** — the `.glass` surface keeps its exact code.
+- **CLI, README, template, and package metadata updated** to reflect a single style. Description, keywords, and usage text now name Glassmorphism only.
+
+### Fixed
+
+- **Stale Lenis reference** — `templates/the-morphism.txt` still said "GSAP + Lenis". Corrected to "GSAP + ScrollTrigger", matching the rest of the skill.
+- **Duplicate "Design token const pattern" block** in SKILL.md — two near-identical copies existed under The Toolbox. Merged into one.
+- **Duplicate "lucide-react 1.x removed brand icons" pitfall** in SKILL.md — two back-to-back copies existed. Merged into one.
+- **Leftover numbered headers** — "9.G Skeuomorphism" and "9.H Liquid Glass" under Color Per Style had survived the 2.3.0 section rename. Removed with the style.
+- **LICENSE copyright year** — now 2026, matching the README.
+
+### Removed
+
+- Seven non-glass styles and all their recipes, Tailwind equivalents, dial presets, tells, motion rules, and copy voices.
+- The "How to Read a Brief in 10 Seconds" style router (no longer needed with one style).
+- Stale `the-morphism-2.3.0.tgz` build artifact.
+
+## [2.3.0] — 2026-08-12
 
 ### Added
 
@@ -19,7 +42,7 @@ All notable changes to The Morphism will be documented in this file.
 - **CSS Recipes and Tailwind Equivalents** are unchanged (exact code stays exact).
 - Frontmatter description shortened to one breath.
 
-## [2.2.0] — 2025-08-12
+## [2.2.0] — 2026-08-12
 
 ### Fixed
 
@@ -44,7 +67,7 @@ All notable changes to The Morphism will be documented in this file.
 - `lenis` from install instructions and all code examples.
 - `--skills-only` flag from CLI.
 
-## [2.1.0] — 2025-08-11
+## [2.1.0] — 2026-08-11
 
 ### Added
 

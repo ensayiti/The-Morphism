@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="assets/the-morphism-logo.png" alt="The Morphism - A design skill for agent that refuses to look AI-generated." width="100%" />
+  <img src="assets/the-morphism-logo.png" alt="The Morphism - A design skill for agents that refuses to look AI-generated." width="100%" />
 </p>
 
 # The Morphism
 
-**A design skill for Hermes Agent that refuses to look AI-generated.**
+**A Glassmorphism design skill for Hermes Agent that refuses to look AI-generated.**
 
-Eight aesthetic styles. Exact CSS recipes. Named anti-patterns. One page, one style. The agent reads the brief, picks the right language, and ships interfaces with depth — not another purple-gradient hero with three equal cards.
+Frosted glass, done right. Exact CSS recipes. Tailwind v4 equivalents. Named anti-patterns. The agent reads the brief, sets three dials (DEPTH / SOFTNESS / TRANSLUCENCY), and ships glass interfaces with depth — not another purple-gradient hero with three equal cards.
 
 ---
 
@@ -28,20 +28,21 @@ Re-run any time to update. Non-Hermes users: use `--templates-only` and paste th
 
 ---
 
-## The eight styles
+## The skill
 
-| Style | Character | Best for |
-|---|---|---|
-| **Glassmorphism** | Frosted glass, blur, translucent overlays | SaaS landing, hero overlays, nav bars, modals |
-| **Neumorphism** | Soft extruded 3D, light/shadow embossing | Dashboards, settings panels, interactive controls |
-| **Claymorphism** | Chunky, pillowy, playful 3D | Kids apps, creative portfolios, ed-tech, gaming |
-| **Minimalism** | Clean, restrained, borders over shadows | Enterprise SaaS, docs, portfolios, a11y-critical |
-| **Maximalism** | Dense, loud, layered, expressive | Creative agencies, fashion, music, Dribbble-style |
-| **Brutalism** | Raw, mechanical, unapologetic | Designer portfolios, anti-design, art projects |
-| **Skeuomorphism** | Realistic textures, physical metaphors | Music production, gaming, retro, niche sims |
-| **Liquid Glass** | Apple Vision Pro-style spatial material | Immersive product, spatial UI, premium brands |
+**Glassmorphism** — frosted glass, blur, translucent overlays.
 
-One style per page. Never mix. The skill handles the decision — every style comes with exact CSS recipes, Tailwind v4 equivalents, per-style color palette rules, motion character, and named tells of what not to do.
+Best for SaaS landing pages, hero overlays, nav bars, modals, and premium product cards. The skill ships:
+
+- **Exact CSS recipe** — the `.glass` surface with `backdrop-filter`, light/dark mode, and a mandatory `prefers-reduced-transparency` fallback.
+- **Three dials** — DEPTH, SOFTNESS, and TRANSLUCENCY, with use-case presets so the agent tunes rather than copies.
+- **Tailwind v4 equivalents** — the same recipe as utility classes.
+- **Named anti-patterns** — THE PILL BADGE, THE EM-DASH, INTER-BY-DEFAULT, MORPHISM WITHOUT FALLBACK, and more. Each tell is named so the agent recognizes and avoids it.
+- **A11y enforcement** — contrast, reduced motion, reduced transparency, and focus states.
+- **Structural variety rule** — no two builds share the same page rhythm.
+- **Copy discipline** — banned opening lines, a glass copy voice, and a self-audit.
+
+One material per page. Glass is the frame; the background is the design.
 
 ---
 
