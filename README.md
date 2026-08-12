@@ -47,4 +47,4 @@ One style per page. Never mix. The skill handles the decision — every style co
 
 ## License
 
-[MIT License](LICENSE) · Copyright (c) 2026 Leonxlnx
+[MIT License](LICENSE) · Copyright (c) 2026 XEM
