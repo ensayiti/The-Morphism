@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/the-morphism-logo.png" alt="The Morphism - A design skill for agent that refuses to look AI-generated." width="100%" />
+</p>
+
 # The Morphism
 
 **A design skill for Hermes Agent that refuses to look AI-generated.**
@@ -26,16 +30,16 @@ Re-run any time to update. Non-Hermes users: use `--templates-only` and paste th
 
 ## The eight styles
 
-| Style | Character |
-|---|---|
-| **Glassmorphism** | Frosted glass, blur, translucent overlays |
-| **Neumorphism** | Soft extruded 3D, light/shadow embossing |
-| **Claymorphism** | Chunky, pillowy, playful 3D |
-| **Minimalism** | Clean, restrained, borders over shadows |
-| **Maximalism** | Dense, loud, layered, expressive |
-| **Brutalism** | Raw, mechanical, unapologetic |
-| **Skeuomorphism** | Realistic textures, physical metaphors |
-| **Liquid Glass** | Apple Vision Pro-style spatial material |
+| Style | Character | Best for |
+|---|---|---|
+| **Glassmorphism** | Frosted glass, blur, translucent overlays | SaaS landing, hero overlays, nav bars, modals |
+| **Neumorphism** | Soft extruded 3D, light/shadow embossing | Dashboards, settings panels, interactive controls |
+| **Claymorphism** | Chunky, pillowy, playful 3D | Kids apps, creative portfolios, ed-tech, gaming |
+| **Minimalism** | Clean, restrained, borders over shadows | Enterprise SaaS, docs, portfolios, a11y-critical |
+| **Maximalism** | Dense, loud, layered, expressive | Creative agencies, fashion, music, Dribbble-style |
+| **Brutalism** | Raw, mechanical, unapologetic | Designer portfolios, anti-design, art projects |
+| **Skeuomorphism** | Realistic textures, physical metaphors | Music production, gaming, retro, niche sims |
+| **Liquid Glass** | Apple Vision Pro-style spatial material | Immersive product, spatial UI, premium brands |
 
 One style per page. Never mix. The skill handles the decision — every style comes with exact CSS recipes, Tailwind v4 equivalents, per-style color palette rules, motion character, and named tells of what not to do.
 
@@ -43,4 +47,4 @@ One style per page. Never mix. The skill handles the decision — every style co
 
 ## License
 
-MIT
+[MIT License](LICENSE) · Copyright (c) 2026 Leonxlnx
