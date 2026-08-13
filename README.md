@@ -10,6 +10,25 @@ Multiple aesthetic styles. Exact CSS recipes. A motion system. A typographic sca
 
 ---
 
+## Preview
+
+<table>
+  <tr>
+    <td width="25%"><img src="assets/preview/glassmorph-half.png" alt="Glassmorphism" /></td>
+    <td width="25%"><img src="assets/preview/neubrutalism-half.png" alt="Neubrutalism" /></td>
+    <td width="25%"><img src="assets/preview/swiss-half.png" alt="Swiss Design" /></td>
+    <td width="25%"><img src="assets/preview/bauhaus-half.png" alt="Bauhaus" /></td>
+  </tr>
+  <tr>
+    <td><b>Glassmorphism</b><br/><sub>Frosted Glass · SaaS landing</sub></td>
+    <td><b>Neubrutalism</b><br/><sub>Hard · Portfolios</sub></td>
+    <td><b>Swiss Design</b><br/><sub>Flat· Editorial, Docs</sub></td>
+    <td><b>Bauhaus</b><br/><sub>Flat · Posters, Arts & Culture</sub></td>
+  </tr>
+</table>
+
+---
+
 ## Install
 
 ```bash
@@ -46,25 +65,6 @@ Beyond the styles, the skill ships a shared craft layer:
 - **A layout system** — a spacing scale, z-index levels, and the "one layout family per page" rule.
 - **Named anti-patterns** — THE PILL BADGE, THE EM-DASH, INTER-BY-DEFAULT, THE SOFT SHADOW, THE TRANSITION-ALL, and more. Each tell is named so the agent recognizes and avoids it.
 - **A pre-emit self-critique** — six axes scored before shipping.
-
----
-
-## Preview
-
-<table>
-  <tr>
-    <td width="25%"><img src="assets/preview/glassmorph-half.png" alt="Glassmorphism" /></td>
-    <td width="25%"><img src="assets/preview/neubrutalism-half.png" alt="Neubrutalism" /></td>
-    <td width="25%"><img src="assets/preview/swiss-half.png" alt="Swiss Design" /></td>
-    <td width="25%"><img src="assets/preview/bauhaus-half.png" alt="Bauhaus" /></td>
-  </tr>
-  <tr>
-    <td><b>Glassmorphism</b><br/><sub>Frosted Glass · SaaS landing</sub></td>
-    <td><b>Neubrutalism</b><br/><sub>Hard · Portfolios</sub></td>
-    <td><b>Swiss Design</b><br/><sub>Flat· Editorial, Docs</sub></td>
-    <td><b>Bauhaus</b><br/><sub>Flat · Posters, Arts & Culture</sub></td>
-  </tr>
-</table>
 
 ---
 
