@@ -51,12 +51,20 @@ Beyond the styles, the skill ships a shared craft layer:
 
 ## Preview
 
-| Style | Full page | Hero |
-|---|---|---|
-| **Glassmorphism** | <img src="assets/preview/glassmorph-full.png" alt="Glassmorphism full page" width="240" /> | <img src="assets/preview/glassmorph-half.png" alt="Glassmorphism hero" width="460" /> |
-| **Neubrutalism** | <img src="assets/preview/neubrutalism-full.png" alt="Neubrutalism full page" width="240" /> | <img src="assets/preview/neubrutalism-half.png" alt="Neubrutalism hero" width="460" /> |
-| **Swiss Design** | <img src="assets/preview/swiss-full.png" alt="Swiss Design full page" width="240" /> | <img src="assets/preview/swiss-half.png" alt="Swiss Design hero" width="460" /> |
-| **Bauhaus** | <img src="assets/preview/bauhaus-full.png" alt="Bauhaus full page" width="240" /> | <img src="assets/preview/bauhaus-half.png" alt="Bauhaus hero" width="460" /> |
+<table>
+  <tr>
+    <td width="25%"><img src="assets/preview/glassmorph-half.png" alt="Glassmorphism" /></td>
+    <td width="25%"><img src="assets/preview/neubrutalism-half.png" alt="Neubrutalism" /></td>
+    <td width="25%"><img src="assets/preview/swiss-half.png" alt="Swiss Design" /></td>
+    <td width="25%"><img src="assets/preview/bauhaus-half.png" alt="Bauhaus" /></td>
+  </tr>
+  <tr>
+    <td><b>Glassmorphism</b><br/><sub>Frosted Glass · SaaS landing</sub></td>
+    <td><b>Neubrutalism</b><br/><sub>Hard · Portfolios</sub></td>
+    <td><b>Swiss Design</b><br/><sub>Flat· Editorial, Docs</sub></td>
+    <td><b>Bauhaus</b><br/><sub>Flat · Posters, Arts & Culture</sub></td>
+  </tr>
+</table>
 
 ---
 
