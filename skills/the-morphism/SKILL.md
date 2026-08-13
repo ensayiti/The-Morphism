@@ -1,17 +1,17 @@
 ---
 name: the-morphism
-description: "Anti-slop morphism & aesthetic design skill for Hermes Agent. Glassmorphism, Neubrutalism, and Swiss Design — exact CSS recipes, a motion system, a typographic scale, and named anti-patterns. The agent reads the brief, picks the right style, and ships interfaces that don't look AI-generated. Zero em-dash, zero emoji-as-icon."
-version: 3.4.0
+description: "Anti-slop morphism & aesthetic design skill for Hermes Agent. Glassmorphism, Neubrutalism, Bauhaus, and Swiss Design — exact CSS recipes, a motion system, a typographic scale, and named anti-patterns. The agent reads the brief, picks the right style, and ships interfaces that don't look AI-generated. Zero em-dash, zero emoji-as-icon."
+version: 3.5.0
 author: XEM
 license: MIT
 metadata:
   hermes:
-    tags: [frontend, design, glassmorphism, neubrutalism, brutalism, css, tailwindcss, anti-slop]
+    tags: [frontend, design, glassmorphism, neubrutalism, brutalism, bauhaus, css, tailwindcss, anti-slop]
 ---
 
 # The Morphism
 
-> Three aesthetic styles. One page, one style. The agent reads the brief, picks the right language, and ships interfaces that don't look AI-generated.
+> Four aesthetic styles. One page, one style. The agent reads the brief, picks the right language, and ships interfaces that don't look AI-generated.
 > The recipes are exact. The rules are opinionated. The bans are named. Everything else is taste — and taste is contextual.
 
 ---
@@ -25,7 +25,7 @@ Most AI design output is bad because the model reaches for the same purple gradi
 Read the brief for five signals:
 
 1. **What kind of page?** Landing page, dashboard, portfolio, product card, mobile shell, creative/agency, editorial, settings panel.
-2. **What words did they use?** "glass", "frosted", "blur", "translucent", "premium", "layered" — Glassmorphism. "neubrutalist", "brutalist", "bold", "hard shadows", "thick borders", "blocky", "playful", "loud", "colorful" — Neubrutalism. "swiss", "international style", "typographic", "grid", "editorial", "flat", "minimal", "neutral", "grotesque" — Swiss Design.
+2. **What words did they use?** "glass", "frosted", "blur", "translucent", "premium", "layered" — Glassmorphism. "neubrutalist", "brutalist", "bold", "hard shadows", "thick borders", "blocky", "playful", "loud", "colorful" — Neubrutalism. "swiss", "international style", "typographic", "grid", "editorial", "flat", "minimal", "neutral", "grotesque" — Swiss Design. "bauhaus", "geometric", "primary colors", "constructivist", "poster", "avant-garde", "abstract" — Bauhaus.
 3. **Did they link something?** Reference URLs, screenshots, named products. macOS = frosted glass. Windows 11 = Mica. Linear modals = frosted glass. neobrutalism.dev / neubrutalism.com = the neubrutalist grammar. Apple Vision Pro = the high-translucency end of glass.
 4. **Who's the audience?** Design-forward consumers or enterprise buyers or accessibility-required users. A11y-critical audiences override high-translucency glass immediately. Neubrutalism's loud personality is wrong for trust-first surfaces (healthcare, fintech, government).
 5. **Does a brand already exist?** Logo, colors, type. The style works WITH the brand or it's wrong.
@@ -38,6 +38,7 @@ Before any code, pause and state the Design Read — one sentence that sounds li
 *"Reading this as: a premium product showcase for people who care about materials — floating glass over a rich gradient, layered, restrained."*
 *"Reading this as: a dev-tool startup that wants to feel like a sticker pack — Neubrutalism, thick black borders, hard offset shadows, flat loud color."*
 *"Reading this as: an ed-tech brand that should feel playful and unmissable — Neubrutalism, bold type, square corners, one saturated accent."*
+*"Reading this as: a poster for a design conference — Bauhaus, three primaries, geometric type, asymmetric grid."*
 
 The Design Read isn't a spec. It's a sentence. If you can't say it in one breath, you haven't read the room.
 
@@ -70,6 +71,7 @@ After the Design Read, set three dials. Every blur, radius, shadow, and layout d
 | **Glassmorphism** | 4-6 | 3-5 | 7-10 | SaaS landing, hero overlays, nav bars, modals, premium product cards |
 | **Neubrutalism** | 5-7 | 0-1 | 0 | Portfolios, dev tools, startups, ed-tech, playful brands, design agencies |
 | **Swiss Design** | 0 | 0 | 0 | Editorial, documentation, reference, archives, museums, publications, design systems |
+| **Bauhaus** | 0 | 0 | 0 | Posters, arts & culture, education, music, architecture, design-forward brands |
 
 ### Use-Case Presets
 
@@ -89,12 +91,14 @@ After the Design Read, set three dials. Every blur, radius, shadow, and layout d
 | Creative agency | Neubrutalism | 7 | 0 | 0 |
 | Editorial / magazine / publication | Swiss Design | 0 | 0 | 0 |
 | Docs / reference / archive | Swiss Design | 0 | 0 | 0 |
+| Poster / campaign / event | Bauhaus | 0 | 0 | 0 |
+| Arts & culture / education / museum | Bauhaus | 0 | 0 | 0 |
 
 ---
 
 ## Pick the Macrostructure First
 
-The material (glass or neubrutalism) dresses the shape — it does not choose it. After the Design Read and the dials, pick the page SHAPE before you touch the recipe. A macrostructure is a complete page skeleton (Bento Grid, Marquee Hero, Split Diptych, Stat-Led, Manifesto, Long Document, Workbench, Quote-Led, Photographic, Catalogue, Letter, Portfolio Grid) — heading placement, body composition, divider, button voice, image treatment, reveal — bundled as one named choice.
+The material (glass, neubrutalism, Swiss, or Bauhaus) dresses the shape — it does not choose it. After the Design Read and the dials, pick the page SHAPE before you touch the recipe. A macrostructure is a complete page skeleton (Bento Grid, Marquee Hero, Split Diptych, Stat-Led, Manifesto, Long Document, Workbench, Quote-Led, Photographic, Catalogue, Letter, Portfolio Grid) — heading placement, body composition, divider, button voice, image treatment, reveal — bundled as one named choice.
 
 - Pick one from `references/macrostructures.md` and state it out loud: *"Macrostructure: Bento Grid. Material: glass."*
 - **Refuse the last three.** No two consecutive builds in the same project share a macrostructure. Pick from a categorically different family (grid-led vs document-led vs poster-led).
@@ -104,7 +108,7 @@ The material (glass or neubrutalism) dresses the shape — it does not choose it
 
 ## The Recipes
 
-This is the heart of the skill. Two exact CSS recipes — not suggestions, not starting points. Start here, then tune the dials. Framework-agnostic CSS; Tailwind equivalents follow in the next section.
+This is the heart of the skill. Four exact CSS recipes — not suggestions, not starting points. Start here, then tune the dials. Framework-agnostic CSS; Tailwind equivalents follow in the next section.
 
 ### Glassmorphism
 
@@ -263,6 +267,42 @@ h1, h2 { font-weight: 300; letter-spacing: -0.02em; }
 
 ---
 
+### Bauhaus
+
+```css
+/* === BAUHAUS: flat, geometric, primary === */
+.bauhaus {
+  background: #F5F0E6;                     /* cream paper — never a pastel, never pure white alone */
+  color: #000000;                          /* black ink */
+  font-family: "Jost", "Archivo", system-ui, sans-serif;
+  border-radius: 0;                        /* rectilinear */
+}
+.bauhaus-primary   { background: #E2062C; color: #F5F0E6; }   /* red */
+.bauhaus-secondary { background: #FFDD00; color: #000000; }   /* yellow — black text, never yellow text */
+.bauhaus-tertiary  { background: #00509E; color: #F5F0E6; }   /* blue */
+
+/* The graphic language is geometry, not ornament */
+.shape { display: inline-block; }
+.shape.square   { width: 80px; height: 80px; background: #E2062C; }
+.shape.circle   { width: 80px; height: 80px; border-radius: 50%; background: #FFDD00; }
+.shape.triangle { width: 0; height: 0; border-left: 40px solid transparent; border-right: 40px solid transparent; border-bottom: 80px solid #00509E; }
+```
+
+**The dials don't tune here.** Bauhaus is `0 / 0 / 0` — flat, rectilinear, opaque, like Swiss. But where Swiss is neutral and typography-led, Bauhaus is primary-colored and geometry-led. Swiss is the quiet flat style; Bauhaus is the loud flat style.
+
+**The rules that make it Bauhaus:**
+- **Three primaries + black + cream.** Red `#E2062C`, yellow `#FFDD00`, blue `#00509E`, black `#000000`, cream `#F5F0E6`. Flat fills at full saturation. No gradients, no shadows, no blur, no opacity ladder (that's Swiss).
+- **Geometry is the composition.** Circle, square, and triangle are structural elements — they carve the layout, not decorate it. Compose asymmetrically; centered-everything is the AI default.
+- **Bold geometric type.** Headings are heavy (`700`/`800`, uppercase). Bauhaus is the inverse of Swiss's light type. One geometric face does the work (Jost).
+- **Yellow is a fill, never text.** Black text on yellow. Cream text on red and blue. Yellow text on cream fails contrast.
+- **Rectilinear.** No border-radius on structural elements — the circle shape is the only rounding on the page.
+
+**When to use:** Posters, campaigns, arts & culture, music, education, architecture, museums, design-forward brands — anything that should read as *bold, functional, avant-garde*.
+
+**When NOT to use:** Warm or emotional brands, luxury or premium (that's glass), trust-first surfaces, data-heavy dashboards. Say so explicitly if the brief pushes Bauhaus where it doesn't belong.
+
+---
+
 ## Tailwind Equivalents
 
 Same recipes, Tailwind v4 utility classes. CSS-first config — no `tailwind.config.js`. Use `@tailwindcss/postcss` or the Vite plugin.
@@ -321,6 +361,21 @@ Same recipes, Tailwind v4 utility classes. CSS-first config — no `tailwind.con
   <p class="text-base leading-relaxed max-w-[60ch] text-stone-900/70">Body copy at secondary opacity.</p>
   <span class="text-xs uppercase tracking-wide text-stone-900/40">Caption</span>
   <button class="rounded-none bg-[#C8102E] px-6 py-3 font-normal text-white">Register</button>
+</div>
+```
+
+### Bauhaus
+
+```html
+<div class="bg-[#F5F0E6] text-black rounded-none font-[Jost,system-ui] p-6">
+  <h2 class="text-4xl font-bold uppercase tracking-tight">Form Follows Function</h2>
+  <p class="text-base max-w-[60ch]">Flat fills, primary color, geometric type. No gradient, no shadow, no blur.</p>
+  <div class="flex gap-4">
+    <span class="size-20 bg-[#E2062C]"></span>
+    <span class="size-20 rounded-full bg-[#FFDD00]"></span>
+    <span class="size-0 border-x-[40px] border-x-transparent border-b-[80px] border-b-[#00509E]"></span>
+  </div>
+  <button class="rounded-none bg-[#E2062C] px-6 py-3 font-bold text-[#F5F0E6]">Enter</button>
 </div>
 ```
 
@@ -388,10 +443,11 @@ Then reference tokens with template literals: `className={GLASS.card}`, `classNa
 - **Glassmorphism:** Geist, Outfit, Satoshi (crisp, modern — lets the material speak).
 - **Neubrutalism:** Syne, Space Grotesk, Bricolage Grotesque, Archivo Black for display; Inter or Geist for body (calm, boring on purpose); Space Mono or Geist Mono for the outlier.
 - **Swiss Design:** IBM Plex Sans (primary), Hanken Grotesk, Barlow, Host Grotesk (fallbacks, in that order). Light weights only — headings `300`/`400`, never bold.
+- **Bauhaus:** Jost (display, the Futura clone — geometric, points on A/M/N), Archivo (body). Headings bold (`700`/`800`) and uppercase — the loud inverse of Swiss's light type.
 
 **Available typefaces:**
 - **Default:** Geist Sans + Geist Mono (shadcn/ui default)
-- **Sans-serif options:** Inter, Outfit, Plus Jakarta Sans, DM Sans, Manrope, Space Grotesk, Public Sans, Work Sans
+- **Sans-serif options:** Inter, Outfit, Plus Jakarta Sans, DM Sans, Manrope, Space Grotesk, Public Sans, Work Sans, Jost, Kumbh Sans, Archivo
 - **Display / wide:** Sora, Syne, Archivo Black, Bricolage Grotesque, Clash Display, Cabinet Grotesk (self-host), Satoshi (self-host)
 - **Mono options:** Geist Mono, JetBrains Mono, Fira Code, IBM Plex Mono, Space Mono
 - **Serif options:** Newsreader, Playfair Display, Lora, Merriweather, EB Garamond
@@ -404,7 +460,7 @@ For the full type system — the 2+1 rule, the ratio-based scale, measure (45–
 - `@phosphor-icons/react` -- extensive, multiple weights (Thin through Fill)
 - `@tabler/icons-react` -- sharp, technical, good for dashboards
 
-**Recommended by style:** Glassmorphism — Lucide (Regular) or Phosphor (Regular), crisp glyphs that read cleanly over translucency. Neubrutalism — Phosphor (Bold) or Lucide with `strokeWidth={2.5}`, chunky glyphs that match the thick borders.
+**Recommended by style:** Glassmorphism — Lucide (Regular) or Phosphor (Regular), crisp glyphs that read cleanly over translucency. Neubrutalism — Phosphor (Bold) or Lucide with `strokeWidth={2.5}`, chunky glyphs that match the thick borders. Bauhaus — Lucide (thin strokes) or raw geometric shapes (circle/square/triangle) as the graphic language.
 
 **Rules:**
 - One icon family per project. Do not mix Lucide with Phosphor in the same tree.
@@ -424,11 +480,12 @@ For the full type system — the 2+1 rule, the ratio-based scale, measure (45–
 
 ## The Rules That Keep It Usable
 
-Both styles are a11y traps in different ways. These rules are mandatory — skip them and you shipped broken work.
+These styles are a11y traps in different ways. These rules are mandatory — skip them and you shipped broken work.
 
 ### Contrast
 - **Glass:** text over variable backgrounds MUST have a text-shadow or subtle scrim. A bright spot in the background image directly behind text will wipe it out. Light mode near-black, dark mode near-white.
 - **Neubrutalism:** flat color is the point, so contrast is explicit — but it must still be checked. Yellow-on-white fails. Use yellow as a *fill* with black text, never yellow *text*. Body text needs 4.5:1; "loud" is not an excuse for inaccessible.
+- **Bauhaus:** black on cream, cream on red and blue all pass 4.5:1. Yellow is a *fill* with black text, never yellow text. Full-saturation primaries vibrate next to each other — separate them with black or cream.
 - Any colored accent text must pass 4.5:1 against its background.
 
 ### Reduced Motion
@@ -454,11 +511,12 @@ Both styles are a11y traps in different ways. These rules are mandatory — skip
   }
 }
 ```
-Every glass element MUST ship a solid fallback. Never ship glass without it. (Neubrutalism is opaque by definition — this rule is glass-only.)
+Every glass element MUST ship a solid fallback. Never ship glass without it. (Neubrutalism, Swiss, and Bauhaus are opaque by definition — this rule is glass-only.)
 
 ### Focus States
 - **Glass:** `outline: 2px solid rgba(255,255,255,0.8);` on dark backgrounds, `outline: 2px solid rgba(0,0,0,0.6);` on light backgrounds.
 - **Neubrutalism:** `outline: 3px solid #000; outline-offset: 2px;` — thick and mechanical, matching the border weight. In Tailwind, `outline-3` does NOT exist (the scale is 0/1/2/4/8) — use `ring-2 ring-black ring-offset-2` or `outline-[3px] outline-black outline-offset-2`. Note the asymmetry: `border-3` IS valid in Tailwind v4, `outline-3` is not.
+- **Bauhaus:** `outline: 2px solid #000; outline-offset: 2px;` — crisp and geometric, matching the rectilinear grammar.
 - Never rely on shadow change alone for focus. A visible outline ring is mandatory.
 
 ---
@@ -555,6 +613,16 @@ Every glass element MUST ship a solid fallback. Never ship glass without it. (Ne
 - **THE WIDE COLUMN.** Body text over 60ch. Swiss measure is narrow; wider columns are illegible.
 - **THE THIN SECTION.** Section padding under `py-16`. Whitespace IS the design; thin sections are un-Swiss.
 
+### Bauhaus Tells
+- **THE GRADIENT.** Any gradient fill. Bauhaus is flat primary color; a gradient is the fastest way to look un-Bauhaus.
+- **THE DROP SHADOW.** Any box-shadow. Depth is foreign to this style — flat fills only.
+- **THE PASTEL PALETTE.** Muted or desaturated colors instead of full-saturation primaries. Bauhaus red is `#E2062C`, not a dusty rose.
+- **THE GEOMETRIC WALLPAPER.** Scattered triangles and circles as a decorative backdrop instead of geometry that composes the layout. Shapes are structural, not wallpaper.
+- **THE SYMMETRIC LAYOUT.** Centered everything. Bauhaus composes asymmetrically; a symmetric layout is the AI default.
+- **THE ORNAMENT.** A "bauhaus" badge, a logo-as-decoration, or any flourish. Bauhaus is the absence of ornament, by definition.
+- **THE SECOND FONT.** More than one geometric face. Jost does the work; a second face only for body clarity.
+- **THE ROUNDED CORNER.** `border-radius` on structural elements. The literal circle shape is the only rounding on the page.
+
 ---
 
 ## How Things Move
@@ -580,6 +648,7 @@ The full motion language — easing tokens, the duration canon, page-load orches
 |---|---|---|---|
 | Glassmorphism | Smooth, elegant, floating | background/opacity shift (= increased blur), `--dur-short` `--ease-out`. No scale | Staggered card reveals (`delay: i * 0.06`), reveal once, no re-fire |
 | Neubrutalism | Fast, decisive, mechanical | the "press": `translate(x,y)` by the shadow offset + shadow collapse, ~100ms | Marquee, staggered grid reveals. No soft eases, no overshoot |
+| Bauhaus | Functional, near-static | fill/geometry swap (color invert), no scale, ~150ms | staggered grid reveals, sharp, no overshoot |
 
 **GSAP ScrollTrigger pattern** (see `references/gsap-setup.md` for React, vanilla JS, and Astro examples):
 ```tsx
@@ -621,6 +690,11 @@ useEffect(() => {
 - **Grayscale is the palette.** The stone scale (`#fafaf9` paper to `#1c1917` ink), never pure white or black. Hierarchy is opacity, never hue — `0.7` secondary, `0.4` tertiary, `0.2` ghost. Never mid-scale gray for text weight.
 - **One accent.** Swiss red `#C8102E` by default; cobalt `#003B8E`, golden `#F0B429`, forest `#2D6A4F` as alternates. At full / 60% / 20% / 10% opacity only.
 - **Dark mode:** flip the stone scale (`stone-950` paper, `stone-50` ink); the opacity values stay identical.
+
+### Bauhaus
+- **Three primaries + black + cream.** Red `#E2062C`, yellow `#FFDD00`, blue `#00509E`, black `#000000`, cream `#F5F0E6`. Flat fills at full saturation.
+- **Yellow is a fill, never text.** Black text on yellow; cream text on red and blue. Yellow text on cream fails contrast.
+- **No gradients, no opacity ladder, no ambient color.** Color is categorical (like neubrutalism) but geometric and quieter. Separate primaries with black or cream — red against blue vibrates.
 
 ---
 
@@ -680,6 +754,7 @@ Name something real. A place, a date, a number, a verb that means something:
 | Glassmorphism | Precise, modern, one level cooler than the reader. "The API for developers who ship on Fridays." |
 | Neubrutalism | Loud, punchy, declarative, unapologetic. "WE MAKE THINGS THAT MAKE YOU LOOK." |
 | Swiss Design | Objective, measured, declarative. "The grid system is an aid, not a guarantee." The facts do the selling; adjectives are withheld. |
+| Bauhaus | Functional, declarative. "Design is not a decoration; it is a decision." Form follows function; facts and function, no flourish. |
 
 ### The self-audit
 
@@ -728,6 +803,7 @@ Before the checklist, score the build 1–5 on six axes. Anything < 3 on any axi
 - [ ] **Glassmorphism:** `backdrop-filter` AND `-webkit-backdrop-filter` both present? Rich background behind the glass? Max 2 layers?
 - [ ] **Neubrutalism:** hard offset shadow (zero blur)? 2–3px black border? Square/near-square corners? Flat color, no gradients? Distinction from Brutalism honored?
 - [ ] **Swiss Design:** grayscale + opacity hierarchy (no second hue)? Headings light (300/400, never bold)? Rectilinear (no border-radius)? 12-col grid + 8px unit? Body ≤ 60ch? One accent at opacity stops?
+- [ ] **Bauhaus:** flat fills (no gradient/shadow/blur)? Three primaries + black + cream (no pastels)? Geometry as composition, not decoration? Bold geometric type (Jost)? Rectilinear? Asymmetric composition? Yellow-as-fill-not-text?
 
 ### Code Quality
 - [ ] **No `h-screen`** -- using `min-h-[100dvh]`?
@@ -756,6 +832,7 @@ Before the checklist, score the build 1–5 on six axes. Anything < 3 on any axi
 
 This skill is NOT for:
 - Flat design that isn't Swiss — generic "clean minimal" without the grid, type, and opacity discipline. That routes to Swiss Design, not out of scope.
+- Flat design with primary colors and geometry (circle/square/triangle) that isn't Bauhaus-disciplined — routes to Bauhaus, not out of scope.
 - Other morphism styles (Neumorphism, Claymorphism, Skeuomorphism, Liquid Glass) — not yet covered; say so if the brief asks for them.
 - 3D WebGL/Three.js scenes (this skill is CSS-only depth).
 - Native mobile (use platform HIG: Material Design, Apple HIG).
@@ -776,8 +853,10 @@ If the brief is out of scope, **say so** and recommend the right approach.
 | "neubrutalist", "neobrutalism", "hard shadows", "thick borders" | Neubrutalism | 6 / 1 / 0 |
 | "bold", "blocky", "playful", "loud", "colorful", "sticker" | Neubrutalism | 6 / 0 / 0 |
 | "swiss", "international style", "typographic", "grid", "editorial", "flat", "neutral" | Swiss Design | 0 / 0 / 0 |
+| "bauhaus", "geometric", "primary colors", "constructivist", "poster", "avant-garde" | Bauhaus | 0 / 0 / 0 |
 
 ## Real-World References
 
 - **Glassmorphism:** Apple Vision Pro UI, macOS Sonoma lock screen, Windows 11 Mica, Stripe dashboard, Linear modals.
-- **Neubrutalism:** neobrutalism.dev, neubrutalism.com, the ekmas neobrutalism-components library, Gumroad's brand, Figma's community templates.
+- **Neubrutalism:** neobrutalism.dev, neobrutalism.com, the ekmas neobrutalism-components library, Gumroad's brand, Figma's community templates.
+- **Bauhaus:** the Bauhaus Dessau archive, Josef Albers and Herbert Bayer posters, Bayer's Universal alphabet, Oskar Schlemmer's 1922 emblem, the bauhaus-dessau.de site.

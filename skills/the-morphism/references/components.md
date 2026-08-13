@@ -17,6 +17,7 @@ The AI reaches for the same nav and footer on every page. That's a tell. Pick de
 | Glass | N5 Floating pill · N2 Floating chip | N1b, N9, N13 |
 | Neubrutalism | N7 Brutal slab · N1b SaaS three-section | N8 Terminal, N9, N12 |
 | Swiss Design | N6 Newspaper masthead · N9 Edge-aligned minimal | N1a, N3 Side-rail |
+| Bauhaus | N1b three-section · N9 Edge-aligned minimal | N12 Banner, N7 Brutal slab |
 
 - **N1a · Wordmark + 2 links** — wordmark left, two text links right. The minimal bar. Reach for it only when the page genuinely has 2 destinations.
   - Glass: frosted bar on scroll. Neo: hard 3px bottom border, all-caps.
@@ -80,6 +81,14 @@ Swiss reads every chrome element flat and typographic — no blur, no hard shado
 - Nav: N6 Newspaper masthead (editorial), N9 Edge-aligned minimal (quiet), N1a Wordmark + 2 links. The nav is a rule + wordmark, not a container.
 - Footer: Ft1 Mast-headed, Ft2 Inline single line, Ft4 Dense colophon. The footer is a colophon, not a sitemap.
 - Section heads: S2 Hanging, S3 Sticky, S4 Inline. S1 Left-margin numbered is Swiss's historical home — reach for it only on a genuinely editorial/specimen page.
+
+## Bauhaus chrome
+
+Bauhaus reads chrome flat, geometric, and loud — full-saturation primaries, black rules, no blur, no soft shadow.
+
+- Nav: N1b three-section (geometric wordmark + a primary-color CTA block), N9 Edge-aligned minimal (quiet), N12 Banner (a flat primary band). The nav is a bold grid row, not a container.
+- Footer: Ft1 Mast-headed, Ft2 Inline single line, Ft8 Marquee scroll (a mechanical geometric line). The footer is a colophon or a marquee, not a sitemap.
+- Section heads: S1 Left-margin numbered (geometric label + heavy heading), S3 Sticky, S5 Bottom anchored. Eyebrows default OFF, as everywhere.
 
 ## Variation knobs
 

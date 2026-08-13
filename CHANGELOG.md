@@ -2,6 +2,15 @@
 
 All notable changes to The Morphism will be documented in this file.
 
+## [3.5.0] — 2026-08-13
+
+### Added
+
+- **Bauhaus — the fourth style.** Full treatment in SKILL.md: signal words, dial preset `0 / 0 / 0`, an exact CSS recipe (three primaries + black + cream, flat fills, geometric shapes), a Tailwind equivalent, a color system, typography (Jost display + Archivo body, bold geometric headings), a copy voice, and eight named tells — THE GRADIENT, THE DROP SHADOW, THE PASTEL PALETTE, THE GEOMETRIC WALLPAPER, THE SYMMETRIC LAYOUT, THE ORNAMENT, THE SECOND FONT, THE ROUNDED CORNER. Bauhaus is framed as Swiss's loud flat sibling — the same dial floor, but primary color + geometry instead of grayscale + type.
+- Bauhaus takes for all twelve macrostructures in `references/macrostructures.md`, plus an arts / culture / education / architecture / poster routing row (material lean: Bauhaus).
+- Bauhaus chrome in `references/components.md` — nav N1b / N9 / N12, footer Ft1 / Ft2 / Ft8, section heads S1 / S3 / S5.
+- Package description, keywords, and tags now name Bauhaus.
+
 ## [3.4.0] — 2026-08-13
 
 ### Added
