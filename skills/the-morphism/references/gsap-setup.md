@@ -315,3 +315,5 @@ if (mq.matches) {
   return
 }
 ```
+
+The Motion/React equivalent has its own SSR trap — gating `initial`/`animate`/`whileInView` on `useReducedMotion()` blanks the page for reduced-motion users. Wrap the app in `<MotionConfig reducedMotion="user">` at the root instead (see `motion.md` → THE REDUCED-MOTION GATE).

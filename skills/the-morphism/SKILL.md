@@ -1,7 +1,7 @@
 ---
 name: the-morphism
 description: "Anti-slop morphism & aesthetic design skill for Hermes Agent. Glassmorphism and Neubrutalism — exact CSS recipes, a motion system, a typographic scale, and named anti-patterns. The agent reads the brief, picks the right style, and ships interfaces that don't look AI-generated. Zero em-dash, zero emoji-as-icon."
-version: 3.2.0
+version: 3.3.0
 author: XEM
 license: MIT
 metadata:
@@ -89,6 +89,16 @@ After the Design Read, set three dials. Every blur, radius, shadow, and layout d
 
 ---
 
+## Pick the Macrostructure First
+
+The material (glass or neubrutalism) dresses the shape — it does not choose it. After the Design Read and the dials, pick the page SHAPE before you touch the recipe. A macrostructure is a complete page skeleton (Bento Grid, Marquee Hero, Split Diptych, Stat-Led, Manifesto, Long Document, Workbench, Quote-Led, Photographic, Catalogue, Letter, Portfolio Grid) — heading placement, body composition, divider, button voice, image treatment, reveal — bundled as one named choice.
+
+- Pick one from `references/macrostructures.md` and state it out loud: *"Macrostructure: Bento Grid. Material: glass."*
+- **Refuse the last three.** No two consecutive builds in the same project share a macrostructure. Pick from a categorically different family (grid-led vs document-led vs poster-led).
+- Pick the nav and footer archetypes alongside it — see `references/components.md`. They are the fingerprint, not chrome. **Default away from the AI nav (wordmark + 4 centred links + CTA) and the AI footer (4 columns + social row + tiny copyright).**
+
+---
+
 ## The Recipes
 
 This is the heart of the skill. Two exact CSS recipes — not suggestions, not starting points. Start here, then tune the dials. Framework-agnostic CSS; Tailwind equivalents follow in the next section.
@@ -137,7 +147,7 @@ This is the heart of the skill. Two exact CSS recipes — not suggestions, not s
 | SOFTNESS | `border-radius: 8px`, sharp borders | `border-radius: 16px` | `border-radius: 24px`, pill shapes |
 | TRANSLUCENCY | `rgba(255,255,255,0.70)` | `rgba(255,255,255,0.35)` | `rgba(255,255,255,0.08)`, stronger blur needed |
 
-**When to use:** Rich background (gradients, images, video) behind the glass. The background IS the design; glass is the frame. Flat color behind glass defeats the purpose.
+**When to use:** Rich background behind the glass — a real image, video, or brand-driven composition. The background IS the design; glass is the frame. A gradient is the fallback, not the default: one light source, two stops, never a multi-color radial wash (see THE RADIAL MESH). Flat color behind glass defeats the purpose.
 
 **When NOT to use:** Data-heavy dashboards, long-form text, or any surface where the background content must stay sharply readable. Say so explicitly if the brief pushes glass where it doesn't belong.
 
@@ -384,7 +394,7 @@ Every glass element MUST ship a solid fallback. Never ship glass without it. (Ne
 
 ### Focus States
 - **Glass:** `outline: 2px solid rgba(255,255,255,0.8);` on dark backgrounds, `outline: 2px solid rgba(0,0,0,0.6);` on light backgrounds.
-- **Neubrutalism:** `outline: 3px solid #000; outline-offset: 2px;` — thick and mechanical, matching the border weight.
+- **Neubrutalism:** `outline: 3px solid #000; outline-offset: 2px;` — thick and mechanical, matching the border weight. In Tailwind, `outline-3` does NOT exist (the scale is 0/1/2/4/8) — use `ring-2 ring-black ring-offset-2` or `outline-[3px] outline-black outline-offset-2`. Note the asymmetry: `border-3` IS valid in Tailwind v4, `outline-3` is not.
 - Never rely on shadow change alone for focus. A visible outline ring is mandatory.
 
 ---
@@ -413,6 +423,18 @@ Every glass element MUST ship a solid fallback. Never ship glass without it. (Ne
 
 **SHADOW STACKING.** Max 4 box-shadow declarations per element. Beyond that it's a performance hit and reads as trying too hard.
 
+**THE AI NAV.** Wordmark hard-left, 4-5 inline links (Features · Pricing · Docs · Blog), CTA hard-right, sticky, hairline bottom. Every LLM emits it because every SaaS that fed the training data shipped it. The nav should tell you what kind of site you're on — see `references/components.md` for the archetypes. Glass floats it (frosted bar or pill); neo slabs it (hard border, all-caps).
+
+**THE AI FOOTER.** Four link columns (Product · Company · Resources · Legal) + a social-icon row + tiny copyright. A bakery has no "Resources" column. The footer closes the page; it doesn't catalogue an absent sitemap. See `references/components.md`.
+
+**THE EYEBROW.** An uppercase mono-cap tag (`01 / FEATURES`, `02 · THE TOUR`) above — or worse, BESIDE — every section heading. Default OFF. When a tag IS used, the heading stacks directly underneath it in the same column; the tag-left / heading-right two-column head is the single most reliable templated tell and is banned outright.
+
+**THE SIDE-STRIPE CARD.** A card with a thick coloured border on one edge (usually left, 4-6px). Very 2018-SaaS-AI. Use a hairline all round, or no border, or a small accent square beside the heading.
+
+**THE AURORA BLOB.** Flowing organic mesh blobs in purple-to-pink-to-cyan behind the hero. It reads "premium" until you've seen it on every Dribbble shot since 2022. Solid surface, or a subtle two-stop gradient + grain at <0.1 opacity.
+
+**TOKEN IMPROVISATION.** A theme is locked at the top, then a one-off hex or `font-family` sneaks into a hover state or a focus ring. Every colour and font must reference a named token (`var(--color-accent)`, `font-family: var(--font-display)`). If a value doesn't exist as a token, lift it into the token block first, then reference it.
+
 ### The Motion Tells
 
 **THE TRANSITION-ALL.** `transition-all` / `transition: all`. Name the properties. Focus rings, visibility, and display changes must be instant.
@@ -426,6 +448,8 @@ Every glass element MUST ship a solid fallback. Never ship glass without it. (Ne
 **THE ANIMATED FOCUS RING.** A focus ring that fades in over 200ms. Focus rings appear instantly — keyboard users need an immediate indicator.
 
 **THE CELEBRATORY TOAST.** "Done!" for an action whose effect the user can already see. Silent success is taste; toasts are for failures and invisible effects.
+
+**THE REDUCED-MOTION GATE.** Gating `initial`/`animate`/`whileInView` on `useReducedMotion()` (`initial={reduce ? undefined : ...}`). `useReducedMotion()` reads a client-only preference, so the server bakes `opacity:0` into the HTML while the client renders visible; React 19 leaves the server's `opacity:0` in place and the whole section stays blank. Wrap the app once in `<MotionConfig reducedMotion="user">` and write animations plainly.
 
 ### The Typography Tells
 
@@ -446,7 +470,8 @@ Every glass element MUST ship a solid fallback. Never ship glass without it. (Ne
 - **Glass over busy images without text protection.** Add `text-shadow` or a subtle scrim behind text.
 - **Glass on glass on glass.** Max 2 layers of glass overlaid. Three layers = unreadable soup.
 - **`backdrop-filter` without `-webkit-backdrop-filter`.** Safari needs the prefix.
-- **Glass over a flat background.** A solid color behind glass defeats the purpose — there's nothing to blur. The background must be rich: gradient, image, or video.
+- **Glass over a flat background.** A solid color behind glass defeats the purpose — there's nothing to blur. The background must be rich: image, video, or a restrained gradient.
+- **THE RADIAL MESH.** A multi-color radial gradient wash (emerald/indigo/sky blobs on slate-950, purple/blue/pink) behind the hero. The generic "AI glass" backdrop. The background should be a real image, video, or brand-driven composition; a gradient is one light source with two stops, never three colored blobs.
 - **Glass on a data-heavy surface.** Tables and long text go solid. Glass is for frames, heroes, navs, and cards.
 
 ### Neubrutalism Tells
@@ -472,6 +497,10 @@ The full motion language — easing tokens, the duration canon, page-load orches
 - **No more than three distinct animation primitives per page.** One orchestrated entrance + one hover treatment + one scroll reveal = three. Done.
 - **Animate only `transform` and `opacity`.** Never `width`, `height`, `top`, `left`, `margin`, `padding`.
 - **When in doubt, cut.** If making the animation instant would lose nothing, remove it.
+
+**Reduced motion in React:** never gate `initial`/`animate`/`whileInView` on `useReducedMotion()` — see THE REDUCED-MOTION GATE. Wrap the app once in `<MotionConfig reducedMotion="user">` (inside a root client component) and write animations plainly; Motion then honors the preference consistently across SSR and client and keeps an opacity-only fade for reduced-motion users.
+
+**Glass perf:** `backdrop-filter` is GPU-expensive. One backdrop-filter surface per viewport; never animate the `transform` of the element that owns the blur (put the mount animation on a parent wrapper); don't layer a full-screen grain overlay above animated content. Full recipe in `references/motion.md` → Performance.
 
 **Per-style motion character:**
 
@@ -505,7 +534,7 @@ useEffect(() => {
 ## Color Per Style
 
 ### Glassmorphism
-- **Background behind glass:** rich and varied (gradients, images, video). This is the most important color decision on the page — the glass only works if there's something worth blurring.
+- **Background behind glass:** a real image, video, or brand-driven composition first; a restrained single-light-source gradient second. This is the most important color decision on the page — the glass only works if there's something worth blurring. Never the multi-color radial mesh (see THE RADIAL MESH).
 - **Glass transparency:** light mode `rgba(255,255,255,0.10-0.25)`, dark mode `rgba(15,23,42,0.30-0.55)`.
 - **Text:** high contrast. Light mode near-black, dark mode near-white.
 - **Accent:** one vibrant color (electric blue, emerald, deep rose). Pick one and stay consistent.
@@ -610,8 +639,11 @@ Before the checklist, score the build 1–5 on six axes. Anything < 3 on any axi
 
 ### Accessibility (CRITICAL)
 - [ ] **Contrast check:** all text on styled surfaces has 4.5:1 contrast (glass: text-shadow/scrim; neubrutalism: yellow-as-fill-not-text)?
+- [ ] **Button text ≠ fill** (no black-on-black; `--color-accent-ink` defined when accent fills a surface)?
+- [ ] **Hero fits the fold** at 1280×800 (eyebrow + headline + lede + primary CTA visible without scrolling)?
 - [ ] **Glass fallback:** `prefers-reduced-transparency` solid-fill provided?
 - [ ] **Reduced motion:** `prefers-reduced-motion` disables all ambient animations?
+- [ ] **No `useReducedMotion()` gating** of `initial`/`animate`/`whileInView` — `MotionConfig reducedMotion="user"` at the root instead?
 - [ ] **Focus states:** all interactive elements have visible focus rings (instant, never animated)?
 
 ### Style-Specific

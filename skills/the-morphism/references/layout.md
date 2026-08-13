@@ -76,7 +76,7 @@ Don't freestyle numbers.
 }
 ```
 
-For glass, the grain/noise overlay sits at `--z-toast` (above content, `pointer-events-none`), the nav at `--z-sticky`.
+For glass, the grain/noise overlay sits at `--z-toast` (above content, `pointer-events-none`), the nav at `--z-sticky`. If you use grain, rasterize it to a tiny repeating tile and don't animate content beneath it — a live `feTurbulence` overlay forces a full-viewport recomposite every frame (see `motion.md` → Performance).
 
 ## One layout family per page
 

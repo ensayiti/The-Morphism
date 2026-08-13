@@ -2,6 +2,24 @@
 
 All notable changes to The Morphism will be documented in this file.
 
+## [3.3.0] — 2026-08-13
+
+### Fixed
+
+- **THE REDUCED-MOTION GATE (critical blank-page bug).** Gating `initial`/`animate`/`whileInView` on `useReducedMotion()` produces an SSR hydration mismatch for reduced-motion users: the server bakes `opacity:0` into the HTML, the client renders visible, and React 19 leaves the server's `opacity:0` in place, so every animated section stays blank. Documented the trap and the fix — wrap the app once in `<MotionConfig reducedMotion="user">` and write animations plainly. Verified against a reduced-motion build (content resolves to opacity 1, no hydration mismatch).
+- **Neubrutalism focus ring.** The CSS recipe said `outline: 3px solid` but Tailwind's `outline-3` class does not exist (the scale is 0/1/2/4/8). Unified on `ring-2 ring-black ring-offset-2` / `outline-[3px]` and noted the `border-3`-valid-but-`outline-3`-dead asymmetry.
+
+### Added
+
+- **THE RADIAL MESH tell** — the multi-color radial gradient wash behind glass heroes, named and banned. Glass background guidance now leads with image/video/brand composition and demotes "gradient" to a restrained single-light-source fallback.
+- **Performance section** in `references/motion.md` — one backdrop-filter surface per viewport, don't animate the blur owner's transform, no full-screen grain over animated content, `backdrop-saturate()` is expensive.
+- **THE REDUCED-MOTION GATE tell** in the motion tells and the Before You Ship checklist.
+
+### Changed
+
+- Glass background wording tightened across "When to use", "Glassmorphism Tells", and "Color Per Style" so "gradient" is no longer blessed as a default rich background.
+- `references/layout.md` grain-overlay note now flags the full-viewport recomposite cost.
+
 ## [3.2.0] — 2026-08-13
 
 ### Added

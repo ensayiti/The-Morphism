@@ -134,6 +134,36 @@ The translate distance MUST equal the shadow offset (`4px` shadow → `translate
 
 For GSAP specifically, check the media query in JS and skip entirely (see `gsap-setup.md` § Reduced motion). Functional motion — progress bars, loading spinners, skeletons — still runs, just slower. Spatial motion collapses to an opacity crossfade, never to nothing (the element must still become visible).
 
+### Motion / React: the SSR trap (THE REDUCED-MOTION GATE)
+
+Do NOT gate `initial`, `animate`, or `whileInView` on `useReducedMotion()`:
+
+```tsx
+// WRONG — SSR hydration trap. useReducedMotion() reads a client-only
+// preference (null/false on the server, true on the client for reduced-motion
+// users), so the server bakes `opacity:0` into the HTML and the client renders
+// visible. React 19 leaves the server's `opacity:0` in place — blank section.
+const reduce = useReducedMotion()
+<motion.div initial={reduce ? undefined : { opacity: 0, y: 16 }} />
+```
+
+Wrap the app once and write animations plainly:
+
+```tsx
+// theme-provider.tsx (or any root "use client" wrapper)
+import { MotionConfig } from "motion/react"
+<MotionConfig reducedMotion="user">{children}</MotionConfig>
+```
+
+```tsx
+// component — no gating, no useReducedMotion
+<motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} />
+```
+
+`reducedMotion="user"` makes Motion honor the preference internally and consistently across SSR and client: it disables transform/layout motion and keeps an opacity-only fade. One config at the root; never per-component gating.
+
+The non-React path is already safe: CSS `@keyframes` and the `@media (prefers-reduced-motion)` block collapse consistently, with no JS to diverge.
+
 ## The named tells
 
 These are the motion signatures of generated code. Treat any one as a critical finding.
@@ -151,6 +181,16 @@ These are the motion signatures of generated code. Treat any one as a critical f
 11. **THE UNIVERSAL STAGGER.** Every section fading up on intersection. The page never settles. One orchestrated entrance.
 12. **THE ANIMATED FOCUS RING.** Focus ring fading in over 200ms, leaving keyboard users without an indicator mid-transition. Focus rings appear instantly. Always.
 13. **THE CELEBRATORY TOAST.** "Done!" for an action whose effect the user can already see. Silent success is taste; toasts are for failures and invisible effects.
+14. **THE REDUCED-MOTION GATE.** Gating `initial`/`animate`/`whileInView` on `useReducedMotion()`. See "Motion / React: the SSR trap" above — it blanks the page for reduced-motion users.
+
+## Performance
+
+`backdrop-filter` is the expensive material on the page, and it's easy to make it jank. Four rules:
+
+- **One backdrop-filter surface per viewport.** The nav, one hero panel, one modal — not three glass cards each blurring the same background. Every blur layer re-samples the backdrop; they multiply.
+- **Never animate the `transform` of the element that owns `backdrop-filter`.** Each frame it moves, the browser re-blurs the whole region behind it — that's the classic glass jank. Put the mount/reveal animation on a parent wrapper and let the glass surface stay still (or animate only `opacity`/`background-color` on the glass itself).
+- **No full-screen grain over animated content.** A fixed `feTurbulence` noise overlay sitting above the page forces a full-viewport recomposite on every animated frame. Rasterize grain to a tiny repeating PNG/WebP tile, keep it `pointer-events-none`, and don't animate anything beneath it in the same pass.
+- **`backdrop-saturate()` adds real cost on top of the blur.** Use it once, on the hero surface, not on every glass element.
 
 ## When in doubt, cut
 
