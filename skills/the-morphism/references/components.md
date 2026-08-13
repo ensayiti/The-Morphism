@@ -18,6 +18,7 @@ The AI reaches for the same nav and footer on every page. That's a tell. Pick de
 | Neubrutalism | N7 Brutal slab · N1b SaaS three-section | N8 Terminal, N9, N12 |
 | Swiss Design | N6 Newspaper masthead · N9 Edge-aligned minimal | N1a, N3 Side-rail |
 | Bauhaus | N1b three-section · N9 Edge-aligned minimal | N12 Banner, N7 Brutal slab |
+| Futurism | N8 Terminal command · N9 Edge-aligned minimal | N7 Brutal slab, N12 Banner |
 
 - **N1a · Wordmark + 2 links** — wordmark left, two text links right. The minimal bar. Reach for it only when the page genuinely has 2 destinations.
   - Glass: frosted bar on scroll. Neo: hard 3px bottom border, all-caps.
@@ -89,6 +90,14 @@ Bauhaus reads chrome flat, geometric, and loud — full-saturation primaries, bl
 - Nav: N1b three-section (geometric wordmark + a primary-color CTA block), N9 Edge-aligned minimal (quiet), N12 Banner (a flat primary band). The nav is a bold grid row, not a container.
 - Footer: Ft1 Mast-headed, Ft2 Inline single line, Ft8 Marquee scroll (a mechanical geometric line). The footer is a colophon or a marquee, not a sitemap.
 - Section heads: S1 Left-margin numbered (geometric label + heavy heading), S3 Sticky, S5 Bottom anchored. Eyebrows default OFF, as everywhere.
+
+## Futurism chrome
+
+Futurism reads chrome as instrumentation — mono, all-caps labels, hairline borders, phosphor glow for the active element, corner notches, near-black.
+
+- Nav: N8 Terminal command (the nav is a CLI prompt), N9 Edge-aligned minimal (wordmark + status light), N7 Brutal slab (all-caps, hard border). The nav is an instrument row, not a container.
+- Footer: Ft4 Dense colophon (credits as a log), Ft2 Inline single line (a status line), Ft8 Marquee scroll (a data ticker). The footer is a log or a ticker, not a sitemap.
+- Section heads: S1 Left-margin numbered (a `01` / `02` index), S3 Sticky, S4 Inline. Eyebrows are allowed here as terminal labels — the one style where a `//`-prefixed tag is native, not a tell.
 
 ## Variation knobs
 

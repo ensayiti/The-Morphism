@@ -2,6 +2,21 @@
 
 All notable changes to The Morphism will be documented in this file.
 
+## [3.6.0] — 2026-08-13
+
+### Added
+
+- **Futurism — the fifth style.** Full treatment in SKILL.md: signal words, dial preset `3 / 0 / 0 / 4-8`, an exact CSS recipe (near-black neutral backgrounds, phosphor glow, corner notches, CRT scanlines), a Tailwind equivalent, a color system, typography (IBM Plex Mono + Space Mono, mono-only), a copy voice, and seven named tells — THE NEON PURPLE, THE ROUNDED CORNER, THE DROP SHADOW, THE PROPORTIONAL FONT, THE GLOW-ON-EVERYTHING, THE TINTED BACKGROUND, THE GRADIENT WASH. Framed explicitly as Cassette Futurism / terminal UI, not Italian Futurism, not neon synthwave.
+- **A fourth dial, GLOW.** The dial system went from three to four — `DEPTH / SOFTNESS / TRANSLUCENCY / GLOW`. Futurism is the first style that reads `0` on softness/translucency but `4-8` on glow; glass is `0-2`, the rest are `0`. The GLOW dial carries a warning (above 7 is decorative, reserve for active/focus).
+- Futurism takes for all twelve macrostructures in `references/macrostructures.md`, plus a dev-tool / CLI / terminal / gaming / security routing row.
+- Futurism chrome in `references/components.md` — nav N8 Terminal command, footer Ft4 colophon / Ft8 ticker, terminal-label section heads.
+- Package description, keywords, and tags now name Futurism.
+
+### Changed
+
+- "The Three Dials" renamed to "The Four Dials"; the dial-preset and use-case tables gained a GLOW column; quick-reference presets now read as four values.
+- Reduced-motion guidance now covers Futurism's CRT effects (all ambient effects off under `prefers-reduced-motion`).
+
 ## [3.5.0] — 2026-08-13
 
 ### Added
