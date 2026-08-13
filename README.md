@@ -22,7 +22,7 @@ Multiple aesthetic styles. Exact CSS recipes. A motion system. A typographic sca
   <tr>
     <td><b>Glassmorphism</b><br/><sub>Frosted Glass · SaaS landing</sub></td>
     <td><b>Neubrutalism</b><br/><sub>Hard · Portfolios</sub></td>
-    <td><b>Swiss Design</b><br/><sub>Flat· Editorial, Docs</sub></td>
+    <td><b>Swiss Design</b><br/><sub>Flat · Editorial, Docs</sub></td>
     <td><b>Bauhaus</b><br/><sub>Flat · Posters, Arts & Culture</sub></td>
   </tr>
 </table>
