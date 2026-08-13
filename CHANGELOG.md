@@ -2,6 +2,22 @@
 
 All notable changes to The Morphism will be documented in this file.
 
+## [3.4.0] — 2026-08-13
+
+### Added
+
+- **Swiss Design — the third style.** Full treatment in SKILL.md: signal words, dial preset `0 / 0 / 0` (the floor of the dials — flat, rectilinear, opaque), an exact CSS recipe (stone grayscale, opacity-only hierarchy, hairline rules, light headings), a Tailwind equivalent, a color system (one accent at four opacity stops), typography (IBM Plex Sans + fallbacks; headings `300`/`400`, never bold), a copy voice, and six named tells — THE SECOND COLOR, THE BOLD HEADING, THE ROUNDED CORNER, THE PURE WHITE / BLACK, THE WIDE COLUMN, THE THIN SECTION.
+- **`references/macrostructures.md`** — twelve named page shapes (Bento Grid, Marquee Hero, Split Diptych, Stat-Led, Manifesto, Long Document, Workbench, Quote-Led, Photographic, Catalogue, Letter, Portfolio Grid), each with a glass / neo / Swiss take, plus domain routing and a refuse-the-last-three rule.
+- **`references/components.md`** — nav, footer, section-head, and CTA archetypes, variation knobs, a "default away from the AI nav / footer" rule, and a Swiss chrome note.
+- **New tells** — THE AI NAV, THE AI FOOTER, THE EYEBROW, THE SIDE-STRIPE CARD, THE AURORA BLOB, TOKEN IMPROVISATION.
+
+### Changed
+
+- **"Pick the Macrostructure First"** step added to the workflow — state the page shape before the material.
+- Domain routing gained an editorial / docs / archive / museum / typography row (material lean: Swiss).
+- Out-of-scope routing now sends generic "clean minimal" flat design to Swiss Design rather than rejecting it.
+- Package description and keywords now name Swiss Design and international style.
+
 ## [3.3.0] — 2026-08-13
 
 ### Fixed

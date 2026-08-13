@@ -16,6 +16,7 @@ The AI reaches for the same nav and footer on every page. That's a tell. Pick de
 |---|---|---|
 | Glass | N5 Floating pill · N2 Floating chip | N1b, N9, N13 |
 | Neubrutalism | N7 Brutal slab · N1b SaaS three-section | N8 Terminal, N9, N12 |
+| Swiss Design | N6 Newspaper masthead · N9 Edge-aligned minimal | N1a, N3 Side-rail |
 
 - **N1a · Wordmark + 2 links** — wordmark left, two text links right. The minimal bar. Reach for it only when the page genuinely has 2 destinations.
   - Glass: frosted bar on scroll. Neo: hard 3px bottom border, all-caps.
@@ -71,6 +72,14 @@ The section head is where the templated-editorial tell lives. **Default OFF for 
 - **C4 · Sticky bottom bar** — a horizontal bar pinned to the viewport bottom, CTA + one reassurance line.
 
 ---
+
+## Swiss Design chrome
+
+Swiss reads every chrome element flat and typographic — no blur, no hard shadow, hairline rules only.
+
+- Nav: N6 Newspaper masthead (editorial), N9 Edge-aligned minimal (quiet), N1a Wordmark + 2 links. The nav is a rule + wordmark, not a container.
+- Footer: Ft1 Mast-headed, Ft2 Inline single line, Ft4 Dense colophon. The footer is a colophon, not a sitemap.
+- Section heads: S2 Hanging, S3 Sticky, S4 Inline. S1 Left-margin numbered is Swiss's historical home — reach for it only on a genuinely editorial/specimen page.
 
 ## Variation knobs
 

@@ -1,7 +1,7 @@
 {
   "name": "the-morphism",
-  "version": "3.3.0",
-  "description": "Anti-slop morphism & aesthetic design skill for Hermes Agent. Glassmorphism and Neubrutalism — exact CSS recipes, a motion system, a typographic scale, and named anti-patterns. The agent reads the brief, picks the right style, and ships interfaces that don't look AI-generated.",
+  "version": "3.4.0",
+  "description": "Anti-slop morphism & aesthetic design skill for Hermes Agent. Glassmorphism, Neubrutalism, and Swiss Design — exact CSS recipes, a motion system, a typographic scale, and named anti-patterns. The agent reads the brief, picks the right style, and ships interfaces that don't look AI-generated.",
   "author": "XEM",
   "license": "MIT",
   "bin": {
@@ -26,6 +26,9 @@
     "backdrop-blur",
     "neubrutalism",
     "brutalism",
+    "swiss-design",
+    "swiss",
+    "international-style",
     "motion",
     "typography",
     "layout",

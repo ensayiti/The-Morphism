@@ -1,7 +1,7 @@
 ---
 name: the-morphism
-description: "Anti-slop morphism & aesthetic design skill for Hermes Agent. Glassmorphism and Neubrutalism — exact CSS recipes, a motion system, a typographic scale, and named anti-patterns. The agent reads the brief, picks the right style, and ships interfaces that don't look AI-generated. Zero em-dash, zero emoji-as-icon."
-version: 3.3.0
+description: "Anti-slop morphism & aesthetic design skill for Hermes Agent. Glassmorphism, Neubrutalism, and Swiss Design — exact CSS recipes, a motion system, a typographic scale, and named anti-patterns. The agent reads the brief, picks the right style, and ships interfaces that don't look AI-generated. Zero em-dash, zero emoji-as-icon."
+version: 3.4.0
 author: XEM
 license: MIT
 metadata:
@@ -11,7 +11,7 @@ metadata:
 
 # The Morphism
 
-> Two aesthetic styles. One page, one style. The agent reads the brief, picks the right language, and ships interfaces that don't look AI-generated.
+> Three aesthetic styles. One page, one style. The agent reads the brief, picks the right language, and ships interfaces that don't look AI-generated.
 > The recipes are exact. The rules are opinionated. The bans are named. Everything else is taste — and taste is contextual.
 
 ---
@@ -25,7 +25,7 @@ Most AI design output is bad because the model reaches for the same purple gradi
 Read the brief for five signals:
 
 1. **What kind of page?** Landing page, dashboard, portfolio, product card, mobile shell, creative/agency, editorial, settings panel.
-2. **What words did they use?** "glass", "frosted", "blur", "translucent", "premium", "layered" — Glassmorphism. "neubrutalist", "brutalist", "bold", "hard shadows", "thick borders", "blocky", "playful", "loud", "colorful" — Neubrutalism.
+2. **What words did they use?** "glass", "frosted", "blur", "translucent", "premium", "layered" — Glassmorphism. "neubrutalist", "brutalist", "bold", "hard shadows", "thick borders", "blocky", "playful", "loud", "colorful" — Neubrutalism. "swiss", "international style", "typographic", "grid", "editorial", "flat", "minimal", "neutral", "grotesque" — Swiss Design.
 3. **Did they link something?** Reference URLs, screenshots, named products. macOS = frosted glass. Windows 11 = Mica. Linear modals = frosted glass. neobrutalism.dev / neubrutalism.com = the neubrutalist grammar. Apple Vision Pro = the high-translucency end of glass.
 4. **Who's the audience?** Design-forward consumers or enterprise buyers or accessibility-required users. A11y-critical audiences override high-translucency glass immediately. Neubrutalism's loud personality is wrong for trust-first surfaces (healthcare, fintech, government).
 5. **Does a brand already exist?** Logo, colors, type. The style works WITH the brand or it's wrong.
@@ -69,6 +69,7 @@ After the Design Read, set three dials. Every blur, radius, shadow, and layout d
 |---|---|---|---|---|
 | **Glassmorphism** | 4-6 | 3-5 | 7-10 | SaaS landing, hero overlays, nav bars, modals, premium product cards |
 | **Neubrutalism** | 5-7 | 0-1 | 0 | Portfolios, dev tools, startups, ed-tech, playful brands, design agencies |
+| **Swiss Design** | 0 | 0 | 0 | Editorial, documentation, reference, archives, museums, publications, design systems |
 
 ### Use-Case Presets
 
@@ -86,6 +87,8 @@ After the Design Read, set three dials. Every blur, radius, shadow, and layout d
 | Portfolio (designer) | Neubrutalism | 6 | 0 | 0 |
 | Ed-tech / playful brand | Neubrutalism | 6 | 1 | 0 |
 | Creative agency | Neubrutalism | 7 | 0 | 0 |
+| Editorial / magazine / publication | Swiss Design | 0 | 0 | 0 |
+| Docs / reference / archive | Swiss Design | 0 | 0 | 0 |
 
 ---
 
@@ -217,6 +220,49 @@ See `references/glass-landing-example.md` for a complete, build-verified glass l
 
 ---
 
+### Swiss Design
+
+```css
+/* === SWISS DESIGN: flat, grid-disciplined, typographic === */
+.swiss {
+  background: #fafaf9;                             /* stone-50 — never pure white */
+  color: #1c1917;                                  /* stone-900 — never pure black */
+  font-family: "IBM Plex Sans", "Hanken Grotesk", system-ui, sans-serif;
+  border-radius: 0;                                /* rectilinear */
+}
+.swiss-surface { background: #f5f5f4; }            /* stone-100 */
+.swiss-rule    { border-top: 1px solid #e7e5e4; }  /* stone-200 hairline */
+
+/* Hierarchy is opacity, never hue */
+.text-secondary { opacity: 0.7; }
+.text-tertiary  { opacity: 0.4; }
+.text-ghost     { opacity: 0.2; }
+
+/* Headings are light — the Swiss inversion */
+h1, h2 { font-weight: 300; letter-spacing: -0.02em; }
+
+/* One accent, four opacities (Swiss red by default) */
+.accent       { color: #C8102E; }
+.accent-muted { color: rgba(200, 16, 46, 0.6); }
+.accent-tint  { background: rgba(200, 16, 46, 0.2); }
+.accent-wash  { background: rgba(200, 16, 46, 0.1); }
+```
+
+**The dials don't tune here.** Swiss Design is `0 / 0 / 0` — flat, rectilinear, opaque. There is no depth to dial up and no blur to turn on. The grid, the type, and the whitespace do the work instead.
+
+**The rules that make it Swiss:**
+- **Opacity, not hue, creates hierarchy.** Never a second color to signal importance. `0.7` secondary, `0.4` tertiary, `0.2` ghost. Mid-scale grays for text weight are the tell.
+- **Headings are light, never bold.** `300` for display and h1, `400` for h2–h3, `500` for in-body emphasis. Bold headings are the AI default and the fastest way to look un-Swiss.
+- **Rectilinear.** No border-radius on structural elements. Rounded corners are glass's language; Swiss is square.
+- **12-column grid, 8px base unit.** Generous whitespace (`py-16` minimum between sections). Body never wider than 60ch.
+- **One accent.** Swiss red `#C8102E` by default; alternates: cobalt `#003B8E`, golden `#F0B429`, forest `#2D6A4F`. Used at full / 60% / 20% / 10% opacity only.
+
+**When to use:** Editorial, documentation, reference, archives, museums, publications, design systems — anything that should read as *ordered, objective, timeless*. The information is the design.
+
+**When NOT to use:** Playful brands, loud consumer products, anything that needs to feel warm or emotional, or a brief that asks for "premium" or "layered" (that's glass). Say so explicitly if the brief pushes Swiss where it doesn't belong.
+
+---
+
 ## Tailwind Equivalents
 
 Same recipes, Tailwind v4 utility classes. CSS-first config — no `tailwind.config.js`. Use `@tailwindcss/postcss` or the Vite plugin.
@@ -259,6 +305,23 @@ Same recipes, Tailwind v4 utility classes. CSS-first config — no `tailwind.con
 ">
   CLICK
 </button>
+```
+
+---
+
+### Swiss Design
+
+```html
+<div class="
+  bg-stone-50 text-stone-900 font-[IBM_Plex_Sans,system-ui]
+  rounded-none border-b border-stone-200 p-6
+">
+  <!-- hierarchy via opacity, headings light -->
+  <h2 class="text-3xl font-light tracking-tight leading-snug">The Typographic Grid</h2>
+  <p class="text-base leading-relaxed max-w-[60ch] text-stone-900/70">Body copy at secondary opacity.</p>
+  <span class="text-xs uppercase tracking-wide text-stone-900/40">Caption</span>
+  <button class="rounded-none bg-[#C8102E] px-6 py-3 font-normal text-white">Register</button>
+</div>
 ```
 
 ---
@@ -324,6 +387,7 @@ Then reference tokens with template literals: `className={GLASS.card}`, `classNa
 **Recommended by style:**
 - **Glassmorphism:** Geist, Outfit, Satoshi (crisp, modern — lets the material speak).
 - **Neubrutalism:** Syne, Space Grotesk, Bricolage Grotesque, Archivo Black for display; Inter or Geist for body (calm, boring on purpose); Space Mono or Geist Mono for the outlier.
+- **Swiss Design:** IBM Plex Sans (primary), Hanken Grotesk, Barlow, Host Grotesk (fallbacks, in that order). Light weights only — headings `300`/`400`, never bold.
 
 **Available typefaces:**
 - **Default:** Geist Sans + Geist Mono (shadcn/ui default)
@@ -483,6 +547,14 @@ Every glass element MUST ship a solid fallback. Never ship glass without it. (Ne
 - **THE FULL-VOLUME PAGE.** Every component at maximum saturation. One to three saturated accents against a black-and-white base. If everything shouts, nothing is loud.
 - **THE PASTEL-ON-PASTEL.** Low-contrast fills that fail 4.5:1. Loud is fine; unreadable is not.
 
+### Swiss Design Tells
+- **THE SECOND COLOR.** Using a second hue to signal hierarchy instead of opacity. Swiss hierarchy is opacity only — `text-stone-900/70`, never `text-stone-500`.
+- **THE BOLD HEADING.** `font-weight: 700` on a heading. Swiss headings are light (`300`). Bold is the AI default.
+- **THE ROUNDED CORNER.** `border-radius` on a card or button. Swiss is rectilinear — `rounded-none`, or `rounded-sm` at most.
+- **THE PURE WHITE / BLACK.** `bg-white` or `bg-black`. Swiss uses the stone scale — paper is `#fafaf9`, ink is `#1c1917`.
+- **THE WIDE COLUMN.** Body text over 60ch. Swiss measure is narrow; wider columns are illegible.
+- **THE THIN SECTION.** Section padding under `py-16`. Whitespace IS the design; thin sections are un-Swiss.
+
 ---
 
 ## How Things Move
@@ -545,6 +617,11 @@ useEffect(() => {
 - **Accents:** one to three saturated pops — bold yellow `#ffd23f`, coral pink `#ff6b6b`, sky blue `#74b9ff`, soft green `#88d498`, orange `#ffa552`, lavender `#b8a9fa`. Pick and stay consistent.
 - **Text:** black on light fills, off-white on dark fills. Yellow as a *fill* with black text, never yellow text on white (fails contrast).
 
+### Swiss Design
+- **Grayscale is the palette.** The stone scale (`#fafaf9` paper to `#1c1917` ink), never pure white or black. Hierarchy is opacity, never hue — `0.7` secondary, `0.4` tertiary, `0.2` ghost. Never mid-scale gray for text weight.
+- **One accent.** Swiss red `#C8102E` by default; cobalt `#003B8E`, golden `#F0B429`, forest `#2D6A4F` as alternates. At full / 60% / 20% / 10% opacity only.
+- **Dark mode:** flip the stone scale (`stone-950` paper, `stone-50` ink); the opacity values stay identical.
+
 ---
 
 ## Don't Build the Same Page Twice
@@ -602,6 +679,7 @@ Name something real. A place, a date, a number, a verb that means something:
 |---|---|
 | Glassmorphism | Precise, modern, one level cooler than the reader. "The API for developers who ship on Fridays." |
 | Neubrutalism | Loud, punchy, declarative, unapologetic. "WE MAKE THINGS THAT MAKE YOU LOOK." |
+| Swiss Design | Objective, measured, declarative. "The grid system is an aid, not a guarantee." The facts do the selling; adjectives are withheld. |
 
 ### The self-audit
 
@@ -649,6 +727,7 @@ Before the checklist, score the build 1–5 on six axes. Anything < 3 on any axi
 ### Style-Specific
 - [ ] **Glassmorphism:** `backdrop-filter` AND `-webkit-backdrop-filter` both present? Rich background behind the glass? Max 2 layers?
 - [ ] **Neubrutalism:** hard offset shadow (zero blur)? 2–3px black border? Square/near-square corners? Flat color, no gradients? Distinction from Brutalism honored?
+- [ ] **Swiss Design:** grayscale + opacity hierarchy (no second hue)? Headings light (300/400, never bold)? Rectilinear (no border-radius)? 12-col grid + 8px unit? Body ≤ 60ch? One accent at opacity stops?
 
 ### Code Quality
 - [ ] **No `h-screen`** -- using `min-h-[100dvh]`?
@@ -676,7 +755,7 @@ Before the checklist, score the build 1–5 on six axes. Anything < 3 on any axi
 ## Out of Scope
 
 This skill is NOT for:
-- Pure flat design with zero depth or aesthetic character (use a different skill).
+- Flat design that isn't Swiss — generic "clean minimal" without the grid, type, and opacity discipline. That routes to Swiss Design, not out of scope.
 - Other morphism styles (Neumorphism, Claymorphism, Skeuomorphism, Liquid Glass) — not yet covered; say so if the brief asks for them.
 - 3D WebGL/Three.js scenes (this skill is CSS-only depth).
 - Native mobile (use platform HIG: Material Design, Apple HIG).
@@ -696,6 +775,7 @@ If the brief is out of scope, **say so** and recommend the right approach.
 | "clean glass", "subtle frosted", "enterprise glass" | Glassmorphism | 3 / 3 / 5 |
 | "neubrutalist", "neobrutalism", "hard shadows", "thick borders" | Neubrutalism | 6 / 1 / 0 |
 | "bold", "blocky", "playful", "loud", "colorful", "sticker" | Neubrutalism | 6 / 0 / 0 |
+| "swiss", "international style", "typographic", "grid", "editorial", "flat", "neutral" | Swiss Design | 0 / 0 / 0 |
 
 ## Real-World References
 
