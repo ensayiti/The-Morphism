@@ -29,6 +29,14 @@ Multiple aesthetic styles. Exact CSS recipes. A motion system. A typographic sca
     <td><b>Swiss Design</b><br/><sub>Flat · Editorial, Docs</sub></td>
     <td><b>Bauhaus</b><br/><sub>Flat · Posters, Arts & Culture</sub></td>
   </tr>
+  <tr>
+    <td width="25%"><img src="assets/preview/swiss-half.png" alt="Swiss Design" /></td>
+    <td width="25%"><img src="assets/preview/bauhaus-half.png" alt="Bauhaus" /></td>
+  </tr>
+  <tr>
+    <td><b>Swiss Design</b><br/><sub>Flat · Editorial, Docs</sub></td>
+    <td><b>Bauhaus</b><br/><sub>Flat · Posters, Arts & Culture</sub></td>
+  </tr>
 </table>
 
 ---
