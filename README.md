@@ -16,12 +16,16 @@ Multiple aesthetic styles. Exact CSS recipes. A motion system. A typographic sca
   <tr>
     <td width="25%"><img src="assets/preview/glassmorph-half.png" alt="Glassmorphism" /></td>
     <td width="25%"><img src="assets/preview/neubrutalism-half.png" alt="Neubrutalism" /></td>
-    <td width="25%"><img src="assets/preview/futurism-half.png" alt="Futurism" /></td>
-    <td width="25%"><img src="assets/preview/minimalism-half.png" alt="Minimalism" /></td>
   </tr>
   <tr>
     <td><b>Glassmorphism</b><br/><sub>Frosted Glass · SaaS landing</sub></td>
     <td><b>Neubrutalism</b><br/><sub>Hard · Portfolios</sub></td>
+  </tr>
+  <tr>
+    <td width="25%"><img src="assets/preview/futurism-half.png" alt="Futurism" /></td>
+    <td width="25%"><img src="assets/preview/minimalism-half.png" alt="Minimalism" /></td>
+  </tr>
+  <tr>
     <td><b>Futurism</b><br/><sub>Future · Terminal</sub></td>
     <td><b>Minimalism</b><br/><sub>Minimal · UI/UX</sub></td>
   </tr>
