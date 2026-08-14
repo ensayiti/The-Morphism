@@ -2,6 +2,21 @@
 
 All notable changes to The Morphism will be documented in this file.
 
+## [3.7.0] — 2026-08-14
+
+### Added
+
+- **Minimalism — the sixth style.** Full treatment in SKILL.md: signal words, dial preset `0 / 0 / 0 / 0`, an exact CSS recipe (pure-white paper, near-black ink, serif display, underlined controls), a Tailwind equivalent, a color system, typography (Playfair Display display + Noto Sans body), a copy voice, and seven named tells — THE ACCENT COLOR, THE SANS HEADING, THE FILLED BUTTON, THE ROUNDED CORNER, THE DROP SHADOW, THE BOLD HEADING, THE DENSE LAYOUT. Locked to three hard differentiators (serif display, ink-only palette, underlined controls) to stay distinct from Swiss Design, its closest flat sibling.
+- **A flat-family tiebreaker** in Read the Room — splits "flat, minimal, neutral, editorial" into Swiss (sans + grid + one accent), Bauhaus (geometric + primaries + shapes), Minimalism (serif + ink-only + underlined controls).
+- Minimalism takes for all twelve macrostructures in `references/macrostructures.md`, plus a publishing / magazine / gallery / fashion / architecture / luxury routing row.
+- Minimalism chrome in `references/components.md` — nav N9 / N6 / N1a, footer Ft2 / Ft6 / Ft1, section heads S4 / S2 / S3, CTA C3 typographic link as the native control.
+- Package description, keywords, tags, CLI usage, and the plain-text template now name Minimalism (the template also gained the fourth GLOW dial).
+
+### Changed
+
+- Out-of-scope routing now sends generic "clean minimal" flat design to the closest flat style (Swiss / Bauhaus / Minimalism) instead of Swiss alone.
+- Playfair Display's ban in `references/typography.md` clarified: banned as a *body* face only; it is the Minimalism display signature.
+
 ## [3.6.0] — 2026-08-13
 
 ### Added

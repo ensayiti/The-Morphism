@@ -19,6 +19,7 @@ The AI reaches for the same nav and footer on every page. That's a tell. Pick de
 | Swiss Design | N6 Newspaper masthead · N9 Edge-aligned minimal | N1a, N3 Side-rail |
 | Bauhaus | N1b three-section · N9 Edge-aligned minimal | N12 Banner, N7 Brutal slab |
 | Futurism | N8 Terminal command · N9 Edge-aligned minimal | N7 Brutal slab, N12 Banner |
+| Minimalism | N9 Edge-aligned minimal · N6 Newspaper masthead | N1a Wordmark + 2 links, N2 Floating chip |
 
 - **N1a · Wordmark + 2 links** — wordmark left, two text links right. The minimal bar. Reach for it only when the page genuinely has 2 destinations.
   - Glass: frosted bar on scroll. Neo: hard 3px bottom border, all-caps.
@@ -98,6 +99,15 @@ Futurism reads chrome as instrumentation — mono, all-caps labels, hairline bor
 - Nav: N8 Terminal command (the nav is a CLI prompt), N9 Edge-aligned minimal (wordmark + status light), N7 Brutal slab (all-caps, hard border). The nav is an instrument row, not a container.
 - Footer: Ft4 Dense colophon (credits as a log), Ft2 Inline single line (a status line), Ft8 Marquee scroll (a data ticker). The footer is a log or a ticker, not a sitemap.
 - Section heads: S1 Left-margin numbered (a `01` / `02` index), S3 Sticky, S4 Inline. Eyebrows are allowed here as terminal labels — the one style where a `//`-prefixed tag is native, not a tell.
+
+## Minimalism chrome
+
+Minimalism reads chrome as typography — serif wordmark, ink-only, underlined links, hairline rules, no container, no shadow, pure white.
+
+- Nav: N9 Edge-aligned minimal (serif wordmark + one underlined link), N6 Newspaper masthead (editorial), N1a Wordmark + 2 links. The nav is a rule + wordmark, not a container.
+- Footer: Ft2 Inline single line (a quiet credit line), Ft6 Letter close (closes like a letter), Ft1 Mast-headed. The footer is a colophon or a signature, not a sitemap.
+- Section heads: S4 Inline (a small-caps phrase inside the flow), S2 Hanging, S3 Sticky. Eyebrows default OFF, as everywhere.
+- CTA: C3 Typographic link is the native Minimalism CTA — the underlined link IS the button. Never C1 outlined chip, never a filled button.
 
 ## Variation knobs
 

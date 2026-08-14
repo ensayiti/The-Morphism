@@ -34,7 +34,7 @@ The outlier is a *register*, not a third surface:
 On-distribution for every LLM. Do not reach for these without a deliberate reason:
 
 - **Sans:** Inter, Roboto, Open Sans, Lato, Poppins, Source Sans, Nunito, Montserrat, Raleway, Work Sans, DM Sans, system-ui, Arial, Helvetica.
-- **Serif:** Merriweather, Playfair Display (body), Lora, Source Serif, Georgia-as-default.
+- **Serif:** Merriweather, Playfair Display (body), Lora, Source Serif, Georgia-as-default. Playfair Display is banned only as a *body* face — as a display face it is the Minimalism style's signature serif.
 - **Mono:** Courier New, Consolas-as-default, system mono.
 
 If the user insists on one, do it. Otherwise pick from the allowlist below.

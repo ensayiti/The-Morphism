@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const USAGE = `
-the-morphism — Anti-slop Glassmorphism design skill for Hermes Agent
+the-morphism — Anti-slop morphism & aesthetic design skill for Hermes Agent
 
 Usage:
   npx the-morphism init                  Install SKILL.md + references + .txt template (full)
@@ -19,6 +19,10 @@ Files are copied to:
 Aesthetic styles covered (one per page — never mix):
   • Glassmorphism — frosted glass, blur, translucent overlays
   • Neubrutalism — hard shadows, thick borders, flat color
+  • Swiss Design — flat, neutral, typographic, grid
+  • Bauhaus — flat, geometric, primary colors, bold type
+  • Futurism — mono, phosphor glow, terminal, near-black
+  • Minimalism — serif display, ink-only, underlined controls
 `;
 
 function copyDirRecursive(src, dest) {

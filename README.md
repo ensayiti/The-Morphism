@@ -56,6 +56,7 @@ Re-run any time to update. Non-Hermes users: use `--templates-only` and paste th
 | **Swiss Design** | Flat, neutral, typographic, grid-disciplined | Editorial, docs, archives, museums, design systems |
 | **Bauhaus** | Flat, geometric, primary colors, bold type | Posters, arts & culture, education, architecture |
 | **Futurism** | Mono, phosphor glow, terminal, near-black | Dev tools, terminals, dashboards, monitoring, gaming |
+| **Minimalism** | Serif display, ink-only, underlined controls, pure white | Publishing, magazines, galleries, fashion, luxury brands |
 
 One style per page. Never mix. The skill handles the decision — every style comes with an exact CSS recipe, Tailwind v4 equivalents, per-style dial presets, color rules, motion character, copy voice, and named tells of what not to do.
 
