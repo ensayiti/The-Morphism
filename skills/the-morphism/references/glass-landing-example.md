@@ -7,7 +7,7 @@ This is a complete, build-verified glassmorphism landing page built with the `th
 - Next.js 16 (App Router) with TailwindCSS v4
 - Motion (`motion/react`) -- `useInView` for scroll-triggered reveals
 - Lucide icons (no brand icons -- see pitfall below)
-- Outfit font via `next/font/google`
+- Outfit font via Fontshare CSS API (or `@fontsource/outfit`)
 - pnpm as package manager
 
 ## Page structure

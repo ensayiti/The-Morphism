@@ -1,12 +1,12 @@
 ---
 name: the-morphism
 description: "Anti-slop morphism & aesthetic design skill for Hermes Agent. Glassmorphism, Neubrutalism, Bauhaus, Swiss Design, Futurism, and Minimalism — exact CSS recipes, a motion system, a typographic scale, and named anti-patterns. The agent reads the brief, picks the right style, and ships interfaces that don't look AI-generated. Zero em-dash, zero emoji-as-icon."
-version: 3.7.0
+version: 3.8.0
 author: XEM
 license: MIT
 metadata:
   hermes:
-    tags: [frontend, design, glassmorphism, neubrutalism, brutalism, bauhaus, futurism, minimalism, serif, editorial, css, tailwindcss, anti-slop]
+    tags: [frontend, design, glassmorphism, neubrutalism, brutalism, bauhaus, futurism, minimalism, serif, editorial, fontshare, css, tailwindcss, anti-slop]
 ---
 
 # The Morphism
@@ -244,7 +244,7 @@ See `references/glass-landing-example.md` for a complete, build-verified glass l
 .swiss {
   background: #fafaf9;                             /* stone-50 — never pure white */
   color: #1c1917;                                  /* stone-900 — never pure black */
-  font-family: "IBM Plex Sans", "Hanken Grotesk", system-ui, sans-serif;
+  font-family: "Familjen Grotesk", "Switzer", system-ui, sans-serif;
   border-radius: 0;                                /* rectilinear */
 }
 .swiss-surface { background: #f5f5f4; }            /* stone-100 */
@@ -287,7 +287,7 @@ h1, h2 { font-weight: 300; letter-spacing: -0.02em; }
 .bauhaus {
   background: #F5F0E6;                     /* cream paper — never a pastel, never pure white alone */
   color: #000000;                          /* black ink */
-  font-family: "Jost", "Archivo", system-ui, sans-serif;
+  font-family: "Excon", "Archivo", system-ui, sans-serif;
   border-radius: 0;                        /* rectilinear */
 }
 .bauhaus-primary   { background: #E2062C; color: #F5F0E6; }   /* red */
@@ -306,7 +306,7 @@ h1, h2 { font-weight: 300; letter-spacing: -0.02em; }
 **The rules that make it Bauhaus:**
 - **Three primaries + black + cream.** Red `#E2062C`, yellow `#FFDD00`, blue `#00509E`, black `#000000`, cream `#F5F0E6`. Flat fills at full saturation. No gradients, no shadows, no blur, no opacity ladder (that's Swiss).
 - **Geometry is the composition.** Circle, square, and triangle are structural elements — they carve the layout, not decorate it. Compose asymmetrically; centered-everything is the AI default.
-- **Bold geometric type.** Headings are heavy (`700`/`800`, uppercase). Bauhaus is the inverse of Swiss's light type. One geometric face does the work (Jost).
+- **Bold geometric type.** Headings are heavy (`700`/`800`, uppercase). Bauhaus is the inverse of Swiss's light type. One geometric face does the work (Excon).
 - **Yellow is a fill, never text.** Black text on yellow. Cream text on red and blue. Yellow text on cream fails contrast.
 - **Rectilinear.** No border-radius on structural elements — the circle shape is the only rounding on the page.
 
@@ -323,7 +323,7 @@ h1, h2 { font-weight: 300; letter-spacing: -0.02em; }
 .futurism {
   background: #050505;                        /* near-black — neutral, NO color tint */
   color: #E0D5BE;                             /* bone text */
-  font-family: "IBM Plex Mono", "Space Mono", monospace;
+  font-family: "Azeret Mono", monospace;
   border-radius: 0;                           /* zero radius — chamfered, not rounded */
   border: 1px solid #252525;
 }
@@ -351,7 +351,7 @@ h1, h2 { font-weight: 300; letter-spacing: -0.02em; }
 **The dials that matter here are `GLOW`.** Futurism is `3 / 0 / 0` on depth/softness/translucency — near-black, zero-radius, opaque — and `4-8` on glow. The glow IS the style. No glow, and you've built a dark Swiss page in mono.
 
 **The rules that make it Futurism:**
-- **Mono only.** IBM Plex Mono for everything; Space Mono as the outlier. Every character on the grid. Headings `700` with `0.05em` tracking; labels all-caps. Base size 14-16px.
+- **Mono only.** Azeret Mono for everything — Fontshare's one mono, so the outlier slot is dropped. Every character on the grid. Headings `700` with `0.05em` tracking; labels all-caps. Base size 14-16px.
 - **Zero radius, chamfered corners.** `border-radius: 0` globally; use `clip-path` corner notches for emphasis. Never rounded.
 - **Phosphor glow, not drop shadow.** Glow is `box-shadow` with the accent color and zero offset (`0 0 8px`). A blurry black drop shadow is the tell.
 - **Deliberate palette.** Green `#00ed3f` (alive), amber `#ff8800` (warning), red `#cc2200` (danger), blue `#4466cc` (info). Bone `#E0D5BE` is the text. Near-black backgrounds `#050505` / `#0D0D0D` / `#141414` — neutral, never color-tinted.
@@ -373,11 +373,11 @@ h1, h2 { font-weight: 300; letter-spacing: -0.02em; }
 .minimal {
   background: #ffffff;                           /* pure white — the one style allowed pure white */
   color: #1a1a1a;                                /* near-black ink */
-  font-family: "Noto Sans", system-ui, sans-serif;   /* body is sans */
+  font-family: "Switzer", system-ui, sans-serif;     /* body is sans */
   border-radius: 0;                              /* square */
 }
 .minimal-heading {
-  font-family: "Playfair Display", Georgia, serif;    /* the ONLY serif display in the skill */
+  font-family: "Zodiak", Georgia, serif;               /* the ONLY serif display in the skill */
   font-weight: 400;                              /* regular, never bold */
   letter-spacing: 0.02em;
   text-transform: uppercase;                     /* print / fashion register */
@@ -390,7 +390,7 @@ h1, h2 { font-weight: 300; letter-spacing: -0.02em; }
 
 /* Controls are underlined text-links, never filled */
 .minimal-btn {
-  font-family: "Noto Sans", system-ui, sans-serif;
+  font-family: "Switzer", system-ui, sans-serif;
   background: none;
   border: none;
   border-bottom: 1px solid #1a1a1a;              /* the underline IS the control */
@@ -407,10 +407,10 @@ h1, h2 { font-weight: 300; letter-spacing: -0.02em; }
 **The dials don't tune here.** Minimalism is `0 / 0 / 0 / 0` — flat, rectilinear, opaque, like Swiss and Bauhaus. But where Swiss is sans + grid + one accent (institutional) and Bauhaus is geometric + primaries (poster), Minimalism is serif + ink-only + underlined controls (print, quiet luxury). It is the third style at the dial floor, and the quietest.
 
 **The rules that make it Minimalism:**
-- **Serif display.** Playfair Display for headings — the ONLY serif display in the skill. Body stays sans (Noto Sans). Never sans headings, never serif body (Playfair-as-body is banned).
+- **Serif display.** Zodiak for headings — the ONLY serif display in the skill. Body stays sans (Switzer). Never sans headings, never serif body (Zodiak-as-body is banned).
 - **Ink-only palette.** No accent color, ever. Primary IS near-black ink. Hierarchy via weight, size, whitespace, and ink opacity (0.6 / 0.4) — never a second hue. Swiss keeps one accent; Minimalism keeps none.
 - **Underlined controls.** Buttons are underlined text-links. Never filled pills, never solid buttons, never outlined chips. The underline is the affordance.
-- **Uppercase headings, regular weight.** Playfair uppercase with wide tracking reads print / fashion. `font-weight: 400`, never bold. The bold heading is the tell.
+- **Uppercase headings, regular weight.** Zodiak uppercase with wide tracking reads print / fashion. `font-weight: 400`, never bold. The bold heading is the tell.
 - **Pure white paper.** Background is pure white (`#ffffff` / `oklch(1 0 0)`), not Swiss's stone. Ink is near-black (`#1a1a1a` / `oklch(0.214)`), not pure black.
 - **Square and shadowless.** `border-radius: 0`, no box-shadow, no glow, no blur. Depth comes from whitespace, never elevation.
 - **Whitespace is the material.** Wide margins, short measure (45-65ch), generous section padding (`py-16` minimum). A dense layout is the tell.
@@ -471,7 +471,7 @@ Same recipes, Tailwind v4 utility classes. CSS-first config — no `tailwind.con
 
 ```html
 <div class="
-  bg-stone-50 text-stone-900 font-[IBM_Plex_Sans,system-ui]
+  bg-stone-50 text-stone-900 font-[Familjen_Grotesk,Switzer,system-ui]
   rounded-none border-b border-stone-200 p-6
 ">
   <!-- hierarchy via opacity, headings light -->
@@ -485,7 +485,7 @@ Same recipes, Tailwind v4 utility classes. CSS-first config — no `tailwind.con
 ### Bauhaus
 
 ```html
-<div class="bg-[#F5F0E6] text-black rounded-none font-[Jost,system-ui] p-6">
+<div class="bg-[#F5F0E6] text-black rounded-none font-[Excon,system-ui] p-6">
   <h2 class="text-4xl font-bold uppercase tracking-tight">Form Follows Function</h2>
   <p class="text-base max-w-[60ch]">Flat fills, primary color, geometric type. No gradient, no shadow, no blur.</p>
   <div class="flex gap-4">
@@ -500,7 +500,7 @@ Same recipes, Tailwind v4 utility classes. CSS-first config — no `tailwind.con
 ### Futurism
 
 ```html
-<div class="bg-[#050505] text-[#E0D5BE] border border-[#252525] rounded-none font-[IBM_Plex_Mono,monospace] p-6">
+<div class="bg-[#050505] text-[#E0D5BE] border border-[#252525] rounded-none font-[Azeret_Mono,monospace] p-6">
   <span class="text-xs uppercase tracking-[0.08em] text-[#00ed3f]">// SYSTEM ONLINE</span>
   <h2 class="text-3xl font-bold tracking-[0.05em] text-[#00ed3f] [text-shadow:0_0_6px_#00ed3f99,0_0_14px_#00ed3f55]">SIGNAL ACQUIRED</h2>
   <p class="text-sm text-[#E0D5BE]/70">4 transmissions buffered. Awaiting input.</p>
@@ -511,8 +511,8 @@ Same recipes, Tailwind v4 utility classes. CSS-first config — no `tailwind.con
 ### Minimalism
 
 ```html
-<div class="bg-white text-[#1a1a1a] rounded-none font-[Noto_Sans,system-ui] p-6">
-  <h2 class="font-[Playfair_Display,Georgia,serif] text-4xl font-normal uppercase tracking-[0.02em]">The Quarterly</h2>
+<div class="bg-white text-[#1a1a1a] rounded-none font-[Switzer,system-ui] p-6">
+  <h2 class="font-[Zodiak,Georgia,serif] text-4xl font-normal uppercase tracking-[0.02em]">The Quarterly</h2>
   <p class="text-base leading-relaxed max-w-[60ch] text-[#1a1a1a]/60">For people who read. No accents, no noise, one ink.</p>
   <button class="bg-transparent border-0 border-b border-[#1a1a1a] rounded-none px-0 py-1 text-xs uppercase tracking-[0.08em] hover:opacity-60">Subscribe</button>
 </div>
@@ -527,14 +527,14 @@ Before you generate anything, read what's already there. Stomping on an existing
 Check these four things in order:
 
 1. **package.json** — what framework? Next.js, Astro, Vite, Svelte, Remix, or vanilla? What motion library is installed (motion, gsap, framer-motion)?
-2. **Font stack** — is `next/font` importing Geist? Is `@fontsource` pulling Inter? Is there a `tailwind.config` with `theme.extend.fontFamily`? Whatever is there, preserve it.
+2. **Font stack** — is the Fontshare CSS API linked? Are `@fontsource` packages pulling Fontshare families? Is there a `tailwind.config` with `theme.extend.fontFamily`? Whatever is there, preserve it.
 3. **Palette** — any `:root` CSS custom properties? OKLCH values in global CSS? Tailwind `@theme` block with color tokens? Don't overwrite them.
 4. **Icons** — `lucide-react` or `@phosphor-icons/react` in dependencies? Use what's installed. Don't install a second library mid-session.
 
 State what you found in one line before the Design Read. If the project is empty, say so and proceed.
 
 ```
-Found: Next.js + Tailwind v4, Geist Sans via next/font, lucide-react, no motion lib.
+Found: Next.js + Tailwind v4, Satoshi via Fontshare CDN, lucide-react, no motion lib.
 Preserving: font stack, icon library. I'll introduce: the style surfaces, GSAP for scroll.
 ```
 
@@ -547,9 +547,7 @@ If the user says "ignore the existing project," skip this. Otherwise, the scan i
 ### Framework
 - **Any framework** with TailwindCSS v4: Next.js, Astro, Vite + React, Svelte, Remix, or plain HTML. The CSS recipes above are pure CSS — they work everywhere. Tailwind utility equivalents use standard classes (no framework lock-in).
 - **Tailwind v4 notes:** CSS-first config. Use `@tailwindcss/postcss` or Vite plugin. No `tailwind.config.js`. Dark mode via `dark:` variant. Container queries and arbitrary values work natively.
-- **Font loading by framework:**
-  - **Next.js:** `next/font/google` for automatic subsetting and `font-display: swap`.
-  - **Astro / Vite / Svelte / Remix:** `@fontsource` packages (e.g. `@fontsource/geist-sans`) or self-host with `@font-face` + `font-display: swap`. Never link Google Fonts via `<link>` in production.
+- **Font loading by framework (Fontshare only):** `next/font/google` cannot load Fontshare families. Use Fontshare's CSS API — `<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">` — in any framework, or self-host via `@fontsource` where the family ships there (Outfit, Space Grotesk, Archivo, Anton, Familjen Grotesk, Azeret Mono) and `@font-face` + `font-display: swap` otherwise. Never link Google Fonts via `<link>` in production.
 - **Motion (mount animations):** Works with any React-compatible framework (Next.js, Vite + React, Remix). Import from `motion/react`. Use for: on-mount entrance animations (hero headlines, nav, initial load). For non-React frameworks (Astro, Svelte, plain HTML), use CSS `@keyframes` + `animation` or the Web Animations API (`element.animate()`) for mount effects.
 - **GSAP + ScrollTrigger (scroll animations):** Framework-agnostic. Use for: scroll-driven reveals (features grids, CTAs, demo panels, staggered card entrances). In React: `useRef` + `gsap.context()` + cleanup in `useEffect`. See `references/gsap-setup.md` for patterns across frameworks.
 - **The split:** Motion (or CSS animations) for mount, GSAP+ScrollTrigger for scroll. Never use GSAP for on-mount — it's heavier and imperative; Motion and CSS are declarative and simpler for that job.
@@ -574,24 +572,31 @@ const NEUBRUTAL = {
 
 Then reference tokens with template literals: `className={GLASS.card}`, `className={[NEUBRUTAL.btn, "flex-1"].join(" ")}`. Benefits: (a) every element stays on the same recipe, (b) tuning a dial means changing one value and every element updates, (c) the file is scannable instead of 150-line class strings on every div. For pages with only one or two styled surfaces, inline classes are fine.
 
-### Fonts (shadcn/ui ecosystem)
-- **Next.js:** Use `next/font/google` for automatic subsetting and `font-display: swap`.
-- **Other frameworks (Astro, Vite, Svelte, Remix):** Use `@fontsource` packages (e.g. `npm install @fontsource/geist-sans`) or self-host with `@font-face` + `font-display: swap`. Never link Google Fonts via `<link>` in production.
+### Fonts (Fontshare only)
+
+Every style in this skill uses Fontshare fonts. Google Fonts and Adobe Fonts are out; `next/font/google` cannot load Fontshare families. Load via Fontshare's CSS API, or self-host:
+
+- **Fontshare CSS API (simplest — works in dev and prod):**
+  ```html
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=general-sans@400&display=swap" rel="stylesheet">
+  ```
+  One `<link>` per family group; weights declared with `@`; `display=swap` in the URL.
+- **Self-host (preferred for production):** families that also ship on Google (Outfit, Space Grotesk, Archivo, Anton, Familjen Grotesk, Azeret Mono) have `@fontsource` packages (`npm install @fontsource/outfit`). Fontshare-exclusive families (Satoshi, General Sans, Switzer, Clash Display, Clash Grotesk, Cabinet Grotesk, Excon, Zodiak, Melodrama) have no `@fontsource` package — download the woff2 from Fontshare and self-host with `@font-face` + `font-display: swap`.
 
 **Recommended by style:**
-- **Glassmorphism:** Geist, Outfit, Satoshi (crisp, modern — lets the material speak).
-- **Neubrutalism:** Syne, Space Grotesk, Bricolage Grotesque, Archivo Black for display; Inter or Geist for body (calm, boring on purpose); Space Mono or Geist Mono for the outlier.
-- **Swiss Design:** IBM Plex Sans (primary), Hanken Grotesk, Barlow, Host Grotesk (fallbacks, in that order). Light weights only — headings `300`/`400`, never bold.
-- **Bauhaus:** Jost (display, the Futura clone — geometric, points on A/M/N), Archivo (body). Headings bold (`700`/`800`) and uppercase — the loud inverse of Swiss's light type.
-- **Futurism:** IBM Plex Mono (the exclusive face), Space Mono (outlier). The one mono-only style — display and body share the same grid. Headings `700` + `0.05em` tracking; labels all-caps.
-- **Minimalism:** Playfair Display (display, serif — the ONLY serif display in the skill) + Noto Sans (body). Headings regular `400`, often uppercase with wide tracking, never bold. Playfair is banned as a body face; as a display face it is the whole point.
+- **Glassmorphism:** Satoshi (display), General Sans (body) — crisp, modern, lets the material speak. Outfit as the restrained alternative; Azeret Mono for code and the outlier slot.
+- **Neubrutalism:** Clash Display, Space Grotesk, Clash Grotesk for display; Anton for the one heavy hero moment; General Sans for body (calm, boring on purpose); Azeret Mono for the outlier.
+- **Swiss Design:** Familjen Grotesk (primary), Switzer, General Sans (fallbacks, in that order). Light weights only — headings `300`/`400`, never bold.
+- **Bauhaus:** Excon (display, the Futura clone — geometric, points on A/M/N), Archivo (body). Headings bold (`700`/`800`) and uppercase — the loud inverse of Swiss's light type.
+- **Futurism:** Azeret Mono — the only mono Fontshare carries, so it is the exclusive face and the outlier slot is dropped. Display and body share the same grid. Headings `700` + `0.05em` tracking; labels all-caps.
+- **Minimalism:** Zodiak (display, serif — the ONLY serif display in the skill) + Switzer (body). Headings regular `400`, often uppercase with wide tracking, never bold. Melodrama as the fashion-forward display alternative.
 
-**Available typefaces:**
-- **Default:** Geist Sans + Geist Mono (shadcn/ui default)
-- **Sans-serif options:** Inter, Outfit, Plus Jakarta Sans, DM Sans, Manrope, Space Grotesk, Public Sans, Work Sans, Jost, Kumbh Sans, Archivo
-- **Display / wide:** Sora, Syne, Archivo Black, Bricolage Grotesque, Clash Display, Cabinet Grotesk (self-host), Satoshi (self-host)
-- **Mono options:** Geist Mono, JetBrains Mono, Fira Code, IBM Plex Mono, Space Mono
-- **Serif options:** Newsreader, Playfair Display, Lora, Merriweather, EB Garamond
+**Available typefaces (all Fontshare):**
+- **Default:** General Sans + Azeret Mono (Fontshare's workhorse + its only mono)
+- **Sans-serif options:** Satoshi, General Sans, Switzer, Outfit, Space Grotesk, Familjen Grotesk, Archivo, Clash Grotesk, Cabinet Grotesk, Sora, Manrope
+- **Display / wide:** Clash Display, Excon, Anton, Panchang, Stardom, Technor, Trench Slab, Sharpie, Nippo, Alpino
+- **Mono options:** Azeret Mono (the only one)
+- **Serif options:** Zodiak, Melodrama, Sentient, Gambetta, Boska, Erode, Gambarino, Recia, Rowan
 
 For the full type system — the 2+1 rule, the ratio-based scale, measure (45–75ch), weight contrast, and hero-headline-length sizing — see `references/typography.md`. For the spacing scale, z-index scale, grid rules, and the "one layout family per page" rule — see `references/layout.md`.
 
@@ -678,7 +683,7 @@ Every glass element MUST ship a solid fallback. Never ship glass without it. (Ne
 
 **EMOJI AS ICONS.** Banned. Use icon library glyphs. Emoji only when the user explicitly asks for a playful/social-native vibe, and sparingly even then.
 
-**INTER-BY-DEFAULT.** Inter as the only font on a page reads as "I didn't think about type." For glass, pick a font with a pulse — Geist, Outfit, or Satoshi. (Neubrutalism is the one exception: Inter is fine as the *body* face there, because the body should be boring on purpose — but the display face must still be loud, e.g. Syne or Space Grotesk.)
+**INTER-BY-DEFAULT.** Inter as the only font on a page reads as "I didn't think about type." For glass, pick a font with a pulse — Satoshi, General Sans, or Outfit. (Neubrutalism is the one exception: General Sans is fine as the *body* face there, because the body should be boring on purpose — but the display face must still be loud, e.g. Clash Display or Space Grotesk.)
 
 **AI COPY CLICHES.** "Elevate." "Seamless." "Unleash." "Next-Gen." "Game-changer." "Delve." "Revolutionize." These are not words — they're the model filling space because it doesn't know what the product does. Write plain, specific language. If the brief gave you nothing, say so and ask for one concrete noun.
 
@@ -765,7 +770,7 @@ Every glass element MUST ship a solid fallback. Never ship glass without it. (Ne
 - **THE GEOMETRIC WALLPAPER.** Scattered triangles and circles as a decorative backdrop instead of geometry that composes the layout. Shapes are structural, not wallpaper.
 - **THE SYMMETRIC LAYOUT.** Centered everything. Bauhaus composes asymmetrically; a symmetric layout is the AI default.
 - **THE ORNAMENT.** A "bauhaus" badge, a logo-as-decoration, or any flourish. Bauhaus is the absence of ornament, by definition.
-- **THE SECOND FONT.** More than one geometric face. Jost does the work; a second face only for body clarity.
+- **THE SECOND FONT.** More than one geometric face. Excon does the work; a second face only for body clarity.
 - **THE ROUNDED CORNER.** `border-radius` on structural elements. The literal circle shape is the only rounding on the page.
 
 ### Futurism Tells
@@ -981,9 +986,9 @@ Before the checklist, score the build 1–5 on six axes. Anything < 3 on any axi
 - [ ] **Glassmorphism:** `backdrop-filter` AND `-webkit-backdrop-filter` both present? Rich background behind the glass? Max 2 layers?
 - [ ] **Neubrutalism:** hard offset shadow (zero blur)? 2–3px black border? Square/near-square corners? Flat color, no gradients? Distinction from Brutalism honored?
 - [ ] **Swiss Design:** grayscale + opacity hierarchy (no second hue)? Headings light (300/400, never bold)? Rectilinear (no border-radius)? 12-col grid + 8px unit? Body ≤ 60ch? One accent at opacity stops?
-- [ ] **Bauhaus:** flat fills (no gradient/shadow/blur)? Three primaries + black + cream (no pastels)? Geometry as composition, not decoration? Bold geometric type (Jost)? Rectilinear? Asymmetric composition? Yellow-as-fill-not-text?
-- [ ] **Futurism:** mono only (IBM Plex Mono)? Zero radius + chamfered notches (no rounded)? Phosphor glow, not drop shadow? Neutral near-black background (no tint)? Deliberate palette (green/amber/red/blue)? Glow reserved for alive/focus? CRT effects gated by reduced-motion?
-- [ ] **Minimalism:** serif display (Playfair, never sans)? Ink-only palette (zero accent)? Underlined controls (no filled buttons)? Pure white paper + near-black ink? Square, shadowless (`0 / 0 / 0 / 0`)? Headings regular-weight, not bold? Generous whitespace (no dense layout)?
+- [ ] **Bauhaus:** flat fills (no gradient/shadow/blur)? Three primaries + black + cream (no pastels)? Geometry as composition, not decoration? Bold geometric type (Excon)? Rectilinear? Asymmetric composition? Yellow-as-fill-not-text?
+- [ ] **Futurism:** mono only (Azeret Mono)? Zero radius + chamfered notches (no rounded)? Phosphor glow, not drop shadow? Neutral near-black background (no tint)? Deliberate palette (green/amber/red/blue)? Glow reserved for alive/focus? CRT effects gated by reduced-motion?
+- [ ] **Minimalism:** serif display (Zodiak, never sans)? Ink-only palette (zero accent)? Underlined controls (no filled buttons)? Pure white paper + near-black ink? Square, shadowless (`0 / 0 / 0 / 0`)? Headings regular-weight, not bold? Generous whitespace (no dense layout)?
 
 ### Code Quality
 - [ ] **No `h-screen`** -- using `min-h-[100dvh]`?
@@ -999,7 +1004,7 @@ Before the checklist, score the build 1–5 on six axes. Anything < 3 on any axi
 - [ ] **No AI copy cliches** ("Elevate", "Seamless", "Unleash", etc.)?
 - [ ] **No generic placeholders** ("John Doe", "Acme Corp", "Lorem Ipsum")?
 - [ ] **No pill badge** (`rounded-full bg-white/10 backdrop-blur ...`) -- bare text label + icon only?
-- [ ] **Font is not Inter-by-default** (glass: Geist/Outfit/Satoshi; neubrutalism: loud display face)?
+- [ ] **Font is not Inter-by-default** (glass: Satoshi/General Sans/Outfit; neubrutalism: loud display face)?
 - [ ] **No mixing styles** on one page?
 - [ ] **Different page rhythm** than the last build (see Don't Build the Same Page Twice)?
 - [ ] **Copy self-audited** — no banned opening lines, no invented metrics?

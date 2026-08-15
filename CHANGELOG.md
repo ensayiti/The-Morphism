@@ -2,6 +2,15 @@
 
 All notable changes to The Morphism will be documented in this file.
 
+## [3.8.0] — 2026-08-14
+
+### Changed
+
+- **All fonts moved to Fontshare.** Every style's type now comes from fontshare.com: Glassmorphism (Satoshi + General Sans, Outfit alt), Neubrutalism (Clash Display / Space Grotesk / Clash Grotesk display, Anton heavy, General Sans body), Swiss Design (Familjen Grotesk + Switzer), Bauhaus (Excon + Archivo), Futurism (Azeret Mono — Fontshare's only mono, so the second face is dropped), Minimalism (Zodiak + Switzer, Melodrama alt). Google fonts and `next/font/google` are out.
+- **Font loading guidance rewritten** in SKILL.md and `references/typography.md`: Fontshare CSS API (`api.fontshare.com/v2/css`) as the primary path, `@fontsource` where the family also ships on Google (Outfit, Space Grotesk, Archivo, Anton, Familjen Grotesk, Azeret Mono), `@font-face` self-host for Fontshare-exclusive families.
+- **Banned-defaults note added:** Poppins, Montserrat, Nunito, Work Sans, and Public Sans are on Fontshare too — being on Fontshare does not un-ban them.
+- CSS recipes, Tailwind equivalents, the INTER-BY-DEFAULT tell, and the Before You Ship checklist updated to the new faces. Package keywords and tags name Fontshare.
+
 ## [3.7.0] — 2026-08-14
 
 ### Added

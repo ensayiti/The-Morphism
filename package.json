@@ -1,6 +1,6 @@
 {
   "name": "the-morphism",
-  "version": "3.7.0",
+  "version": "3.8.0",
   "description": "Anti-slop morphism & aesthetic design skill for Hermes Agent. Glassmorphism, Neubrutalism, Bauhaus, Swiss Design, Futurism, and Minimalism — exact CSS recipes, a motion system, a typographic scale, and named anti-patterns. The agent reads the brief, picks the right style, and ships interfaces that don't look AI-generated.",
   "author": "XEM",
   "license": "MIT",
@@ -36,6 +36,7 @@
     "minimalism",
     "serif",
     "editorial",
+    "fontshare",
     "motion",
     "typography",
     "layout",

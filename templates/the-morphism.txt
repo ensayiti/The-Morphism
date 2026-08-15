@@ -36,23 +36,23 @@ STYLE QUICK REFERENCE:
 
 • Swiss Design (0/0/0/0): Flat, stone grayscale, opacity-only hierarchy, light headings.
   For: Editorial, docs, archives, museums, design systems.
-  .swiss { background: #fafaf9; color: #1c1917; font-family: "IBM Plex Sans", sans-serif; border-radius: 0; }
+  .swiss { background: #fafaf9; color: #1c1917; font-family: "Familjen Grotesk", sans-serif; border-radius: 0; }
   Hierarchy via opacity (0.7 secondary, 0.4 tertiary). Headings light (300), never bold. One accent.
 
 • Bauhaus (0/0/0/0): Flat, three primaries + black + cream, geometry-led.
   For: Posters, arts & culture, education, architecture.
-  .bauhaus { background: #F5F0E6; color: #000; font-family: "Jost", sans-serif; border-radius: 0; }
+  .bauhaus { background: #F5F0E6; color: #000; font-family: "Excon", sans-serif; border-radius: 0; }
   Red #E2062C, yellow #FFDD00, blue #00509E. Flat fills, no gradient/shadow/blur. Yellow is a fill, never text.
 
 • Futurism (3/0/0/6): Mono, phosphor glow, near-black, zero-radius.
   For: Dev tools, CLIs, terminals, dashboards, gaming.
-  .futurism { background: #050505; color: #E0D5BE; font-family: "IBM Plex Mono", monospace; border-radius: 0; }
+  .futurism { background: #050505; color: #E0D5BE; font-family: "Azeret Mono", monospace; border-radius: 0; }
   Green #00ed3f (alive). Glow = box-shadow 0 0 8px accent, not drop shadow. Glow reserved for alive/focus.
 
 • Minimalism (0/0/0/0): Serif display, ink-only, underlined controls, pure white.
   For: Publishing, magazines, galleries, fashion, luxury.
-  .minimal { background: #fff; color: #1a1a1a; font-family: "Noto Sans", sans-serif; border-radius: 0; }
-  Headings: Playfair Display, regular 400, uppercase. No accent color. Buttons = underlined text-links.
+  .minimal { background: #fff; color: #1a1a1a; font-family: "Switzer", sans-serif; border-radius: 0; }
+  Headings: Zodiak, regular 400, uppercase. No accent color. Buttons = underlined text-links.
 
 MOTION:
 • Animate only transform and opacity. Never width/height/top/left/margin/padding.
@@ -69,8 +69,8 @@ TYPOGRAPHY:
 • Ratio-based scale (1.25 major third) from 16px. Display max ~5rem.
 • Measure 45-75ch. Weight contrast >= 300 units (400 vs 700, never 400 vs 500).
 • Hero headline <= 50 chars.
-• Glass fonts: Geist, Outfit, Satoshi. Neubrutalism: Syne/Space Grotesk display + Inter/Geist body + Space Mono outlier.
-• Banned: gradient text, italic headers, all-caps body. (Inter is banned as default except neubrutalism body.)
+• Fonts (Fontshare only, via api.fontshare.com/v2/css): Glass: Satoshi + General Sans. Neo: Clash Display/Space Grotesk display + General Sans body. Swiss: Familjen Grotesk. Bauhaus: Excon + Archivo. Futurism: Azeret Mono. Minimalism: Zodiak + Switzer.
+• Banned: gradient text, italic headers, all-caps body. (Inter is banned as default; the neo body is General Sans instead.)
 
 LAYOUT:
 • 4pt spacing scale, named steps. Gap for siblings, margin only for optical breaks.
@@ -79,7 +79,8 @@ LAYOUT:
 • Neubrutalism layout: "broken but not random" — asymmetric at macro, aligned at micro.
 
 STACK: TailwindCSS v4, React/Next.js, Motion (mount animations),
-GSAP + ScrollTrigger (scroll animations). Fonts from shadcn/ui ecosystem.
+GSAP + ScrollTrigger (scroll animations). Fonts: Fontshare only
+(https://api.fontshare.com/v2/css?f[]=family@weight&display=swap).
 Icons: Lucide, Phosphor, or Tabler (one family per project; bold weight for neubrutalism).
 
 NON-NEGOTIABLE RULES:

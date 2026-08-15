@@ -16,9 +16,9 @@ A page may use at most **three** font families: one **display**, one **body**, a
 
 ```css
 :root {
-  --font-display:  "Outfit", ui-sans-serif, system-ui, sans-serif;   /* headings, hero */
-  --font-body:     "Geist", ui-sans-serif, system-ui, sans;          /* prose, UI */
-  --font-outlier:  "Geist Mono", ui-monospace, monospace;            /* wordmark + hero stat ONLY */
+  --font-display:  "Satoshi", ui-sans-serif, system-ui, sans-serif;   /* headings, hero */
+  --font-body:     "General Sans", ui-sans-serif, system-ui, sans;    /* prose, UI */
+  --font-outlier:  "Azeret Mono", ui-monospace, monospace;            /* wordmark + hero stat ONLY */
 }
 ```
 
@@ -33,30 +33,34 @@ The outlier is a *register*, not a third surface:
 
 On-distribution for every LLM. Do not reach for these without a deliberate reason:
 
-- **Sans:** Inter, Roboto, Open Sans, Lato, Poppins, Source Sans, Nunito, Montserrat, Raleway, Work Sans, DM Sans, system-ui, Arial, Helvetica.
-- **Serif:** Merriweather, Playfair Display (body), Lora, Source Serif, Georgia-as-default. Playfair Display is banned only as a *body* face — as a display face it is the Minimalism style's signature serif.
-- **Mono:** Courier New, Consolas-as-default, system mono.
+- **Sans:** Inter, Roboto, Open Sans, Lato, Poppins, Source Sans, Nunito, Montserrat, Raleway, Work Sans, DM Sans, system-ui, Arial, Helvetica. Poppins, Montserrat, Nunito, Work Sans, and Public Sans are all on Fontshare — being on Fontshare does not un-ban them.
+- **Serif:** Merriweather, Playfair Display (body), Lora, Source Serif, Georgia-as-default. Zodiak is the Minimalism display signature — it replaces Playfair Display in that role, and it is banned as a *body* face just the same.
+- **Mono:** Courier New, Consolas-as-default, system mono. Azeret Mono is the exception — it is the Futurism face.
 
 If the user insists on one, do it. Otherwise pick from the allowlist below.
 
-## The glass font catalog
+## The font catalog (Fontshare only)
 
-**Recommended for glass — Geist, Outfit, Satoshi.** Crisp, modern, lets the material speak. Also fine: Plus Jakarta Sans, Space Grotesk, Sora.
+**Recommended for glass — Satoshi, General Sans, Outfit.** Crisp, modern, lets the material speak. Also fine: Sora, Space Grotesk, Switzer.
 
-**Recommended for neubrutalism — a loud display + a boring body.** Display: Syne, Space Grotesk, Bricolage Grotesque, Archivo Black (impact, heavy, tight). Body: Inter or Geist (calm, legible, "boring on purpose" — the bold gestures only work if the body stays quiet). Outlier: Space Mono or Geist Mono.
+**Recommended for neubrutalism — a loud display + a boring body.** Display: Clash Display, Space Grotesk, Clash Grotesk, Anton (impact, heavy, tight). Body: General Sans (calm, legible, "boring on purpose" — the bold gestures only work if the body stays quiet). Outlier: Azeret Mono.
 
 | Family | Source | Voice | Best for |
 |---|---|---|---|
-| **Geist** | Google | Modern grotesque, geometric, 7 weights | The default body/display for glass; neubrutalism body |
-| **Outfit** | Google | Modern geometric | Restrained glass display |
-| **Satoshi** | Fontshare | Playful geometric sans | Playful consumer glass |
-| **Syne** | Google | Expressive display, 800 weight | Neubrutalism display |
-| **Space Grotesk** | Google | Geometric, slightly quirky | Neubrutalism display / technical |
-| **Bricolage Grotesque** | Google | Variable display, bold condensable | Neubrutalism display |
-| **Archivo Black** | Google | Heavy grotesque, one weight | Neubrutalism hero moments |
-| **Inter** | Google | Neutral, legible | Neubrutalism body (the one place it's allowed) |
-| **Geist Mono** | Google | Geist's mono companion | Wordmark, hero stat, code |
-| **Space Mono** | Google | Quirky, slightly retro | Neubrutalism outlier / captions |
+| **Satoshi** | Fontshare | Modern geometric, 7 weights | Glass display/body |
+| **General Sans** | Fontshare | Neutral grotesque, 9 weights | The Fontshare workhorse — glass body, neo body, Swiss alt |
+| **Switzer** | Fontshare | Clean, refined grotesque | Swiss alt, Minimalism body |
+| **Outfit** | Fontshare | Modern geometric | Restrained glass display |
+| **Clash Display** | Fontshare | Expressive display, 700 max | Neubrutalism display |
+| **Space Grotesk** | Fontshare | Geometric, slightly quirky | Neubrutalism display / technical |
+| **Clash Grotesk** | Fontshare | Groovy grotesque, variable | Neubrutalism display / alt |
+| **Anton** | Fontshare | Heavy condensed, one weight | Neubrutalism hero moments |
+| **Familjen Grotesk** | Fontshare | Neutral grotesque, variable | Swiss primary |
+| **Excon** | Fontshare | Geometric, Futura clone | Bauhaus display |
+| **Archivo** | Fontshare | Clean grotesque, 9 weights | Bauhaus body |
+| **Azeret Mono** | Fontshare | Mono, 9 weights, variable | Futurism (the only mono), neo/glass outlier |
+| **Zodiak** | Fontshare | High-contrast editorial serif | Minimalism display |
+| **Melodrama** | Fontshare | High-contrast fashion serif | Minimalism fashion alt |
 
 ## Scale
 
@@ -100,7 +104,7 @@ A 100-character headline at display size is the single most reliable AI tell. Wh
 
 ## Required features
 
-- `font-display: swap` on every web font (next/font and @fontsource both do this).
+- `font-display: swap` on every web font (@fontsource and the Fontshare CDN both do this).
 - Tabular numbers on any data display: `font-variant-numeric: tabular-nums`.
 - Proper typographic punctuation: `" " — … ‘ ’`. Never straight quotes, never `--` or `...`.
 - Text over glass needs a `text-shadow` or scrim — see The Rules That Keep It Usable in SKILL.md.

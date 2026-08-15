@@ -30,7 +30,7 @@ The glass, neo, Swiss, Bauhaus, Futurism, and Minimalism takes below are the mat
 - Swiss: one light-weight statement in huge type, vast whitespace, nothing else. The typographic poster.
 - Bauhaus: one heavy uppercase statement in geometric type, a primary-color shape beside it, asymmetric. The poster.
 - Futurism: a huge mono statement in phosphor type over near-black, a status line above, glow on the key word.
-- Minimalism: one huge serif statement in Playfair, uppercase, vast whitespace. The print poster.
+- Minimalism: one huge serif statement in Zodiak, uppercase, vast whitespace. The print poster.
 - Reach for: launch pages, agency splashes, one-idea products. Avoid: content-heavy pages that need the fold to explain.
 
 **03 · Split Diptych** — text on one side, proof on the other. The pairing alternates direction down the page.
@@ -111,7 +111,7 @@ The glass, neo, Swiss, Bauhaus, Futurism, and Minimalism takes below are the mat
 - Swiss: a typeset letter — "Dear X," in light type, formal, one accent reserved for the signature.
 - Bauhaus: a bold typeset letter, "Dear X," in heavy geometric type, a primary-color signature block.
 - Futurism: a terminal message — `> FROM: X`, mono prose, a signature block in glow.
-- Minimalism: NATIVE. First-person, serif, intimate. "Dear X," in Playfair.
+- Minimalism: NATIVE. First-person, serif, intimate. "Dear X," in Zodiak.
 - Reach for: personal sites, founder notes, hand-crafted brands. Avoid: transactional pages.
 
 **12 · Portfolio Grid** — filterable cards of projects. The work is the product.
