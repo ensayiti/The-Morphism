@@ -20,6 +20,7 @@ The AI reaches for the same nav and footer on every page. That's a tell. Pick de
 | Bauhaus | N1b three-section · N9 Edge-aligned minimal | N12 Banner, N7 Brutal slab |
 | Futurism | N8 Terminal command · N9 Edge-aligned minimal | N7 Brutal slab, N12 Banner |
 | Minimalism | N9 Edge-aligned minimal · N6 Newspaper masthead | N1a Wordmark + 2 links, N2 Floating chip |
+| Brutalism | N7 Brutal slab · N1a Wordmark + 2 links | N9 Edge-aligned minimal, N12 Banner |
 
 - **N1a · Wordmark + 2 links** — wordmark left, two text links right. The minimal bar. Reach for it only when the page genuinely has 2 destinations.
   - Glass: frosted bar on scroll. Neo: hard 3px bottom border, all-caps.
@@ -108,6 +109,15 @@ Minimalism reads chrome as typography — serif wordmark, ink-only, underlined l
 - Footer: Ft2 Inline single line (a quiet credit line), Ft6 Letter close (closes like a letter), Ft1 Mast-headed. The footer is a colophon or a signature, not a sitemap.
 - Section heads: S4 Inline (a small-caps phrase inside the flow), S2 Hanging, S3 Sticky. Eyebrows default OFF, as everywhere.
 - CTA: C3 Typographic link is the native Minimalism CTA — the underlined link IS the button. Never C1 outlined chip, never a filled button.
+
+## Brutalism chrome
+
+Brutalism reads chrome as structure — bare links, hard rules, no container, no shadow, monochrome, typed.
+
+- Nav: N7 Brutal slab (hard bottom border, all-caps mono wordmark), N1a Wordmark + 2 links (bare text). The nav is a rule + wordmark, not a container.
+- Footer: Ft2 Inline single line (a raw credit line), Ft4 Dense colophon (mono credits). The footer is a colophon, not a sitemap.
+- Section heads: S1 Left-margin numbered (`01` / `02` in mono), S4 Inline. Eyebrows default OFF, as everywhere.
+- CTA: C3 Typographic link is native — the bare underlined link IS the control. Never a polished button.
 
 ## Variation knobs
 

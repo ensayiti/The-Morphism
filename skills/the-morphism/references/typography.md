@@ -45,6 +45,8 @@ If the user insists on one, do it. Otherwise pick from the allowlist below.
 
 **Recommended for neubrutalism — a loud display + a boring body.** Display: Clash Display, Space Grotesk, Clash Grotesk, Anton (impact, heavy, tight). Body: General Sans (calm, legible, "boring on purpose" — the bold gestures only work if the body stays quiet). Outlier: Azeret Mono.
 
+**Recommended for brutalism — typed, not designed.** Azeret Mono as the voice (typed-document honesty), Archivo only for long prose. No refined pairing, no tracking ceremony.
+
 | Family | Source | Voice | Best for |
 |---|---|---|---|
 | **Satoshi** | Fontshare | Modern geometric, 7 weights | Glass display/body |

@@ -1,7 +1,7 @@
 ---
 name: the-morphism
-description: "Anti-slop morphism & aesthetic design skill for Hermes Agent. Glassmorphism, Neubrutalism, Bauhaus, Swiss Design, Futurism, and Minimalism — exact CSS recipes, a motion system, a typographic scale, and named anti-patterns. The agent reads the brief, picks the right style, and ships interfaces that don't look AI-generated. Zero em-dash, zero emoji-as-icon."
-version: 3.8.0
+description: "Anti-slop morphism & aesthetic design skill for Hermes Agent. Glassmorphism, Neubrutalism, Bauhaus, Swiss Design, Futurism, Minimalism, and Brutalism — exact CSS recipes, a motion system, a typographic scale, and named anti-patterns. The agent reads the brief, picks the right style, and ships interfaces that don't look AI-generated. Zero em-dash, zero emoji-as-icon."
+version: 3.9.0
 author: XEM
 license: MIT
 metadata:
@@ -11,7 +11,7 @@ metadata:
 
 # The Morphism
 
-> Six aesthetic styles. One page, one style. The agent reads the brief, picks the right language, and ships interfaces that don't look AI-generated.
+> Seven aesthetic styles. One page, one style. The agent reads the brief, picks the right language, and ships interfaces that don't look AI-generated.
 > The recipes are exact. The rules are opinionated. The bans are named. Everything else is taste — and taste is contextual.
 
 ---
@@ -25,12 +25,12 @@ Most AI design output is bad because the model reaches for the same purple gradi
 Read the brief for five signals:
 
 1. **What kind of page?** Landing page, dashboard, portfolio, product card, mobile shell, creative/agency, editorial, settings panel.
-2. **What words did they use?** "glass", "frosted", "blur", "translucent", "premium", "layered" — Glassmorphism. "neubrutalist", "brutalist", "bold", "hard shadows", "thick borders", "blocky", "playful", "loud", "colorful" — Neubrutalism. "swiss", "international style", "typographic", "grid", "editorial", "flat", "neutral", "grotesque" — Swiss Design. "bauhaus", "geometric", "primary colors", "constructivist", "poster", "avant-garde", "abstract" — Bauhaus. "futurism", "sci-fi", "retro sci-fi", "terminal", "cyberpunk", "hacker", "phosphor", "mono" — Futurism. "minimalist", "quiet luxury", "serif", "print", "understated", "gallery", "magazine", "fashion" — Minimalism.
+2. **What words did they use?** "glass", "frosted", "blur", "translucent", "premium", "layered" — Glassmorphism. "neubrutalist", "bold", "hard shadows", "thick borders", "blocky", "playful", "loud", "colorful" — Neubrutalism. "swiss", "international style", "typographic", "grid", "editorial", "flat", "neutral", "grotesque" — Swiss Design. "bauhaus", "geometric", "primary colors", "constructivist", "poster", "avant-garde", "abstract" — Bauhaus. "futurism", "sci-fi", "retro sci-fi", "terminal", "cyberpunk", "hacker", "phosphor", "mono" — Futurism. "minimalist", "quiet luxury", "serif", "print", "understated", "gallery", "magazine", "fashion" — Minimalism. "brutalist", "raw", "concrete", "ugly on purpose", "anti-design", "unpolished", "exposed" — Brutalism.
 3. **Did they link something?** Reference URLs, screenshots, named products. macOS = frosted glass. Windows 11 = Mica. Linear modals = frosted glass. neobrutalism.dev / neubrutalism.com = the neubrutalist grammar. Apple Vision Pro = the high-translucency end of glass.
 4. **Who's the audience?** Design-forward consumers or enterprise buyers or accessibility-required users. A11y-critical audiences override high-translucency glass immediately. Neubrutalism's loud personality is wrong for trust-first surfaces (healthcare, fintech, government).
 5. **Does a brand already exist?** Logo, colors, type. The style works WITH the brand or it's wrong.
 
-**The flat-family tiebreaker.** Three styles share "flat, minimal, neutral, editorial." Split them on one signal: **Swiss** = sans + grid + one accent (institutional, ordered). **Bauhaus** = geometric sans + primary colors + shapes (poster, loud). **Minimalism** = serif display + ink-only + underlined controls (print, quiet luxury). "serif", "print", or "luxury" → Minimalism. "grid", "system", or "grotesque" → Swiss. Shapes or primaries → Bauhaus.
+**The flat-family tiebreaker.** Three styles share "flat, minimal, neutral, editorial." Split them on one signal: **Swiss** = sans + grid + one accent (institutional, ordered). **Bauhaus** = geometric sans + primary colors + shapes (poster, loud). **Minimalism** = serif display + ink-only + underlined controls (print, quiet luxury). "serif", "print", or "luxury" → Minimalism. "grid", "system", or "grotesque" → Swiss. Shapes or primaries → Bauhaus. **Brutalism** is the anti-design pole — monochrome + raw + exposed structure. "raw", "concrete", or "ugly on purpose" → Brutalism, and it is NOT neubrutalism (see the recipe).
 
 ### Say it out loud
 
@@ -43,6 +43,7 @@ Before any code, pause and state the Design Read — one sentence that sounds li
 *"Reading this as: a poster for a design conference — Bauhaus, three primaries, geometric type, asymmetric grid."*
 *"Reading this as: a terminal dashboard for a security tool — Futurism, mono type, phosphor green on near-black, corner notches."*
 *"Reading this as: a gallery site for a fashion house — Minimalism, serif display, ink-only, underlined links."*
+*"Reading this as: an anti-brand artist's site — Brutalism, monochrome, raw, exposed structure, zero polish."*
 
 The Design Read isn't a spec. It's a sentence. If you can't say it in one breath, you haven't read the room.
 
@@ -79,6 +80,7 @@ After the Design Read, set four dials. Every blur, radius, shadow, glow, and lay
 | **Bauhaus** | 0 | 0 | 0 | 0 | Posters, arts & culture, education, music, architecture, design-forward brands |
 | **Futurism** | 3 | 0 | 0 | 4-8 | Dev tools, CLIs, terminals, dashboards, monitoring, gaming, security tools |
 | **Minimalism** | 0 | 0 | 0 | 0 | Publishing, magazines, journals, galleries, fashion, architecture, luxury brands, personal sites |
+| **Brutalism** | 1-2 | 0 | 0 | 0 | Galleries, museums, avant-garde studios, music artists, art zines, anti-brand brands |
 
 ### Use-Case Presets
 
@@ -106,12 +108,14 @@ After the Design Read, set four dials. Every blur, radius, shadow, glow, and lay
 | Magazine / journal / publication (print) | Minimalism | 0 | 0 | 0 | 0 |
 | Gallery / fashion / architecture / luxury | Minimalism | 0 | 0 | 0 | 0 |
 | Personal site / quiet portfolio | Minimalism | 0 | 0 | 0 | 0 |
+| Gallery / museum / art space | Brutalism | 1 | 0 | 0 | 0 |
+| Avant-garde studio / artist / zine | Brutalism | 1 | 0 | 0 | 0 |
 
 ---
 
 ## Pick the Macrostructure First
 
-The material (glass, neubrutalism, Swiss, Bauhaus, Futurism, or Minimalism) dresses the shape — it does not choose it. After the Design Read and the dials, pick the page SHAPE before you touch the recipe. A macrostructure is a complete page skeleton (Bento Grid, Marquee Hero, Split Diptych, Stat-Led, Manifesto, Long Document, Workbench, Quote-Led, Photographic, Catalogue, Letter, Portfolio Grid) — heading placement, body composition, divider, button voice, image treatment, reveal — bundled as one named choice.
+The material (glass, neubrutalism, Swiss, Bauhaus, Futurism, Minimalism, or Brutalism) dresses the shape — it does not choose it. After the Design Read and the dials, pick the page SHAPE before you touch the recipe. A macrostructure is a complete page skeleton (Bento Grid, Marquee Hero, Split Diptych, Stat-Led, Manifesto, Long Document, Workbench, Quote-Led, Photographic, Catalogue, Letter, Portfolio Grid) — heading placement, body composition, divider, button voice, image treatment, reveal — bundled as one named choice.
 
 - Pick one from `references/macrostructures.md` and state it out loud: *"Macrostructure: Bento Grid. Material: glass."*
 - **Refuse the last three.** No two consecutive builds in the same project share a macrostructure. Pick from a categorically different family (grid-led vs document-led vs poster-led).
@@ -121,7 +125,7 @@ The material (glass, neubrutalism, Swiss, Bauhaus, Futurism, or Minimalism) dres
 
 ## The Recipes
 
-This is the heart of the skill. Six exact CSS recipes — not suggestions, not starting points. Start here, then tune the dials. Framework-agnostic CSS; Tailwind equivalents follow in the next section.
+This is the heart of the skill. Seven exact CSS recipes — not suggestions, not starting points. Start here, then tune the dials. Framework-agnostic CSS; Tailwind equivalents follow in the next section.
 
 ### Glassmorphism
 
@@ -233,7 +237,7 @@ See `references/glass-landing-example.md` for a complete, build-verified glass l
 
 **When NOT to use:** Trust-first surfaces (healthcare, fintech, government), enterprise SaaS where the playful tone undermines credibility, or any brief where the user asked for "clean," "minimal," or "premium." Say so explicitly if the brief pushes neubrutalism where it doesn't belong.
 
-**Neubrutalism is NOT Brutalism.** Brutalism is raw, monochrome, and anti-conventional. Neubrutalism is colorful, playful, and productized — it borrows brutalism's bluntness but keeps a modern, usable UI grammar. If the brief says "brutalist, raw, ugly on purpose," that is not this style; flag the distinction and ask which they mean.
+**Neubrutalism is NOT Brutalism.** Brutalism (the seventh style, below) is raw, monochrome, and anti-conventional. Neubrutalism is colorful, playful, and productized — it borrows brutalism's bluntness but keeps a modern, usable UI grammar. If the brief says "brutalist, raw, ugly on purpose," route to the Brutalism recipe, not here.
 
 ---
 
@@ -421,6 +425,45 @@ h1, h2 { font-weight: 300; letter-spacing: -0.02em; }
 
 ---
 
+### Brutalism
+
+```css
+/* === BRUTALISM: raw, monochrome, exposed structure === */
+.brutal {
+  background: #ffffff;                     /* raw paper — or concrete #E8E8E8 */
+  color: #000000;                          /* pure black */
+  font-family: "Azeret Mono", "Courier New", monospace;   /* typed, honest */
+  border-radius: 0;                        /* zero, always */
+}
+.brutal-rule { border: 1px solid #000000; }  /* visible seams — the structure shows */
+.brutal-table { border-collapse: collapse; }
+.brutal-table th, .brutal-table td {
+  border: 1px solid #000000;
+  padding: 8px;
+}
+
+/* One raw signal accent, maximum — text/links only, never ambient */
+.brutal-accent { color: #E2062C; }         /* raw red */
+
+/* No shadows. No gradients. No rounded corners. No hover polish. */
+```
+
+**The dials don't tune here.** Brutalism is `1-2 / 0 / 0 / 0` — the flat floor's anti-polish pole. Swiss is ordered, Bauhaus is poster, Minimalism is print, Brutalism is raw. It is NOT neubrutalism: no colors, no hard offset shadows, no press hover, no product polish.
+
+**The rules that make it Brutalism:**
+- **Monochrome.** Black, white, concrete gray. One raw signal accent (red `#E2062C`) maximum, and only as text or links — never ambient, never a fill.
+- **Exposed structure.** Visible grid seams, bare table borders, underlined links, default list markers. The skeleton shows; nothing hides behind chrome.
+- **Zero polish.** No shadows, no gradients, no border-radius, no hover transitions, no smooth easing. Interactions are instant or absent.
+- **Typed, not designed.** Azeret Mono by default — the honesty of a typed document. Archivo only for long prose. No refined pairing, no tracking ceremony.
+- **Density is honesty.** Brutalism does not need Swiss air; cramped, honest layouts are part of the rawness. (If the page needs generous whitespace, that's Swiss or Minimalism.)
+- **Ugly ≠ unreadable.** Contrast, visible links, and focus states are all still mandatory. The style is raw, not broken.
+
+**When to use:** Galleries, museums, avant-garde studios, music artists, art zines, anti-brand brands, experimental portfolios — anything that should read as *honest, anti-conventional, unfinished on purpose*.
+
+**When NOT to use:** Consumer products, SaaS, e-commerce, trust-first surfaces, or anything that needs to feel comfortable or sell comfort. Say so explicitly if the brief pushes Brutalism where it doesn't belong.
+
+---
+
 ## Tailwind Equivalents
 
 Same recipes, Tailwind v4 utility classes. CSS-first config — no `tailwind.config.js`. Use `@tailwindcss/postcss` or the Vite plugin.
@@ -518,6 +561,20 @@ Same recipes, Tailwind v4 utility classes. CSS-first config — no `tailwind.con
 </div>
 ```
 
+### Brutalism
+
+```html
+<div class="bg-white text-black rounded-none font-[Azeret_Mono,monospace] p-6">
+  <h2 class="text-2xl font-bold uppercase">RAW. HONEST.</h2>
+  <p class="text-sm">This site does not sell comfort. Read the text.</p>
+  <table class="border-collapse border border-black w-full">
+    <tr><td class="border border-black p-2">Item</td><td class="border border-black p-2">Price</td></tr>
+    <tr><td class="border border-black p-2">One HTML file</td><td class="border border-black p-2">Free</td></tr>
+  </table>
+  <a href="#" class="underline text-black">Read the manifesto</a>
+</div>
+```
+
 ---
 
 ## Scan the Project First
@@ -590,6 +647,7 @@ Every style in this skill uses Fontshare fonts. Google Fonts and Adobe Fonts are
 - **Bauhaus:** Excon (display, the Futura clone — geometric, points on A/M/N), Archivo (body). Headings bold (`700`/`800`) and uppercase — the loud inverse of Swiss's light type.
 - **Futurism:** Azeret Mono — the only mono Fontshare carries, so it is the exclusive face and the outlier slot is dropped. Display and body share the same grid. Headings `700` + `0.05em` tracking; labels all-caps.
 - **Minimalism:** Zodiak (display, serif — the ONLY serif display in the skill) + Switzer (body). Headings regular `400`, often uppercase with wide tracking, never bold. Melodrama as the fashion-forward display alternative.
+- **Brutalism:** Azeret Mono (the voice — typed-document honesty) + Archivo (plain body, only for long prose). No refined pairing; no tracking ceremony.
 
 **Available typefaces (all Fontshare):**
 - **Default:** General Sans + Azeret Mono (Fontshare's workhorse + its only mono)
@@ -606,7 +664,7 @@ For the full type system — the 2+1 rule, the ratio-based scale, measure (45–
 - `@phosphor-icons/react` -- extensive, multiple weights (Thin through Fill)
 - `@tabler/icons-react` -- sharp, technical, good for dashboards
 
-**Recommended by style:** Glassmorphism — Lucide (Regular) or Phosphor (Regular), crisp glyphs that read cleanly over translucency. Neubrutalism — Phosphor (Bold) or Lucide with `strokeWidth={2.5}`, chunky glyphs that match the thick borders. Bauhaus — Lucide (thin strokes) or raw geometric shapes (circle/square/triangle) as the graphic language. Futurism — Lucide (thin strokes) or Tabler (sharp, technical), glyphs that read as instrument readouts. Minimalism — Lucide (thin strokes, `strokeWidth={1.5}`) or no icons at all; the type carries the page.
+**Recommended by style:** Glassmorphism — Lucide (Regular) or Phosphor (Regular), crisp glyphs that read cleanly over translucency. Neubrutalism — Phosphor (Bold) or Lucide with `strokeWidth={2.5}`, chunky glyphs that match the thick borders. Bauhaus — Lucide (thin strokes) or raw geometric shapes (circle/square/triangle) as the graphic language. Futurism — Lucide (thin strokes) or Tabler (sharp, technical), glyphs that read as instrument readouts. Minimalism — Lucide (thin strokes, `strokeWidth={1.5}`) or no icons at all; the type carries the page. Brutalism — no icon library; bare unicode glyphs (`→`, `[ ]`, `*`) and raw text are the interface.
 
 **Rules:**
 - One icon family per project. Do not mix Lucide with Phosphor in the same tree.
@@ -659,7 +717,7 @@ These styles are a11y traps in different ways. These rules are mandatory — ski
   }
 }
 ```
-Every glass element MUST ship a solid fallback. Never ship glass without it. (Neubrutalism, Swiss, Bauhaus, Futurism, and Minimalism are opaque by definition — this rule is glass-only.)
+Every glass element MUST ship a solid fallback. Never ship glass without it. (Neubrutalism, Swiss, Bauhaus, Futurism, Minimalism, and Brutalism are opaque by definition — this rule is glass-only.)
 
 ### Focus States
 - **Glass:** `outline: 2px solid rgba(255,255,255,0.8);` on dark backgrounds, `outline: 2px solid rgba(0,0,0,0.6);` on light backgrounds.
@@ -667,6 +725,7 @@ Every glass element MUST ship a solid fallback. Never ship glass without it. (Ne
 - **Bauhaus:** `outline: 2px solid #000; outline-offset: 2px;` — crisp and geometric, matching the rectilinear grammar.
 - **Futurism:** `outline: 1px solid #00ed3f; outline-offset: 2px; box-shadow: 0 0 8px #00ed3f66;` — the focus ring IS the glow. Instant, never animated.
 - **Minimalism:** `outline: 1px solid #1a1a1a; outline-offset: 2px;` — a hairline ink ring, instant, never animated.
+- **Brutalism:** `outline: 1px solid #000000; outline-offset: 2px;` — a raw black ring, instant, never animated.
 - Never rely on shadow change alone for focus. A visible outline ring is mandatory.
 
 ---
@@ -791,6 +850,16 @@ Every glass element MUST ship a solid fallback. Never ship glass without it. (Ne
 - **THE BOLD HEADING.** `font-weight` ≥ 600 on a heading. Minimalism headings are regular-weight serif (`400`), often uppercase. Bold reads loud, not quiet.
 - **THE DENSE LAYOUT.** Cramped spacing, tight margins, 3-column-equal grids. Whitespace is the material; a dense Minimalism page is just a Swiss page without the grid.
 
+### Brutalism Tells
+- **THE POLISHED BUTTON.** A styled button — rounded, filled, shadowed. Brutalism's controls are bare text links and raw inputs; a polished button is product chrome.
+- **THE ROUNDED CORNER.** Any `border-radius`. Brutalism is zero-radius, always.
+- **THE GRADIENT.** Any gradient fill. Monochrome flat only.
+- **THE SOFT SHADOW.** A blurred or offset shadow. Brutalism has no shadows; structure replaces depth.
+- **THE SMOOTH EASING.** Any eased transition. Interactions are instant or absent.
+- **THE REFINED TYPE.** A designed pairing with careful tracking. Brutalism is typed, not typeset.
+- **THE GENEROUS WHITESPACE.** Luxury air. Brutalism can be cramped and raw — density is honesty. If the page needs air, that's Swiss or Minimalism.
+- **THE LOUD ACCENT.** More than one signal color, or color used ambiently. One raw red maximum, text-only.
+
 ---
 
 ## How Things Move
@@ -819,6 +888,7 @@ The full motion language — easing tokens, the duration canon, page-load orches
 | Bauhaus | Functional, near-static | fill/geometry swap (color invert), no scale, ~150ms | staggered grid reveals, sharp, no overshoot |
 | Futurism | CRT, mechanical | blink/flicker/pulse (ambient, reduced-motion-off), glitch on hover, ~150ms | data-scroll tickers, scanline reveals, sharp, no easing |
 | Minimalism | Near-static, editorial | underline stays, text fades (opacity shift), ~150ms. No scale, no lift | slow single-opacity fades, reveal once, no stagger cascade |
+| Brutalism | Static, instant | no hover treatment — instant state change or none at all | no scroll reveals, no parallax, no easing |
 
 **GSAP ScrollTrigger pattern** (see `references/gsap-setup.md` for React, vanilla JS, and Astro examples):
 ```tsx
@@ -876,6 +946,11 @@ useEffect(() => {
 - **Ink-only, zero accent.** No accent color exists. Hierarchy is ink opacity (`0.6` secondary, `0.4` tertiary) plus weight and whitespace. Links and buttons are ink, underlined.
 - **Optional undertone themes.** Warm or cool the paper with a neutral undertone — taupe, stone, zinc, mauve, olive, mist — but the ink stays black. Never a chromatic accent.
 - **Dark mode:** invert — near-black paper, near-white ink. Opacity stops stay identical.
+
+### Brutalism
+- **Monochrome.** Pure black `#000000`, pure white `#ffffff`, concrete gray `#E8E8E8` / `#CCCCCC`. No tinted backgrounds, no gradients.
+- **One raw accent.** Raw red `#E2062C` maximum, as text or links only. Everything else is ink on paper.
+- **Dark mode:** invert — near-black paper, near-white ink. Same monochrome discipline.
 
 ---
 
@@ -938,6 +1013,7 @@ Name something real. A place, a date, a number, a verb that means something:
 | Bauhaus | Functional, declarative. "Design is not a decoration; it is a decision." Form follows function; facts and function, no flourish. |
 | Futurism | Terse, procedural, terminal-native. "SIGNAL ACQUIRED. 4 TRANSMISSIONS BUFFERED." All-caps for labels and states; readable mono for prose. |
 | Minimalism | Quiet, precise, editorial. "The quarterly for people who read." Restraint is the point; adjectives are withheld. |
+| Brutalism | Raw, declarative, unpolished on purpose. "RAW. HONEST. UNFINISHED ON PURPOSE." No comfort, no adjectives; facts and index. |
 
 ### The self-audit
 
@@ -970,7 +1046,7 @@ Before the checklist, score the build 1–5 on six axes. Anything < 3 on any axi
 
 ### Style Selection
 - [ ] **Design Read** declared (see Read the Room)?
-- [ ] **Dial values** set (glass `5 / 4 / 8 / 0`, neubrutalism `6 / 1 / 0 / 0`, futurism `3 / 0 / 0 / 6`, minimalism `0 / 0 / 0 / 0`, unless overridden)?
+- [ ] **Dial values** set (glass `5 / 4 / 8 / 0`, neubrutalism `6 / 1 / 0 / 0`, futurism `3 / 0 / 0 / 6`, minimalism `0 / 0 / 0 / 0`, brutalism `1 / 0 / 0 / 0`, unless overridden)?
 - [ ] **ONE style** per page (no mixing)?
 
 ### Accessibility (CRITICAL)
@@ -989,6 +1065,7 @@ Before the checklist, score the build 1–5 on six axes. Anything < 3 on any axi
 - [ ] **Bauhaus:** flat fills (no gradient/shadow/blur)? Three primaries + black + cream (no pastels)? Geometry as composition, not decoration? Bold geometric type (Excon)? Rectilinear? Asymmetric composition? Yellow-as-fill-not-text?
 - [ ] **Futurism:** mono only (Azeret Mono)? Zero radius + chamfered notches (no rounded)? Phosphor glow, not drop shadow? Neutral near-black background (no tint)? Deliberate palette (green/amber/red/blue)? Glow reserved for alive/focus? CRT effects gated by reduced-motion?
 - [ ] **Minimalism:** serif display (Zodiak, never sans)? Ink-only palette (zero accent)? Underlined controls (no filled buttons)? Pure white paper + near-black ink? Square, shadowless (`0 / 0 / 0 / 0`)? Headings regular-weight, not bold? Generous whitespace (no dense layout)?
+- [ ] **Brutalism:** monochrome (one raw accent max)? Exposed structure (visible seams/borders)? Zero polish (no shadows/gradients/radius/easing)? Typed voice (Azeret Mono)? Ugly-but-readable (contrast + focus still pass)?
 
 ### Code Quality
 - [ ] **No `h-screen`** -- using `min-h-[100dvh]`?
@@ -1016,7 +1093,7 @@ Before the checklist, score the build 1–5 on six axes. Anything < 3 on any axi
 ## Out of Scope
 
 This skill is NOT for:
-- Flat design that isn't Swiss, Bauhaus, or Minimalism — generic "clean minimal" with none of the three disciplines (Swiss grid + opacity, Bauhaus primaries + geometry, Minimalism serif + ink + underlined controls). Route to the closest flat style, not out of scope.
+- Flat design that isn't Swiss, Bauhaus, Minimalism, or Brutalism — generic "clean minimal" with none of the four disciplines (Swiss grid + opacity, Bauhaus primaries + geometry, Minimalism serif + ink + underlined controls, Brutalism monochrome + raw + exposed structure). Route to the closest flat style, not out of scope.
 - Flat design with primary colors and geometry (circle/square/triangle) that isn't Bauhaus-disciplined — routes to Bauhaus, not out of scope.
 - Dark neon "sci-fi" that isn't Cassette Futurism — without the mono type, phosphor palette, and zero-radius discipline. Routes to Futurism, not out of scope.
 - Other morphism styles (Neumorphism, Claymorphism, Skeuomorphism, Liquid Glass) — not yet covered; say so if the brief asks for them.
@@ -1042,6 +1119,7 @@ If the brief is out of scope, **say so** and recommend the right approach.
 | "bauhaus", "geometric", "primary colors", "constructivist", "poster", "avant-garde" | Bauhaus | 0 / 0 / 0 / 0 |
 | "futurism", "sci-fi", "retro sci-fi", "terminal", "cyberpunk", "hacker", "phosphor", "mono" | Futurism | 3 / 0 / 0 / 6 |
 | "minimalist", "quiet luxury", "serif", "print", "understated", "gallery", "magazine", "fashion" | Minimalism | 0 / 0 / 0 / 0 |
+| "brutalist", "raw", "concrete", "ugly on purpose", "anti-design", "unpolished", "exposed" | Brutalism | 1 / 0 / 0 / 0 |
 
 ## Real-World References
 
@@ -1050,3 +1128,4 @@ If the brief is out of scope, **say so** and recommend the right approach.
 - **Bauhaus:** the Bauhaus Dessau archive, Josef Albers and Herbert Bayer posters, Bayer's Universal alphabet, Oskar Schlemmer's 1922 emblem, the bauhaus-dessau.de site.
 - **Futurism:** scificn.dev / scificn-ui (Cassette Futurism component library), the Alien and Blade Runner interface language, mission-control dashboards, 1970s terminal UIs.
 - **Minimalism:** shadcn/ui "Sera" theme (serif editorial preset), Aesop, Kinfolk, Cereal magazine, The Row, Leica, Muji.
+- **Brutalism:** brutalistwebsites.com, RAW Magazine, Kunsthalle Zürich, Werkleitz Festival, Yves Tumor's site, the U.S. National Debt Clock, Disslist.

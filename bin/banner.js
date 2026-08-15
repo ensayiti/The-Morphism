@@ -13,7 +13,7 @@ const BANNER_LINES = [
   '   ██║   ██║  ██║███████╗    ██║ ╚═╝ ██║╚██████╔╝██║  ██║██║     ██║  ██║██║███████║██║ ╚═╝ ██║',
   '   ╚═╝   ╚═╝  ╚═╝╚══════╝    ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝╚═╝╚══════╝╚═╝     ╚═╝',
   '',
-  '   SIX STYLES · ONE PAGE · ZERO SLOP',
+  '   SEVEN STYLES · ONE PAGE · ZERO SLOP',
 ];
 
 // Chrome gradient, top highlight to bottom reflection

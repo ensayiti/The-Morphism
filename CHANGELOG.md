@@ -2,6 +2,21 @@
 
 All notable changes to The Morphism will be documented in this file.
 
+## [3.9.0] — 2026-08-14
+
+### Added
+
+- **Brutalism — the seventh style.** Full treatment in SKILL.md: signal words, dial preset `1-2 / 0 / 0 / 0`, an exact CSS recipe (monochrome, exposed structure, bare table borders, one raw red accent), a Tailwind equivalent, a color system, typography (Azeret Mono as the typed voice + Archivo for prose), a copy voice ("RAW. HONEST. UNFINISHED ON PURPOSE."), and eight named tells — THE POLISHED BUTTON, THE ROUNDED CORNER, THE GRADIENT, THE SOFT SHADOW, THE SMOOTH EASING, THE REFINED TYPE, THE GENEROUS WHITESPACE, THE LOUD ACCENT. Locked to three hard differentiators vs Neubrutalism (monochrome, zero product polish, exposed bones) — resolving the skill's own neo-vs-brutal open question.
+- Brutalism takes for all twelve macrostructures in `references/macrostructures.md`, plus a gallery / museum / art space / studio / artist / zine routing row.
+- Brutalism chrome in `references/components.md` — nav N7 / N1a, footer Ft2 / Ft4, section heads S1 / S4, CTA C3 as the native control.
+- The flat-family tiebreaker now covers the four flat styles, including the anti-design pole. "brutalist" moved out of the neubrutalism signal words into its own style.
+- CLI banner tagline updated: SIX STYLES → SEVEN STYLES.
+
+### Changed
+
+- "Neubrutalism is NOT Brutalism" now routes to the Brutalism recipe instead of asking.
+- Out-of-scope routing names four flat disciplines. Package description, template quick-ref, README styles table, and the flat-family checklist all name Brutalism.
+
 ## [3.8.0] — 2026-08-14
 
 ### Added
