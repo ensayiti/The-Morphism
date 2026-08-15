@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { printBanner } = require('./banner');
 
 const USAGE = `
 the-morphism — Anti-slop morphism & aesthetic design skill for Hermes Agent
@@ -41,6 +42,7 @@ function copyDirRecursive(src, dest) {
 }
 
 function init(flags) {
+  printBanner();
   const cwd = process.cwd();
   const pkgRoot = path.resolve(__dirname, '..');
   const skillsSrc = path.join(pkgRoot, 'skills', 'the-morphism');
@@ -123,6 +125,7 @@ const args = process.argv.slice(2);
 const command = args[0];
 
 if (!command || command === '--help' || command === '-h') {
+  printBanner();
   console.log(USAGE);
   process.exit(0);
 }
@@ -137,5 +140,6 @@ if (command === 'init') {
 }
 
 console.error(`Unknown command: ${command}\n`);
+printBanner();
 console.log(USAGE);
 process.exit(1);

@@ -4,6 +4,10 @@ All notable changes to The Morphism will be documented in this file.
 
 ## [3.8.0] — 2026-08-14
 
+### Added
+
+- **CLI banner.** `npx the-morphism` now prints a chrome-gradient ASCII banner — figlet ANSI Shadow wordmark in silver, matching the liquid-metal logotype — on `init`, `--help`, and unknown commands. Falls back to plain text when stdout isn't a TTY or `NO_COLOR` is set.
+
 ### Changed
 
 - **All fonts moved to Fontshare.** Every style's type now comes from fontshare.com: Glassmorphism (Satoshi + General Sans, Outfit alt), Neubrutalism (Clash Display / Space Grotesk / Clash Grotesk display, Anton heavy, General Sans body), Swiss Design (Familjen Grotesk + Switzer), Bauhaus (Excon + Archivo), Futurism (Azeret Mono — Fontshare's only mono, so the second face is dropped), Minimalism (Zodiak + Switzer, Melodrama alt). Google fonts and `next/font/google` are out.
