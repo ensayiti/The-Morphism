@@ -21,6 +21,7 @@ The AI reaches for the same nav and footer on every page. That's a tell. Pick de
 | Futurism | N8 Terminal command · N9 Edge-aligned minimal | N7 Brutal slab, N12 Banner |
 | Minimalism | N9 Edge-aligned minimal · N6 Newspaper masthead | N1a Wordmark + 2 links, N2 Floating chip |
 | Brutalism | N7 Brutal slab · N1a Wordmark + 2 links | N9 Edge-aligned minimal, N12 Banner |
+| Maximalism | N1b three-section · N12 Banner | N9 Edge-aligned minimal, N7 Brutal slab |
 
 - **N1a · Wordmark + 2 links** — wordmark left, two text links right. The minimal bar. Reach for it only when the page genuinely has 2 destinations.
   - Glass: frosted bar on scroll. Neo: hard 3px bottom border, all-caps.
@@ -118,6 +119,15 @@ Brutalism reads chrome as structure — bare links, hard rules, no container, no
 - Footer: Ft2 Inline single line (a raw credit line), Ft4 Dense colophon (mono credits). The footer is a colophon, not a sitemap.
 - Section heads: S1 Left-margin numbered (`01` / `02` in mono), S4 Inline. Eyebrows default OFF, as everywhere.
 - CTA: C3 Typographic link is native — the bare underlined link IS the control. Never a polished button.
+
+## Maximalism chrome
+
+Maximalism reads chrome as part of the composition — nav and footer are ornamented panels, not containers.
+
+- Nav: N1b three-section (serif wordmark, sans links, CTA as an accent frame), N12 Banner (a patterned accent band), N9 Edge-aligned minimal only when the rest of the page is loud. The nav is a framed panel, not a bar.
+- Footer: Ft1 Mast-headed (wordmark + tagline in a double frame), Ft8 Marquee scroll (a patterned ticker), Ft3 Index columns only on a genuine hub. The footer is a closing spread, not a sitemap.
+- Section heads: S5 Bottom anchored, S2 Hanging, S3 Sticky. Eyebrows default OFF, as everywhere.
+- CTA: C1 Outlined chip is native (a framed verb), or C3 Typographic link with an accent arrow.
 
 ## Variation knobs
 

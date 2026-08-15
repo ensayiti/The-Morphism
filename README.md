@@ -61,15 +61,23 @@ Re-run any time to update. Non-Hermes users: use `--templates-only` and paste th
 
 ## The styles
 
+### Morph Design
+
 | Style | Character | Best for |
 |---|---|---|
 | **Glassmorphism** | Frosted glass, blur, translucent overlays | SaaS landing, hero overlays, nav bars, modals |
+| **Futurism** | Mono, phosphor glow, terminal, near-black | Dev tools, terminals, dashboards, monitoring, gaming |
 | **Neubrutalism** | Hard shadows, thick black borders, flat loud color | Portfolios, dev tools, ed-tech, playful brands |
+| **Brutalism** | Raw, monochrome, exposed structure, zero polish | Galleries, museums, avant-garde studios, artists, zines |
+| **Minimalism** | Serif display, ink-only, underlined controls, pure white | Publishing, magazines, galleries, fashion, luxury brands |
+| **Maximalism** | Layered ornament, mixed type, abundance with a budget | Fashion, editorial, galleries, restaurants, creative agencies |
+
+### Non-Morph
+
+| Style | Character | Best for |
+|---|---|---|
 | **Swiss Design** | Flat, neutral, typographic, grid-disciplined | Editorial, docs, archives, museums, design systems |
 | **Bauhaus** | Flat, geometric, primary colors, bold type | Posters, arts & culture, education, architecture |
-| **Futurism** | Mono, phosphor glow, terminal, near-black | Dev tools, terminals, dashboards, monitoring, gaming |
-| **Minimalism** | Serif display, ink-only, underlined controls, pure white | Publishing, magazines, galleries, fashion, luxury brands |
-| **Brutalism** | Raw, monochrome, exposed structure, zero polish | Galleries, museums, avant-garde studios, artists, zines |
 
 One style per page. Never mix. The skill handles the decision — every style comes with an exact CSS recipe, Tailwind v4 equivalents, per-style dial presets, color rules, motion character, copy voice, and named tells of what not to do.
 

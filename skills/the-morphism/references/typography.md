@@ -47,8 +47,12 @@ If the user insists on one, do it. Otherwise pick from the allowlist below.
 
 **Recommended for brutalism — typed, not designed.** Azeret Mono as the voice (typed-document honesty), Archivo only for long prose. No refined pairing, no tracking ceremony.
 
+**Two font tracks.** Track 1 = the shadcn/Next defaults (Geist Sans + Geist Mono, rows below). Track 2 = Fontshare (all other rows). Pick ONE per project and stay on it.
+
 | Family | Source | Voice | Best for |
 |---|---|---|---|
+| **Geist Sans** | Google (shadcn/Next default) | Neutral grotesque, 7 weights | Track 1 — the default body/display; glass, neo body, Swiss |
+| **Geist Mono** | Google (shadcn/Next default) | Geist's mono companion | Track 1 — Futurism, Brutalism, code |
 | **Satoshi** | Fontshare | Modern geometric, 7 weights | Glass display/body |
 | **General Sans** | Fontshare | Neutral grotesque, 9 weights | The Fontshare workhorse — glass body, neo body, Swiss alt |
 | **Switzer** | Fontshare | Clean, refined grotesque | Swiss alt, Minimalism body |

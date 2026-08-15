@@ -1,17 +1,17 @@
 ---
 name: the-morphism
-description: "Anti-slop morphism & aesthetic design skill for Hermes Agent. Glassmorphism, Neubrutalism, Bauhaus, Swiss Design, Futurism, Minimalism, and Brutalism — exact CSS recipes, a motion system, a typographic scale, and named anti-patterns. The agent reads the brief, picks the right style, and ships interfaces that don't look AI-generated. Zero em-dash, zero emoji-as-icon."
-version: 3.9.0
+description: "Anti-slop morphism & aesthetic design skill for Hermes Agent. Glassmorphism, Futurism, Neubrutalism, Brutalism, Minimalism, Maximalism, Swiss Design, and Bauhaus — exact CSS recipes, a motion system, a typographic scale, and named anti-patterns. The agent reads the brief, picks the right style, and ships interfaces that don't look AI-generated. Zero em-dash, zero emoji-as-icon."
+version: 3.10.0
 author: XEM
 license: MIT
 metadata:
   hermes:
-    tags: [frontend, design, glassmorphism, neubrutalism, brutalism, bauhaus, futurism, minimalism, serif, editorial, fontshare, css, tailwindcss, anti-slop]
+    tags: [frontend, design, glassmorphism, neubrutalism, brutalism, bauhaus, futurism, minimalism, maximalism, serif, editorial, fontshare, css, tailwindcss, anti-slop]
 ---
 
 # The Morphism
 
-> Seven aesthetic styles. One page, one style. The agent reads the brief, picks the right language, and ships interfaces that don't look AI-generated.
+> Eight aesthetic styles. One page, one style. The agent reads the brief, picks the right language, and ships interfaces that don't look AI-generated.
 > The recipes are exact. The rules are opinionated. The bans are named. Everything else is taste — and taste is contextual.
 
 ---
@@ -25,12 +25,12 @@ Most AI design output is bad because the model reaches for the same purple gradi
 Read the brief for five signals:
 
 1. **What kind of page?** Landing page, dashboard, portfolio, product card, mobile shell, creative/agency, editorial, settings panel.
-2. **What words did they use?** "glass", "frosted", "blur", "translucent", "premium", "layered" — Glassmorphism. "neubrutalist", "bold", "hard shadows", "thick borders", "blocky", "playful", "loud", "colorful" — Neubrutalism. "swiss", "international style", "typographic", "grid", "editorial", "flat", "neutral", "grotesque" — Swiss Design. "bauhaus", "geometric", "primary colors", "constructivist", "poster", "avant-garde", "abstract" — Bauhaus. "futurism", "sci-fi", "retro sci-fi", "terminal", "cyberpunk", "hacker", "phosphor", "mono" — Futurism. "minimalist", "quiet luxury", "serif", "print", "understated", "gallery", "magazine", "fashion" — Minimalism. "brutalist", "raw", "concrete", "ugly on purpose", "anti-design", "unpolished", "exposed" — Brutalism.
+2. **What words did they use?** "glass", "frosted", "blur", "translucent", "premium", "layered" — Glassmorphism. "futurism", "sci-fi", "retro sci-fi", "terminal", "cyberpunk", "hacker", "phosphor", "mono" — Futurism. "neubrutalist", "bold", "hard shadows", "thick borders", "blocky", "playful", "loud", "colorful" — Neubrutalism. "brutalist", "raw", "concrete", "ugly on purpose", "anti-design", "unpolished", "exposed" — Brutalism. "minimalist", "quiet luxury", "serif", "print", "understated", "gallery", "magazine", "fashion" — Minimalism. "maximalist", "ornate", "opulent", "abundance", "more is more", "memphis", "loud editorial" — Maximalism. "swiss", "international style", "typographic", "grid", "editorial", "flat", "neutral", "grotesque" — Swiss Design. "bauhaus", "geometric", "primary colors", "constructivist", "poster", "avant-garde", "abstract" — Bauhaus.
 3. **Did they link something?** Reference URLs, screenshots, named products. macOS = frosted glass. Windows 11 = Mica. Linear modals = frosted glass. neobrutalism.dev / neubrutalism.com = the neubrutalist grammar. Apple Vision Pro = the high-translucency end of glass.
 4. **Who's the audience?** Design-forward consumers or enterprise buyers or accessibility-required users. A11y-critical audiences override high-translucency glass immediately. Neubrutalism's loud personality is wrong for trust-first surfaces (healthcare, fintech, government).
 5. **Does a brand already exist?** Logo, colors, type. The style works WITH the brand or it's wrong.
 
-**The flat-family tiebreaker.** Three styles share "flat, minimal, neutral, editorial." Split them on one signal: **Swiss** = sans + grid + one accent (institutional, ordered). **Bauhaus** = geometric sans + primary colors + shapes (poster, loud). **Minimalism** = serif display + ink-only + underlined controls (print, quiet luxury). "serif", "print", or "luxury" → Minimalism. "grid", "system", or "grotesque" → Swiss. Shapes or primaries → Bauhaus. **Brutalism** is the anti-design pole — monochrome + raw + exposed structure. "raw", "concrete", or "ugly on purpose" → Brutalism, and it is NOT neubrutalism (see the recipe).
+**The flat-family tiebreaker.** Three styles share "flat, minimal, neutral, editorial." Split them on one signal: **Swiss** = sans + grid + one accent (institutional, ordered). **Bauhaus** = geometric sans + primary colors + shapes (poster, loud). **Minimalism** = serif display + ink-only + underlined controls (print, quiet luxury). "serif", "print", or "luxury" → Minimalism. "grid", "system", or "grotesque" → Swiss. Shapes or primaries → Bauhaus. **Brutalism** is the anti-design pole — monochrome + raw + exposed structure. "raw", "concrete", or "ugly on purpose" → Brutalism, and it is NOT neubrutalism (see the recipe). **Maximalism** is Minimalism's twin — the abundance pole. "ornate", "opulent", or "more is more" → Maximalism.
 
 ### Say it out loud
 
@@ -44,6 +44,7 @@ Before any code, pause and state the Design Read — one sentence that sounds li
 *"Reading this as: a terminal dashboard for a security tool — Futurism, mono type, phosphor green on near-black, corner notches."*
 *"Reading this as: a gallery site for a fashion house — Minimalism, serif display, ink-only, underlined links."*
 *"Reading this as: an anti-brand artist's site — Brutalism, monochrome, raw, exposed structure, zero polish."*
+*"Reading this as: a fashion house's editorial — Maximalism, layered ornament, mixed type, two accents with jobs."*
 
 The Design Read isn't a spec. It's a sentence. If you can't say it in one breath, you haven't read the room.
 
@@ -75,12 +76,15 @@ After the Design Read, set four dials. Every blur, radius, shadow, glow, and lay
 | Style | DEPTH | SOFTNESS | TRANSLUCENCY | GLOW | Best for |
 |---|---|---|---|---|---|
 | **Glassmorphism** | 4-6 | 3-5 | 7-10 | 0-2 | SaaS landing, hero overlays, nav bars, modals, premium product cards |
+| **Futurism** | 3 | 0 | 0 | 4-8 | Dev tools, CLIs, terminals, dashboards, monitoring, gaming, security tools |
 | **Neubrutalism** | 5-7 | 0-1 | 0 | 0 | Portfolios, dev tools, startups, ed-tech, playful brands, design agencies |
+| **Brutalism** | 1-2 | 0 | 0 | 0 | Galleries, museums, avant-garde studios, music artists, art zines, anti-brand brands |
+| **Minimalism** | 0 | 0 | 0 | 0 | Publishing, magazines, journals, galleries, fashion, architecture, luxury brands, personal sites |
+| **Maximalism** | 5-7 | 3-4 | 0 | 0-2 | Fashion, editorial, galleries, restaurants, creative agencies, expressive brands |
 | **Swiss Design** | 0 | 0 | 0 | 0 | Editorial, documentation, reference, archives, museums, publications, design systems |
 | **Bauhaus** | 0 | 0 | 0 | 0 | Posters, arts & culture, education, music, architecture, design-forward brands |
-| **Futurism** | 3 | 0 | 0 | 4-8 | Dev tools, CLIs, terminals, dashboards, monitoring, gaming, security tools |
-| **Minimalism** | 0 | 0 | 0 | 0 | Publishing, magazines, journals, galleries, fashion, architecture, luxury brands, personal sites |
-| **Brutalism** | 1-2 | 0 | 0 | 0 | Galleries, museums, avant-garde studios, music artists, art zines, anti-brand brands |
+
+**Two families.** Morph Design: Glassmorphism, Futurism, Neubrutalism, Brutalism, Minimalism, Maximalism — the morphisms and their cousins. Non-Morph: Swiss Design, Bauhaus — the classic movements. Same recipes either way; the family is context, not a rule.
 
 ### Use-Case Presets
 
@@ -110,12 +114,14 @@ After the Design Read, set four dials. Every blur, radius, shadow, glow, and lay
 | Personal site / quiet portfolio | Minimalism | 0 | 0 | 0 | 0 |
 | Gallery / museum / art space | Brutalism | 1 | 0 | 0 | 0 |
 | Avant-garde studio / artist / zine | Brutalism | 1 | 0 | 0 | 0 |
+| Fashion / editorial / gallery (loud) | Maximalism | 6 | 3 | 0 | 1 |
+| Restaurant / creative agency / expressive brand | Maximalism | 5 | 4 | 0 | 0 |
 
 ---
 
 ## Pick the Macrostructure First
 
-The material (glass, neubrutalism, Swiss, Bauhaus, Futurism, Minimalism, or Brutalism) dresses the shape — it does not choose it. After the Design Read and the dials, pick the page SHAPE before you touch the recipe. A macrostructure is a complete page skeleton (Bento Grid, Marquee Hero, Split Diptych, Stat-Led, Manifesto, Long Document, Workbench, Quote-Led, Photographic, Catalogue, Letter, Portfolio Grid) — heading placement, body composition, divider, button voice, image treatment, reveal — bundled as one named choice.
+The material (glass, neubrutalism, Swiss, Bauhaus, Futurism, Minimalism, Brutalism, or Maximalism) dresses the shape — it does not choose it. After the Design Read and the dials, pick the page SHAPE before you touch the recipe. A macrostructure is a complete page skeleton (Bento Grid, Marquee Hero, Split Diptych, Stat-Led, Manifesto, Long Document, Workbench, Quote-Led, Photographic, Catalogue, Letter, Portfolio Grid) — heading placement, body composition, divider, button voice, image treatment, reveal — bundled as one named choice.
 
 - Pick one from `references/macrostructures.md` and state it out loud: *"Macrostructure: Bento Grid. Material: glass."*
 - **Refuse the last three.** No two consecutive builds in the same project share a macrostructure. Pick from a categorically different family (grid-led vs document-led vs poster-led).
@@ -125,7 +131,7 @@ The material (glass, neubrutalism, Swiss, Bauhaus, Futurism, Minimalism, or Brut
 
 ## The Recipes
 
-This is the heart of the skill. Seven exact CSS recipes — not suggestions, not starting points. Start here, then tune the dials. Framework-agnostic CSS; Tailwind equivalents follow in the next section.
+This is the heart of the skill. Eight exact CSS recipes — not suggestions, not starting points. Start here, then tune the dials. Framework-agnostic CSS; Tailwind equivalents follow in the next section.
 
 ### Glassmorphism
 
@@ -381,7 +387,7 @@ h1, h2 { font-weight: 300; letter-spacing: -0.02em; }
   border-radius: 0;                              /* square */
 }
 .minimal-heading {
-  font-family: "Zodiak", Georgia, serif;               /* the ONLY serif display in the skill */
+  font-family: "Zodiak", Georgia, serif;               /* the quiet family's serif display */
   font-weight: 400;                              /* regular, never bold */
   letter-spacing: 0.02em;
   text-transform: uppercase;                     /* print / fashion register */
@@ -411,7 +417,7 @@ h1, h2 { font-weight: 300; letter-spacing: -0.02em; }
 **The dials don't tune here.** Minimalism is `0 / 0 / 0 / 0` — flat, rectilinear, opaque, like Swiss and Bauhaus. But where Swiss is sans + grid + one accent (institutional) and Bauhaus is geometric + primaries (poster), Minimalism is serif + ink-only + underlined controls (print, quiet luxury). It is the third style at the dial floor, and the quietest.
 
 **The rules that make it Minimalism:**
-- **Serif display.** Zodiak for headings — the ONLY serif display in the skill. Body stays sans (Switzer). Never sans headings, never serif body (Zodiak-as-body is banned).
+- **Serif display.** Zodiak for headings — the quiet family's serif (Maximalism shares the face; the discipline differs). Body stays sans (Switzer). Never sans headings, never serif body (Zodiak-as-body is banned).
 - **Ink-only palette.** No accent color, ever. Primary IS near-black ink. Hierarchy via weight, size, whitespace, and ink opacity (0.6 / 0.4) — never a second hue. Swiss keeps one accent; Minimalism keeps none.
 - **Underlined controls.** Buttons are underlined text-links. Never filled pills, never solid buttons, never outlined chips. The underline is the affordance.
 - **Uppercase headings, regular weight.** Zodiak uppercase with wide tracking reads print / fashion. `font-weight: 400`, never bold. The bold heading is the tell.
@@ -461,6 +467,45 @@ h1, h2 { font-weight: 300; letter-spacing: -0.02em; }
 **When to use:** Galleries, museums, avant-garde studios, music artists, art zines, anti-brand brands, experimental portfolios — anything that should read as *honest, anti-conventional, unfinished on purpose*.
 
 **When NOT to use:** Consumer products, SaaS, e-commerce, trust-first surfaces, or anything that needs to feel comfortable or sell comfort. Say so explicitly if the brief pushes Brutalism where it doesn't belong.
+
+---
+
+### Maximalism
+
+```css
+/* === MAXIMALISM: layered ornament, mixed type, abundance with a budget === */
+.maximal {
+  background: #F7F3E8;                     /* warm ivory paper — never sterile white */
+  color: #1a1a1a;                          /* ink */
+  border-radius: 0;                        /* rectilinear base — ornaments do the rounding */
+}
+.maximal-heading { font-family: "Zodiak", Georgia, serif; font-weight: 500; }  /* the serif voice */
+.maximal-shout   { font-family: "Clash Display", sans-serif; }                 /* the sans shout */
+.maximal-body    { font-family: "General Sans", system-ui, sans-serif; }
+
+/* Ornament is structure, not wallpaper: rules, frames, and patterns compose the layout */
+.maximal-rule  { border-top: 1px solid #1a1a1a; }
+.maximal-frame { border: 2px double #1a1a1a; padding: 24px; }
+
+/* Two or three loud colors, budgeted — each one marks a role */
+.accent-headline { color: #C8102E; }       /* deep red — headlines */
+.accent-link     { color: #1F4E79; }       /* deep blue — links */
+.accent-price    { color: #B08D00; }       /* burnished gold — prices, emphasis */
+```
+
+**The dials that matter here are `DEPTH` and `SOFTNESS`.** Maximalism is `5-7 / 3-4 / 0 / 0-2` — the only style that leans into DEPTH with ornament and layering instead of shadows. It is Minimalism's twin: same discipline, opposite direction. Minimalism subtracts until nothing is left; Maximalism adds until everything has a job.
+
+**The rules that make it Maximalism:**
+- **Abundance with a budget.** Two or three loud accents, each marking one role (headline, link, price). Every ornament earns its place. "More" is a decision, not clutter.
+- **Mixed type, deliberate collision.** Display serif (Zodiak) for the voice, display sans (Clash Display) for the shout, General Sans for body. Serif + one sans + body is the ceiling — a third sans is the tell.
+- **Ornament is structure.** Rules, double-frames, patterns, and fills carve the layout; they never decorate it. A pattern that doesn't compose space is wallpaper.
+- **Layered depth, not shadows.** DEPTH comes from stacked frames, overlapping panels, and layered borders. Max 1-2 shadows on the whole page; shadows are not the material here.
+- **Warm paper.** Ivory `#F7F3E8`, never sterile white. Maximalism's paper has warmth.
+- **Contrast stays.** Loud ≠ unreadable. Accent text passes 4.5:1; busy areas get quiet text.
+
+**When to use:** Fashion houses, editorial (Vogue energy), galleries, restaurants, creative agencies, expressive personal sites — anything that should read as *deliberately rich, confident, more*.
+
+**When NOT to use:** Dashboards, docs, enterprise, trust-first surfaces, or anything that needs calm or clarity. Say so explicitly if the brief pushes Maximalism where it doesn't belong.
 
 ---
 
@@ -575,6 +620,17 @@ Same recipes, Tailwind v4 utility classes. CSS-first config — no `tailwind.con
 </div>
 ```
 
+### Maximalism
+
+```html
+<div class="bg-[#F7F3E8] text-[#1a1a1a] rounded-none font-[General_Sans,system-ui] p-6 border-2 border-double border-[#1a1a1a]">
+  <h2 class="font-[Zodiak,Georgia,serif] text-4xl font-medium text-[#C8102E]">More, Chosen.</h2>
+  <p class="font-[Clash_Display,sans-serif] text-sm uppercase tracking-wide text-[#1F4E79]">The page that gives you everything you asked for.</p>
+  <p class="text-base max-w-[60ch]">Two or three accents, each with a job. Ornament as structure, never wallpaper.</p>
+  <a href="#" class="underline decoration-double underline-offset-4 text-[#B08D00]">Enter the archive</a>
+</div>
+```
+
 ---
 
 ## Scan the Project First
@@ -584,14 +640,14 @@ Before you generate anything, read what's already there. Stomping on an existing
 Check these four things in order:
 
 1. **package.json** — what framework? Next.js, Astro, Vite, Svelte, Remix, or vanilla? What motion library is installed (motion, gsap, framer-motion)?
-2. **Font stack** — is the Fontshare CSS API linked? Are `@fontsource` packages pulling Fontshare families? Is there a `tailwind.config` with `theme.extend.fontFamily`? Whatever is there, preserve it.
+2. **Font stack** — which track? Geist via `next/font` (shadcn default) or the Fontshare CSS API? Is there a `tailwind.config` with `theme.extend.fontFamily`? Whatever is there, preserve the track.
 3. **Palette** — any `:root` CSS custom properties? OKLCH values in global CSS? Tailwind `@theme` block with color tokens? Don't overwrite them.
 4. **Icons** — `lucide-react` or `@phosphor-icons/react` in dependencies? Use what's installed. Don't install a second library mid-session.
 
 State what you found in one line before the Design Read. If the project is empty, say so and proceed.
 
 ```
-Found: Next.js + Tailwind v4, Satoshi via Fontshare CDN, lucide-react, no motion lib.
+Found: Next.js + Tailwind v4, Geist via next/font (Track 1), lucide-react, no motion lib.
 Preserving: font stack, icon library. I'll introduce: the style surfaces, GSAP for scroll.
 ```
 
@@ -604,7 +660,7 @@ If the user says "ignore the existing project," skip this. Otherwise, the scan i
 ### Framework
 - **Any framework** with TailwindCSS v4: Next.js, Astro, Vite + React, Svelte, Remix, or plain HTML. The CSS recipes above are pure CSS — they work everywhere. Tailwind utility equivalents use standard classes (no framework lock-in).
 - **Tailwind v4 notes:** CSS-first config. Use `@tailwindcss/postcss` or Vite plugin. No `tailwind.config.js`. Dark mode via `dark:` variant. Container queries and arbitrary values work natively.
-- **Font loading by framework (Fontshare only):** `next/font/google` cannot load Fontshare families. Use Fontshare's CSS API — `<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">` — in any framework, or self-host via `@fontsource` where the family ships there (Outfit, Space Grotesk, Archivo, Anton, Familjen Grotesk, Azeret Mono) and `@font-face` + `font-display: swap` otherwise. Never link Google Fonts via `<link>` in production.
+- **Font loading by framework (two tracks — pick one):** Track 1, shadcn/Next defaults: `next/font/google` with Geist Sans + Geist Mono (or `@fontsource/geist-sans`). Track 2, Fontshare: `next/font/google` cannot load Fontshare families — use the Fontshare CSS API `<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">`, or self-host via `@fontsource` where the family also ships on Google (Outfit, Space Grotesk, Archivo, Anton, Familjen Grotesk, Azeret Mono) and `@font-face` + `font-display: swap` otherwise. Never link Google Fonts via `<link>` in production outside the Geist track.
 - **Motion (mount animations):** Works with any React-compatible framework (Next.js, Vite + React, Remix). Import from `motion/react`. Use for: on-mount entrance animations (hero headlines, nav, initial load). For non-React frameworks (Astro, Svelte, plain HTML), use CSS `@keyframes` + `animation` or the Web Animations API (`element.animate()`) for mount effects.
 - **GSAP + ScrollTrigger (scroll animations):** Framework-agnostic. Use for: scroll-driven reveals (features grids, CTAs, demo panels, staggered card entrances). In React: `useRef` + `gsap.context()` + cleanup in `useEffect`. See `references/gsap-setup.md` for patterns across frameworks.
 - **The split:** Motion (or CSS animations) for mount, GSAP+ScrollTrigger for scroll. Never use GSAP for on-mount — it's heavier and imperative; Motion and CSS are declarative and simpler for that job.
@@ -629,32 +685,27 @@ const NEUBRUTAL = {
 
 Then reference tokens with template literals: `className={GLASS.card}`, `className={[NEUBRUTAL.btn, "flex-1"].join(" ")}`. Benefits: (a) every element stays on the same recipe, (b) tuning a dial means changing one value and every element updates, (c) the file is scannable instead of 150-line class strings on every div. For pages with only one or two styled surfaces, inline classes are fine.
 
-### Fonts (Fontshare only)
+### Fonts — two tracks, pick one
 
-Every style in this skill uses Fontshare fonts. Google Fonts and Adobe Fonts are out; `next/font/google` cannot load Fontshare families. Load via Fontshare's CSS API, or self-host:
+Every style runs on either track. Pick ONE per project and stay on it.
 
-- **Fontshare CSS API (simplest — works in dev and prod):**
-  ```html
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=general-sans@400&display=swap" rel="stylesheet">
-  ```
-  One `<link>` per family group; weights declared with `@`; `display=swap` in the URL.
-- **Self-host (preferred for production):** families that also ship on Google (Outfit, Space Grotesk, Archivo, Anton, Familjen Grotesk, Azeret Mono) have `@fontsource` packages (`npm install @fontsource/outfit`). Fontshare-exclusive families (Satoshi, General Sans, Switzer, Clash Display, Clash Grotesk, Cabinet Grotesk, Excon, Zodiak, Melodrama) have no `@fontsource` package — download the woff2 from Fontshare and self-host with `@font-face` + `font-display: swap`.
+- **Track 1 — shadcn / Next.js defaults (Geist).** The fonts shadcn/ui and Next.js ship with: Geist Sans + Geist Mono. Load via `next/font/google` or `@fontsource/geist-sans` / `@fontsource/geist-mono`. Zero setup in a shadcn project. Styles that need a serif or geometric display (Minimalism, Bauhaus) either compromise on Geist or switch to Track 2.
+- **Track 2 — Fontshare.** Geist's counterparts with more voice per style. `next/font/google` cannot load Fontshare families. Load via Fontshare's CSS API — `<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">` — or self-host via `@fontsource` where the family also ships on Google (Outfit, Space Grotesk, Archivo, Anton, Familjen Grotesk, Azeret Mono) and `@font-face` + `font-display: swap` otherwise.
 
-**Recommended by style:**
-- **Glassmorphism:** Satoshi (display), General Sans (body) — crisp, modern, lets the material speak. Outfit as the restrained alternative; Azeret Mono for code and the outlier slot.
-- **Neubrutalism:** Clash Display, Space Grotesk, Clash Grotesk for display; Anton for the one heavy hero moment; General Sans for body (calm, boring on purpose); Azeret Mono for the outlier.
-- **Swiss Design:** Familjen Grotesk (primary), Switzer, General Sans (fallbacks, in that order). Light weights only — headings `300`/`400`, never bold.
-- **Bauhaus:** Excon (display, the Futura clone — geometric, points on A/M/N), Archivo (body). Headings bold (`700`/`800`) and uppercase — the loud inverse of Swiss's light type.
-- **Futurism:** Azeret Mono — the only mono Fontshare carries, so it is the exclusive face and the outlier slot is dropped. Display and body share the same grid. Headings `700` + `0.05em` tracking; labels all-caps.
-- **Minimalism:** Zodiak (display, serif — the ONLY serif display in the skill) + Switzer (body). Headings regular `400`, often uppercase with wide tracking, never bold. Melodrama as the fashion-forward display alternative.
-- **Brutalism:** Azeret Mono (the voice — typed-document honesty) + Archivo (plain body, only for long prose). No refined pairing; no tracking ceremony.
+| Style | Track 1 — shadcn/Next (Geist) | Track 2 — Fontshare |
+|---|---|---|
+| Glassmorphism | Geist Sans | Satoshi + General Sans |
+| Neubrutalism | Geist Sans body + Geist Mono outlier | Clash Display / Space Grotesk + General Sans body + Azeret Mono |
+| Swiss Design | Geist Sans (light weights) | Familjen Grotesk + Switzer |
+| Bauhaus | Geist Sans (bold, uppercase — not geometric) | Excon + Archivo |
+| Futurism | Geist Mono | Azeret Mono |
+| Minimalism | Geist Sans body — the serif display requires Track 2 | Zodiak + Switzer |
+| Brutalism | Geist Mono (typed voice) | Azeret Mono + Archivo |
+| Maximalism | Geist Sans + Geist Mono | Zodiak / Clash Display + General Sans |
 
-**Available typefaces (all Fontshare):**
-- **Default:** General Sans + Azeret Mono (Fontshare's workhorse + its only mono)
-- **Sans-serif options:** Satoshi, General Sans, Switzer, Outfit, Space Grotesk, Familjen Grotesk, Archivo, Clash Grotesk, Cabinet Grotesk, Sora, Manrope
-- **Display / wide:** Clash Display, Excon, Anton, Panchang, Stardom, Technor, Trench Slab, Sharpie, Nippo, Alpino
-- **Mono options:** Azeret Mono (the only one)
-- **Serif options:** Zodiak, Melodrama, Sentient, Gambetta, Boska, Erode, Gambarino, Recia, Rowan
+**Available typefaces:**
+- **Track 1:** Geist Sans, Geist Mono
+- **Track 2 (Fontshare):** Sans: Satoshi, General Sans, Switzer, Outfit, Space Grotesk, Familjen Grotesk, Archivo, Clash Grotesk, Cabinet Grotesk, Sora, Manrope. Display: Clash Display, Excon, Anton, Panchang, Stardom, Technor, Trench Slab, Sharpie, Nippo, Alpino. Mono: Azeret Mono (the only one). Serif: Zodiak, Melodrama, Sentient, Gambetta, Boska, Erode, Gambarino, Recia, Rowan.
 
 For the full type system — the 2+1 rule, the ratio-based scale, measure (45–75ch), weight contrast, and hero-headline-length sizing — see `references/typography.md`. For the spacing scale, z-index scale, grid rules, and the "one layout family per page" rule — see `references/layout.md`.
 
@@ -664,7 +715,7 @@ For the full type system — the 2+1 rule, the ratio-based scale, measure (45–
 - `@phosphor-icons/react` -- extensive, multiple weights (Thin through Fill)
 - `@tabler/icons-react` -- sharp, technical, good for dashboards
 
-**Recommended by style:** Glassmorphism — Lucide (Regular) or Phosphor (Regular), crisp glyphs that read cleanly over translucency. Neubrutalism — Phosphor (Bold) or Lucide with `strokeWidth={2.5}`, chunky glyphs that match the thick borders. Bauhaus — Lucide (thin strokes) or raw geometric shapes (circle/square/triangle) as the graphic language. Futurism — Lucide (thin strokes) or Tabler (sharp, technical), glyphs that read as instrument readouts. Minimalism — Lucide (thin strokes, `strokeWidth={1.5}`) or no icons at all; the type carries the page. Brutalism — no icon library; bare unicode glyphs (`→`, `[ ]`, `*`) and raw text are the interface.
+**Recommended by style:** Glassmorphism — Lucide (Regular) or Phosphor (Regular), crisp glyphs that read cleanly over translucency. Neubrutalism — Phosphor (Bold) or Lucide with `strokeWidth={2.5}`, chunky glyphs that match the thick borders. Bauhaus — Lucide (thin strokes) or raw geometric shapes (circle/square/triangle) as the graphic language. Futurism — Lucide (thin strokes) or Tabler (sharp, technical), glyphs that read as instrument readouts. Minimalism — Lucide (thin strokes, `strokeWidth={1.5}`) or no icons at all; the type carries the page. Brutalism — no icon library; bare unicode glyphs (`→`, `[ ]`, `*`) and raw text are the interface. Maximalism — any library works; abundance is native, but one family still holds (Phosphor Bold for the shout, or Lucide at `strokeWidth={2}`).
 
 **Rules:**
 - One icon family per project. Do not mix Lucide with Phosphor in the same tree.
@@ -717,7 +768,7 @@ These styles are a11y traps in different ways. These rules are mandatory — ski
   }
 }
 ```
-Every glass element MUST ship a solid fallback. Never ship glass without it. (Neubrutalism, Swiss, Bauhaus, Futurism, Minimalism, and Brutalism are opaque by definition — this rule is glass-only.)
+Every glass element MUST ship a solid fallback. Never ship glass without it. (Neubrutalism, Swiss, Bauhaus, Futurism, Minimalism, Brutalism, and Maximalism are opaque by definition — this rule is glass-only.)
 
 ### Focus States
 - **Glass:** `outline: 2px solid rgba(255,255,255,0.8);` on dark backgrounds, `outline: 2px solid rgba(0,0,0,0.6);` on light backgrounds.
@@ -726,6 +777,7 @@ Every glass element MUST ship a solid fallback. Never ship glass without it. (Ne
 - **Futurism:** `outline: 1px solid #00ed3f; outline-offset: 2px; box-shadow: 0 0 8px #00ed3f66;` — the focus ring IS the glow. Instant, never animated.
 - **Minimalism:** `outline: 1px solid #1a1a1a; outline-offset: 2px;` — a hairline ink ring, instant, never animated.
 - **Brutalism:** `outline: 1px solid #000000; outline-offset: 2px;` — a raw black ring, instant, never animated.
+- **Maximalism:** `outline: 2px solid #1a1a1a; outline-offset: 2px;` — a bold ink ring, instant, never animated.
 - Never rely on shadow change alone for focus. A visible outline ring is mandatory.
 
 ---
@@ -860,6 +912,16 @@ Every glass element MUST ship a solid fallback. Never ship glass without it. (Ne
 - **THE GENEROUS WHITESPACE.** Luxury air. Brutalism can be cramped and raw — density is honesty. If the page needs air, that's Swiss or Minimalism.
 - **THE LOUD ACCENT.** More than one signal color, or color used ambiently. One raw red maximum, text-only.
 
+### Maximalism Tells
+- **THE EMPTY WALL.** A sparse, quiet section. Maximalism does not do empty sections; if a page has air, it is not maximal.
+- **THE SINGLE ACCENT.** One color used everywhere. Maximalism budgets TWO or THREE, each with a job.
+- **THE UNIFORM GRID.** Three equal cards in a row. Maximalism staggers, overlaps, and varies tile sizes.
+- **THE MINIMAL LOGO.** A tiny wordmark in a corner. Maximalism's wordmark is part of the composition — framed and ornamented.
+- **THE FLAT COLOR.** Flat fills with no ornament, no pattern, no layering. Abundance requires layers.
+- **THE WHITE SPACE.** Generous air. Air is Minimalism's material; Maximalism fills deliberately.
+- **THE CLUTTER.** Ornament that does not compose. Abundance with a budget — decoration without a job is slop.
+- **THE THIRD SANS.** More than one sans voice. Serif + one sans + body is the ceiling.
+
 ---
 
 ## How Things Move
@@ -889,6 +951,7 @@ The full motion language — easing tokens, the duration canon, page-load orches
 | Futurism | CRT, mechanical | blink/flicker/pulse (ambient, reduced-motion-off), glitch on hover, ~150ms | data-scroll tickers, scanline reveals, sharp, no easing |
 | Minimalism | Near-static, editorial | underline stays, text fades (opacity shift), ~150ms. No scale, no lift | slow single-opacity fades, reveal once, no stagger cascade |
 | Brutalism | Static, instant | no hover treatment — instant state change or none at all | no scroll reveals, no parallax, no easing |
+| Maximalism | Expressive, confident | accent color-shift + small ornament scale, ~200ms, no overshoot | staggered cascade reveals, bolder but transform/opacity only |
 
 **GSAP ScrollTrigger pattern** (see `references/gsap-setup.md` for React, vanilla JS, and Astro examples):
 ```tsx
@@ -952,6 +1015,11 @@ useEffect(() => {
 - **One raw accent.** Raw red `#E2062C` maximum, as text or links only. Everything else is ink on paper.
 - **Dark mode:** invert — near-black paper, near-white ink. Same monochrome discipline.
 
+### Maximalism
+- **Warm ivory paper, ink.** Background `#F7F3E8`, ink `#1a1a1a`. Never sterile white — Maximalism's paper has warmth.
+- **Two or three loud accents, budgeted.** Deep red `#C8102E` (headlines), deep blue `#1F4E79` (links), burnished gold `#B08D00` (prices and emphasis). Each accent has ONE job; a fourth color is clutter.
+- **Dark mode:** near-black paper, near-white ink; the accents stay — they are the identity.
+
 ---
 
 ## Don't Build the Same Page Twice
@@ -1014,6 +1082,7 @@ Name something real. A place, a date, a number, a verb that means something:
 | Futurism | Terse, procedural, terminal-native. "SIGNAL ACQUIRED. 4 TRANSMISSIONS BUFFERED." All-caps for labels and states; readable mono for prose. |
 | Minimalism | Quiet, precise, editorial. "The quarterly for people who read." Restraint is the point; adjectives are withheld. |
 | Brutalism | Raw, declarative, unpolished on purpose. "RAW. HONEST. UNFINISHED ON PURPOSE." No comfort, no adjectives; facts and index. |
+| Maximalism | Confident, generous, chosen. "MORE, CHOSEN." Abundance with a budget; every word earns its weight. |
 
 ### The self-audit
 
@@ -1046,7 +1115,7 @@ Before the checklist, score the build 1–5 on six axes. Anything < 3 on any axi
 
 ### Style Selection
 - [ ] **Design Read** declared (see Read the Room)?
-- [ ] **Dial values** set (glass `5 / 4 / 8 / 0`, neubrutalism `6 / 1 / 0 / 0`, futurism `3 / 0 / 0 / 6`, minimalism `0 / 0 / 0 / 0`, brutalism `1 / 0 / 0 / 0`, unless overridden)?
+- [ ] **Dial values** set (glass `5 / 4 / 8 / 0`, futurism `3 / 0 / 0 / 6`, neubrutalism `6 / 1 / 0 / 0`, brutalism `1 / 0 / 0 / 0`, minimalism `0 / 0 / 0 / 0`, maximalism `6 / 3 / 0 / 1`, unless overridden)?
 - [ ] **ONE style** per page (no mixing)?
 
 ### Accessibility (CRITICAL)
@@ -1066,6 +1135,7 @@ Before the checklist, score the build 1–5 on six axes. Anything < 3 on any axi
 - [ ] **Futurism:** mono only (Azeret Mono)? Zero radius + chamfered notches (no rounded)? Phosphor glow, not drop shadow? Neutral near-black background (no tint)? Deliberate palette (green/amber/red/blue)? Glow reserved for alive/focus? CRT effects gated by reduced-motion?
 - [ ] **Minimalism:** serif display (Zodiak, never sans)? Ink-only palette (zero accent)? Underlined controls (no filled buttons)? Pure white paper + near-black ink? Square, shadowless (`0 / 0 / 0 / 0`)? Headings regular-weight, not bold? Generous whitespace (no dense layout)?
 - [ ] **Brutalism:** monochrome (one raw accent max)? Exposed structure (visible seams/borders)? Zero polish (no shadows/gradients/radius/easing)? Typed voice (Azeret Mono)? Ugly-but-readable (contrast + focus still pass)?
+- [ ] **Maximalism:** abundance with a budget (ornament composes, not wallpaper)? Two or three accents, each with a job? Mixed type (serif + one sans, no third sans)? Layered depth, max 1-2 shadows? Contrast passes on loud fills?
 
 ### Code Quality
 - [ ] **No `h-screen`** -- using `min-h-[100dvh]`?
@@ -1081,7 +1151,7 @@ Before the checklist, score the build 1–5 on six axes. Anything < 3 on any axi
 - [ ] **No AI copy cliches** ("Elevate", "Seamless", "Unleash", etc.)?
 - [ ] **No generic placeholders** ("John Doe", "Acme Corp", "Lorem Ipsum")?
 - [ ] **No pill badge** (`rounded-full bg-white/10 backdrop-blur ...`) -- bare text label + icon only?
-- [ ] **Font is not Inter-by-default** (glass: Satoshi/General Sans/Outfit; neubrutalism: loud display face)?
+- [ ] **Font is not Inter-by-default** (glass: Geist or Satoshi/General Sans; neubrutalism: loud display face)?
 - [ ] **No mixing styles** on one page?
 - [ ] **Different page rhythm** than the last build (see Don't Build the Same Page Twice)?
 - [ ] **Copy self-audited** — no banned opening lines, no invented metrics?
@@ -1094,6 +1164,7 @@ Before the checklist, score the build 1–5 on six axes. Anything < 3 on any axi
 
 This skill is NOT for:
 - Flat design that isn't Swiss, Bauhaus, Minimalism, or Brutalism — generic "clean minimal" with none of the four disciplines (Swiss grid + opacity, Bauhaus primaries + geometry, Minimalism serif + ink + underlined controls, Brutalism monochrome + raw + exposed structure). Route to the closest flat style, not out of scope.
+- Loud, cluttered design without a budget — decoration with no job. Maximalism requires abundance with a budget; un-budgeted clutter is slop, not a style.
 - Flat design with primary colors and geometry (circle/square/triangle) that isn't Bauhaus-disciplined — routes to Bauhaus, not out of scope.
 - Dark neon "sci-fi" that isn't Cassette Futurism — without the mono type, phosphor palette, and zero-radius discipline. Routes to Futurism, not out of scope.
 - Other morphism styles (Neumorphism, Claymorphism, Skeuomorphism, Liquid Glass) — not yet covered; say so if the brief asks for them.
@@ -1120,6 +1191,7 @@ If the brief is out of scope, **say so** and recommend the right approach.
 | "futurism", "sci-fi", "retro sci-fi", "terminal", "cyberpunk", "hacker", "phosphor", "mono" | Futurism | 3 / 0 / 0 / 6 |
 | "minimalist", "quiet luxury", "serif", "print", "understated", "gallery", "magazine", "fashion" | Minimalism | 0 / 0 / 0 / 0 |
 | "brutalist", "raw", "concrete", "ugly on purpose", "anti-design", "unpolished", "exposed" | Brutalism | 1 / 0 / 0 / 0 |
+| "maximalist", "ornate", "opulent", "abundance", "more is more", "memphis", "loud editorial" | Maximalism | 6 / 3 / 0 / 1 |
 
 ## Real-World References
 
@@ -1129,3 +1201,4 @@ If the brief is out of scope, **say so** and recommend the right approach.
 - **Futurism:** scificn.dev / scificn-ui (Cassette Futurism component library), the Alien and Blade Runner interface language, mission-control dashboards, 1970s terminal UIs.
 - **Minimalism:** shadcn/ui "Sera" theme (serif editorial preset), Aesop, Kinfolk, Cereal magazine, The Row, Leica, Muji.
 - **Brutalism:** brutalistwebsites.com, RAW Magazine, Kunsthalle Zürich, Werkleitz Festival, Yves Tumor's site, the U.S. National Debt Clock, Disslist.
+- **Maximalism:** the Memphis Group (Ettore Sottsass), Vogue editorial spreads, David Carson's Ray Gun, Gucci's maximalist creative direction, UAL art-school sites.

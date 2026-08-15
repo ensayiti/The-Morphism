@@ -1,6 +1,6 @@
 # Macrostructures — page shapes
 
-> The material (glass, neubrutalism, Swiss, Bauhaus, Futurism, Minimalism, or Brutalism) dresses the shape. It does not choose it.
+> The material (glass, neubrutalism, Swiss, Bauhaus, Futurism, Minimalism, Brutalism, or Maximalism) dresses the shape. It does not choose it.
 > Pick the page SHAPE first, then set the dials. This is the fix for "same page, different palette."
 
 Two briefs should produce two different skeletons — not the same hero → features → CTA → footer run with a different blur or border width. A macrostructure is a complete page shape: heading placement, body composition, divider, button voice, image treatment, reveal. One named choice, not six decisions from scratch.
@@ -9,7 +9,7 @@ Two briefs should produce two different skeletons — not the same hero → feat
 
 **Refuse the last three.** No two consecutive builds in the same project share a macrostructure — and not two editorial variants of the same shape either. Pick from a categorically different family (grid-led vs document-led vs poster-led). If you built Bento Grid yesterday, today is Long Document or Manifesto, not "Bento Grid but with rounder corners."
 
-The glass, neo, Swiss, Bauhaus, Futurism, Minimalism, and Brutalism takes below are the material's read on the same shape. Glass keeps it cool and layered; neo keeps it loud and sharp; Swiss keeps it flat and ordered; Bauhaus keeps it flat and geometric; Futurism keeps it dark and luminous; Minimalism keeps it white, serif, and quiet; Brutalism keeps it raw, monochrome, and honest. Same skeleton, different material.
+The glass, neo, Swiss, Bauhaus, Futurism, Minimalism, Brutalism, and Maximalism takes below are the material's read on the same shape. Glass keeps it cool and layered; neo keeps it loud and sharp; Swiss keeps it flat and ordered; Bauhaus keeps it flat and geometric; Futurism keeps it dark and luminous; Minimalism keeps it white, serif, and quiet; Brutalism keeps it raw, monochrome, and honest; Maximalism keeps it rich, layered, and chosen. Same skeleton, different material.
 
 ---
 
@@ -23,6 +23,7 @@ The glass, neo, Swiss, Bauhaus, Futurism, Minimalism, and Brutalism takes below 
 - Futurism: a mission-control grid of notched panels, hairline borders, mono readouts; glow marks the active tile.
 - Minimalism: a calm grid of white tiles with hairline ink rules; hierarchy via type scale and whitespace, no fills, no shadow.
 - Brutalism: a raw grid of monochrome tiles with visible 1px seams; no fills beyond black/white, one red signal tile.
+- Maximalism: a crowded grid of varied tiles — patterns, double-frames, one accent per tile, deliberate overlap.
 - Reach for: "many things to show" — feature pages, SaaS, dashboards. Avoid: a single hero idea.
 
 **02 · Marquee Hero** — one bold statement fills the fold. No subhead, no CTA above the fold. Below, the page becomes something else.
@@ -33,6 +34,7 @@ The glass, neo, Swiss, Bauhaus, Futurism, Minimalism, and Brutalism takes below 
 - Futurism: a huge mono statement in phosphor type over near-black, a status line above, glow on the key word.
 - Minimalism: one huge serif statement in Zodiak, uppercase, vast whitespace. The print poster.
 - Brutalism: one huge raw statement in mono, all-caps, on bare paper. No subhead, no gloss.
+- Maximalism: a giant serif statement in Zodiak with a sans shout-line, framed in double rules, on a patterned panel.
 - Reach for: launch pages, agency splashes, one-idea products. Avoid: content-heavy pages that need the fold to explain.
 
 **03 · Split Diptych** — text on one side, proof on the other. The pairing alternates direction down the page.
@@ -43,6 +45,7 @@ The glass, neo, Swiss, Bauhaus, Futurism, Minimalism, and Brutalism takes below 
 - Futurism: copy-left + a live data readout or terminal panel right, corner-notched, glow on active elements.
 - Minimalism: text left, a photograph right, on a hard split with a hairline ink divider.
 - Brutalism: text left, raw data or a table right, a hard black rule between. Structure visible.
+- Maximalism: text on a framed panel left, a pattern or photograph right, double-rule divider, accents on both sides.
 - Reach for: SaaS, dev tools, studio sites. Avoid: pure narrative with no visual proof.
 
 **04 · Stat-Led** — a giant number is the hero; everything after supports or qualifies it.
@@ -53,6 +56,7 @@ The glass, neo, Swiss, Bauhaus, Futurism, Minimalism, and Brutalism takes below 
 - Futurism: NATIVE. A giant mono number in phosphor glow over near-black, a status caption beneath. Mission-control readout.
 - Minimalism: a giant thin serif number with a small caption. The number, quiet.
 - Brutalism: a giant mono number, unsmoothed, with a caption. The number, naked.
+- Maximalism: a huge serif number on an ornamented fill, caption in a frame. The number, decorated.
 - Reach for: fintech, metrics products, "the number is the pitch." Avoid: a brief with no real number — invented stats are slop.
 
 **05 · Manifesto** — polemical large type, declaration energy. The page tells you what to believe before it tells you what to buy.
@@ -63,6 +67,7 @@ The glass, neo, Swiss, Bauhaus, Futurism, Minimalism, and Brutalism takes below 
 - Futurism: a terminal declaration — all-caps mono statement, a `>_` prompt, glow on the key phrase.
 - Minimalism: rare — restraint is the point. A quiet declarative serif statement, no exclamation.
 - Brutalism: NATIVE. A raw declaration — mono, all-caps, honest. "THIS SITE IS NOT FOR YOU."
+- Maximalism: a layered declaration — serif voice, sans shout, pattern behind, framed. "MORE, CHOSEN."
 - Reach for: studios, campaigns, causes, opinionated founders. Avoid: trust-first surfaces.
 
 **06 · Long Document** — reads like a memo, letter, or journal entry. No marketing structure. Continuous prose with inline heads.
@@ -73,6 +78,7 @@ The glass, neo, Swiss, Bauhaus, Futurism, Minimalism, and Brutalism takes below 
 - Futurism: a terminal log / README — continuous mono prose, `##` section markers, a blinking cursor at the foot.
 - Minimalism: NATIVE. The canonical magazine article — serif heads, sans body, justified columns, a colophon.
 - Brutalism: a bare typed document — mono prose, visible headers, no styling ceremony.
+- Maximalism: NATIVE. A rich editorial spread — drop caps, pull quotes in frames, marginalia, patterns between sections.
 - Reach for: "this is literature about the product," personal sites, essays. Avoid: skim-and-scan SaaS.
 
 **07 · Workbench** — product screenshots in frames are the primary content. A guided tour of the thing in use.
@@ -83,6 +89,7 @@ The glass, neo, Swiss, Bauhaus, Futurism, Minimalism, and Brutalism takes below 
 - Futurism: NATIVE. Screenshots in notched terminal frames with status bars; the tour is a command log.
 - Minimalism: screenshots in hairline frames, no chrome, numbered serif captions.
 - Brutalism: screenshots in raw 1px black frames, no chrome, numbered captions.
+- Maximalism: screenshots in double-framed panels with caption pins and accent tabs; the tour is a spread.
 - Reach for: dev tools, apps, "here's what you do with it." Avoid: no product to show.
 
 **08 · Quote-Led** — the hero is a pull-quote with attribution. Borrowed credibility leads.
@@ -93,6 +100,7 @@ The glass, neo, Swiss, Bauhaus, Futurism, Minimalism, and Brutalism takes below 
 - Futurism: a quote in phosphor mono, attribution as a status line, a prompt prefix.
 - Minimalism: a large serif pull-quote, attribution in small caps, a hairline above.
 - Brutalism: a raw pull-quote in mono, attribution in caps, a hard rule above.
+- Maximalism: a huge serif pull-quote on a patterned panel, attribution in a frame, accents.
 - Reach for: social-proof-first, testimonials-as-hero. Avoid: a brand that needs to lead with its own voice.
 
 **09 · Photographic** — a single huge image dominates each fold. Text is small annotation, not headline.
@@ -103,6 +111,7 @@ The glass, neo, Swiss, Bauhaus, Futurism, Minimalism, and Brutalism takes below 
 - Futurism: rare — only if the photo is a CRT screen, radar, or technical image; framed in a notched panel.
 - Minimalism: NATIVE. Full-bleed photography, a small serif caption in the margin. The fashion/architecture layout.
 - Brutalism: full-bleed monochrome photography, small raw captions, no treatment.
+- Maximalism: full-bleed photography overlaid with frames, patterns, and accent shapes; caption in a band.
 - Reach for: food, travel, fashion, anything visual-first. Avoid: typography-led brands.
 
 **10 · Catalogue** — a uniform grid of variations of the same thing (SKUs, work, typefaces).
@@ -113,6 +122,7 @@ The glass, neo, Swiss, Bauhaus, Futurism, Minimalism, and Brutalism takes below 
 - Futurism: NATIVE. A grid of instrument panels / data cards, mono labels, glow on the selected item.
 - Minimalism: NATIVE. A uniform grid of specimens on white, hairline ink rules, serif captions.
 - Brutalism: NATIVE. A bare grid of specimens on paper, 1px rules, mono captions.
+- Maximalism: a dense grid of specimens on varied tiles, patterns and frames, one accent per category.
 - Reach for: portfolios, shops, collections. Avoid: a single narrative thread.
 
 **11 · Letter** — first-person, written, intimate. Opens "Dear X,". No buttons in the fold.
@@ -123,6 +133,7 @@ The glass, neo, Swiss, Bauhaus, Futurism, Minimalism, and Brutalism takes below 
 - Futurism: a terminal message — `> FROM: X`, mono prose, a signature block in glow.
 - Minimalism: NATIVE. First-person, serif, intimate. "Dear X," in Zodiak.
 - Brutalism: a raw typed letter — mono, no ornament, signed plainly.
+- Maximalism: an ornate letter — serif hand, ornamented initials, a framed signature block.
 - Reach for: personal sites, founder notes, hand-crafted brands. Avoid: transactional pages.
 
 **12 · Portfolio Grid** — filterable cards of projects. The work is the product.
@@ -133,6 +144,7 @@ The glass, neo, Swiss, Bauhaus, Futurism, Minimalism, and Brutalism takes below 
 - Futurism: a grid of project panels with corner notches, status labels (ONLINE/ARCHIVED), glow on hover.
 - Minimalism: a strict grid of projects on white, serif captions + year, hairline rules.
 - Brutalism: a raw grid of projects on paper, mono captions + year, 1px rules.
+- Maximalism: a dense grid of projects on varied tiles, patterns, frames, one accent per project.
 - Reach for: studios, designers, agencies. Avoid: single-product marketing.
 
 ---
@@ -154,6 +166,7 @@ When the brief is vague, offer three macrostructures from categorically differen
 | dev tool · CLI · terminal · gaming · security · monitoring | Workbench · Stat-Led · Bento Grid | Futurism (native) |
 | publishing · magazine · journal · gallery · fashion · architecture · luxury | Long Document · Catalogue · Photographic | Minimalism (native) |
 | gallery · museum · art space · studio · artist · zine · anti-brand | Portfolio Grid · Manifesto · Long Document | Brutalism (native) |
+| fashion · editorial (loud) · restaurant · creative agency · expressive brand | Catalogue · Manifesto · Long Document | Maximalism (native) |
 | fallback (no signal) | Bento · Long Document · Manifesto | either |
 
 If the brief has no domain word, you didn't read it carefully enough. Ask one question before you pick.

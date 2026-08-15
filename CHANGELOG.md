@@ -2,6 +2,23 @@
 
 All notable changes to The Morphism will be documented in this file.
 
+## [3.10.0] — 2026-08-14
+
+### Added
+
+- **Maximalism — the eighth style.** Full treatment in SKILL.md: signal words, dial preset `5-7 / 3-4 / 0 / 0-2`, an exact CSS recipe (warm ivory paper, layered ornament, mixed type, two or three budgeted accents), a Tailwind equivalent, a color system, typography (Zodiak serif voice + Clash Display sans shout + General Sans body), a copy voice ("MORE, CHOSEN."), and eight named tells — THE EMPTY WALL, THE SINGLE ACCENT, THE UNIFORM GRID, THE MINIMAL LOGO, THE FLAT COLOR, THE WHITE SPACE, THE CLUTTER, THE THIRD SANS. Locked as Minimalism's twin: abundance with a budget, the same discipline in the opposite direction.
+- Maximalism takes for all twelve macrostructures in `references/macrostructures.md`, plus a fashion / editorial / restaurant / creative-agency routing row.
+- Maximalism chrome in `references/components.md` — nav N1b / N12, footer Ft1 / Ft8 / Ft3, section heads S5 / S2 / S3, CTA C1 / C3.
+- **Two font tracks.** Every style now runs on either Track 1 (shadcn / Next.js defaults: Geist Sans + Geist Mono via `next/font/google` or `@fontsource`) or Track 2 (Fontshare, the v3.8.0 mapping). Pick one per project; the track table in SKILL.md and the Geist rows in `references/typography.md` map every style on both tracks.
+- **Two families.** Styles are now grouped as Morph Design (Glassmorphism, Futurism, Neubrutalism, Brutalism, Minimalism, Maximalism) and Non-Morph (Swiss Design, Bauhaus) in the README, the dial preset table, and the signal words, matching the pair layout. "brutalist"/"maximalist" signals now route to their own styles.
+- CLI banner tagline: SEVEN → EIGHT STYLES.
+
+### Changed
+
+- README "The styles" section restructured into Morph Design / Non-Morph tables in the pair order.
+- Minimalism's "the ONLY serif display in the skill" claims softened — Zodiak is now shared with Maximalism (quiet voice vs loud voice).
+- Out-of-scope routing adds a Maximalism guard: un-budgeted clutter is slop, not a style. Package description and keywords name Maximalism.
+
 ## [3.9.0] — 2026-08-14
 
 ### Added
