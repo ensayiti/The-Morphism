@@ -2,6 +2,21 @@
 
 All notable changes to The Morphism will be documented in this file.
 
+## [3.11.0] — 2026-08-14
+
+### Added
+
+- **Universal agent packaging.** The Morphism is now agent-agnostic, not Hermes-only:
+  - Entry files for every major agent, all thin wrappers over the one canonical SKILL.md: `templates/AGENTS.md` (universal — Codex, Cursor, Claude Code), root `CLAUDE.md` (Claude Code), `templates/cursor-the-morphism.mdc` (Cursor rules), `templates/clinerules-the-morphism.md` (Cline/Roo).
+  - CLI `--agent` flag: `auto` (detects `.cursor/`, `.clinerules/`, `.claude/`, else AGENTS.md), `all`, `claude` (also installs `.claude/skills/the-morphism/` as a Claude Agent Skill), `codex`, `cursor`, `cline`. The default install now ships AGENTS.md.
+  - README "Works with" table + skills.sh badge. Installable today via `npx skills add ensayiti/The-Morphism`.
+- **De-branded.** "for Hermes Agent" removed from the SKILL.md description, package.json, CLI usage, and README. The `metadata.hermes` frontmatter block and the npm `hermes` keyword stay — Hermes still auto-loads, and the block is ignorable to other parsers.
+
+### Changed
+
+- CLI usage now lists all eight styles in the Morph Design / Non-Morph grouping.
+- `package.json` ships `CLAUDE.md` in the npm package; keywords gain `universal` and `agent-agnostic`.
+
 ## [3.10.0] — 2026-08-14
 
 ### Added

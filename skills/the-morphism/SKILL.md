@@ -1,7 +1,7 @@
 ---
 name: the-morphism
-description: "Anti-slop morphism & aesthetic design skill for Hermes Agent. Glassmorphism, Futurism, Neubrutalism, Brutalism, Minimalism, Maximalism, Swiss Design, and Bauhaus — exact CSS recipes, a motion system, a typographic scale, and named anti-patterns. The agent reads the brief, picks the right style, and ships interfaces that don't look AI-generated. Zero em-dash, zero emoji-as-icon."
-version: 3.10.0
+description: "Anti-slop morphism & aesthetic design skill for AI coding agents. Glassmorphism, Futurism, Neubrutalism, Brutalism, Minimalism, Maximalism, Swiss Design, and Bauhaus — exact CSS recipes, a motion system, a typographic scale, and named anti-patterns. The agent reads the brief, picks the right style, and ships interfaces that don't look AI-generated. Zero em-dash, zero emoji-as-icon."
+version: 3.11.0
 author: XEM
 license: MIT
 metadata:
@@ -13,6 +13,7 @@ metadata:
 
 > Eight aesthetic styles. One page, one style. The agent reads the brief, picks the right language, and ships interfaces that don't look AI-generated.
 > The recipes are exact. The rules are opinionated. The bans are named. Everything else is taste — and taste is contextual.
+> Agent-agnostic: works with Hermes, Claude Code, Codex, Cursor, Cline, and any agent that reads SKILL.md, AGENTS.md, or the plain-text prompt.
 
 ---
 

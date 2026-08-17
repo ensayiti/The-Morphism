@@ -4,7 +4,7 @@
 
 # The Morphism
 
-**A design skill for Hermes Agent that refuses to look AI-generated.**
+**A design skill for AI coding agents that refuses to look AI-generated.**
 
 Multiple aesthetic styles. Exact CSS recipes. A motion system. A typographic scale. Named anti-patterns. The agent reads the brief, sets four dials (DEPTH / SOFTNESS / TRANSLUCENCY / GLOW), and ships interfaces with depth and glow. Not another purple-gradient hero with three equal cards.
 
@@ -19,7 +19,7 @@ Multiple aesthetic styles. Exact CSS recipes. A motion system. A typographic sca
   </tr>
   <tr>
     <td><b>Glassmorphism</b><br/><sub>Frosted Glass · SaaS landing / Hero Overlays</sub></td>
-    <td><b>Futurism</b><br/><sub>Mono Phospor · Terminal / Dashboard</sub></td>
+    <td><b>Futurism</b><br/><sub>Mono Phosphor · Terminal / Dashboard</sub></td>
   </tr>
   <tr>
     <td width="25%"><img src="assets/preview/neubrutalism-half.png" alt="Neubrutalism" /></td>
@@ -87,15 +87,31 @@ Beyond the styles, the skill ships a shared craft layer:
 npx the-morphism init
 ```
 
-Copies the skill into `skills/the-morphism/`. Hermes auto-loads it from there.
+Copies the skill into `skills/the-morphism/` plus agent entry files. Hermes auto-loads it; Claude Code, Codex, Cursor, and Cline read their entry files (see `--agent`).
 
 | Command | Does |
 |---|---|
 | `npx the-morphism init` | SKILL.md + references + .txt template |
 | `npx the-morphism init --core` | Only SKILL.md (no refs, no templates) |
 | `npx the-morphism init --templates-only` | Only the plain-text prompt template |
+| `npx the-morphism init --agent <name>` | + agent entry files: `auto` (detects), `all`, `claude`, `codex`, `cursor`, `cline` |
 
-Re-run any time to update. Non-Hermes users: use `--templates-only` and paste the .txt into your system prompt.
+Re-run any time to update. Any agent: use `--templates-only` and paste the .txt into your system prompt, or `--agent all` for every entry file.
+
+## Works with
+
+The Morphism is agent-agnostic — one SKILL.md source of truth, entry files per agent:
+
+| Agent | How it loads |
+|---|---|
+| Hermes (Nous Research) | Auto-loads `skills/the-morphism/` |
+| Claude Code | `CLAUDE.md` or `.claude/skills/the-morphism/` (Agent Skill, `--agent claude`) |
+| Codex / Cursor / Claude Code | `AGENTS.md` (universal entry, default install) |
+| Cursor | `.cursor/rules/the-morphism.mdc` |
+| Cline / Roo | `.clinerules/the-morphism.md` |
+| Any agent | `templates/the-morphism.txt` pasted into the system prompt, or `npx skills add ensayiti/The-Morphism` |
+
+[![skills.sh](https://skills.sh/b/ensayiti/The-Morphism)](https://skills.sh/ensayiti/The-Morphism)
 
 ---
 
