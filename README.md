@@ -4,6 +4,8 @@
 
 # The Morphism
 
+![Static Badge](https://img.shields.io/badge/skills.sh-compatible-blue)
+
 **A design skill for AI coding agents that refuses to look AI-generated.**
 
 Multiple aesthetic styles. Exact CSS recipes. A motion system. A typographic scale. Named anti-patterns. The agent reads the brief, sets four dials (DEPTH / SOFTNESS / TRANSLUCENCY / GLOW), and ships interfaces with depth and glow. Not another purple-gradient hero with three equal cards.
