@@ -100,7 +100,7 @@ Re-run any time to update. Any agent: use `--templates-only` and paste the .txt 
 
 ## Works with
 
-The Morphism is agent-agnostic — one SKILL.md source of truth, entry files per agent:
+The Morphism is agent-agnostic one SKILL.md source of truth, entry files per agent:
 
 | Agent | How it loads |
 |---|---|
