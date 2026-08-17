@@ -4,8 +4,6 @@
 
 # The Morphism
 
-![Static Badge](https://img.shields.io/badge/skills.sh-compatible-blue?style=for-the-badge&link=npx%20skills%20add%20ensayiti%2FThe-Morphism)
-
 **A design skill for AI coding agents that refuses to look AI-generated.**
 
 Multiple aesthetic styles. Exact CSS recipes. A motion system. A typographic scale. Named anti-patterns. The agent reads the brief, sets four dials (DEPTH / SOFTNESS / TRANSLUCENCY / GLOW), and ships interfaces with depth and glow. Not another purple-gradient hero with three equal cards.
@@ -113,7 +111,7 @@ The Morphism is agent-agnostic — one SKILL.md source of truth, entry files per
 | Cline / Roo | `.clinerules/the-morphism.md` |
 | Any agent | `templates/the-morphism.txt` pasted into the system prompt, or `npx skills add ensayiti/The-Morphism` |
 
-[![skills.sh](https://skills.sh/b/ensayiti/The-Morphism)](https://skills.sh/ensayiti/The-Morphism)
+[![Static Badge](https://img.shields.io/badge/skills.sh-compatible-blue?style=for-the-badge)](https://skills.sh/ensayiti/The-Morphism)
 
 ---
 
