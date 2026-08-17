@@ -4,7 +4,7 @@
 
 # The Morphism
 
-![Static Badge](https://img.shields.io/badge/skills.sh-compatible-blue)
+![Static Badge](https://img.shields.io/badge/skills.sh-compatible-blue?style=for-the-badge&link=npx%20skills%20add%20ensayiti%2FThe-Morphism)
 
 **A design skill for AI coding agents that refuses to look AI-generated.**
 
