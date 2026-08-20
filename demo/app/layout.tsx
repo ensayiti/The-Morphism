@@ -18,8 +18,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "FORMA — The system behind the system",
-  description: "Design tokens, components, and docs that stay in sync. For teams who ship with intent.",
+  title: "The Morphism — Eight styles. One page. Zero slop.",
+  description:
+    "An aesthetic design skill for AI coding agents. Glassmorphism, Futurism, Neubrutalism, Brutalism, Minimalism, Maximalism, Swiss Design, and Bauhaus — exact CSS recipes, four dials, and named anti-patterns.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

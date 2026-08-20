@@ -275,24 +275,24 @@ export default function Home() {
               <span className="flex items-center gap-2">
                 <span className="h-7 w-7 bg-[#E2062C] inline-block" />
                 <span className="h-7 w-7 rounded-full bg-[#FFDD00] inline-block border border-black" />
-                <span className="text-xl font-black uppercase tracking-tight">FORMA</span>
+                <span className="text-xl font-black uppercase tracking-tight">The Morphism</span>
               </span>
             ) : isFuturism ? (
               <span className="flex items-center gap-2 font-mono text-sm tracking-[0.16em]">
                 <span className="h-2 w-2 bg-[#00ed3f] shadow-[0_0_6px_#00ed3f] animate-pulse" />
-                FORMA.SYS
+                MORPHISM.SYS
               </span>
             ) : (
               <span className="flex items-center gap-2">
                 {isNeo ? <Boxes className="h-6 w-6" /> : isSwiss ? <Grid3X3 className="h-5 w-5 opacity-60" /> : isGlass ? <Hexagon className="h-5 w-5" /> : isMaximal ? <span className="h-6 w-6 border-2 border-double border-current grid place-items-center text-[10px] font-black">F</span> : <Box className="h-5 w-5" />}
-                <span className={cn("text-[17px] tracking-tight", isSwiss ? "font-light text-xl" : "font-bold", isMinimal ? "font-[Zodiak,serif] uppercase tracking-[0.06em] text-base font-normal" : "")}>FORMA</span>
+                <span className={cn("text-[17px] tracking-tight", isSwiss ? "font-light text-xl" : "font-bold", isMinimal ? "font-[Zodiak,serif] uppercase tracking-[0.06em] text-base font-normal" : "")}>The Morphism</span>
                 {!isMinimal && !isBrutal && !isFuturism && <span className={cn("text-xs font-medium px-1.5 py-0.5", isGlass ? "rounded-full bg-white/10 text-white/60" : isNeo ? "bg-black text-white" : isSwiss ? "bg-[#C8102E]/10 text-[#C8102E]" : isBauhaus ? "bg-black text-white" : "bg-[#1a1a1a] text-white")}>2026</span>}
               </span>
             )}
           </a>
 
           <div className="hidden md:flex items-center gap-7 text-sm">
-            {["Product", "System", "Journal", "Pricing"].map((l) => (
+            {["Styles", "Recipes", "Docs", "Install"].map((l) => (
               <a
                 key={l}
                 href={`#${l.toLowerCase()}`}
@@ -328,7 +328,7 @@ export default function Home() {
         </div>
         {mobileNav && (
           <div className={cn("md:hidden border-t px-6 py-4 flex flex-col gap-3 text-sm", isGlass ? "border-white/10 bg-[#070b18]/80 backdrop-blur" : "border-black/10 bg-white")}>
-            {["Product", "System", "Journal", "Pricing"].map((l) => (
+            {["Styles", "Recipes", "Docs", "Install"].map((l) => (
               <a key={l} href={`#${l.toLowerCase()}`} onClick={() => setMobileNav(false)}>{l}</a>
             ))}
           </div>
@@ -348,21 +348,21 @@ export default function Home() {
           <div>
             <div className={sectionLabel}>
               {isGlass ? <Sparkles className="h-3.5 w-3.5 opacity-60" /> : isNeo ? <Zap className="h-3.5 w-3.5" /> : isSwiss ? <span className="h-px w-8 bg-[#C8102E]" /> : isBauhaus ? <span className="h-2 w-2 bg-[#E2062C]" /> : isFuturism ? <span className="h-1.5 w-1.5 bg-[#00ed3f] animate-pulse shadow-[0_0_6px_#00ed3f]" /> : isMaximal ? <span className="h-px w-8 bg-[#C8102E]" /> : <span className="h-px w-6 bg-current opacity-30" />}
-              <span>{isFuturism ? "SYSTEM // FORMA v2.4 ONLINE" : isSwiss ? "EST. 2021  —  DESIGN INFRASTRUCTURE" : isBauhaus ? "FORM FOLLOWS SYSTEM" : isMinimal ? "ISSUE 04  —  THE SYSTEM ISSUE" : "Design infrastructure for teams who ship"}</span>
+              <span>{isFuturism ? "SYSTEM // THE MORPHISM v3.11 ONLINE" : isSwiss ? "EIGHT STYLES  —  ONE PAGE  —  ZERO SLOP" : isBauhaus ? "FORM FOLLOWS TASTE" : isMinimal ? "ISSUE 04  —  THE TASTE ISSUE" : "Eight styles. One page. Never mix."}</span>
             </div>
 
             <h1 className={cn("mt-6 text-[40px] lg:text-[64px] leading-[0.92] max-w-[14ch]", fontHeading, headingWeight)}>
               {isFuturism ? (
-                <span className="text-[#00ed3f] [text-shadow:0_0_8px_#00ed3f66]">THE SYSTEM<br />BEHIND THE<br />SYSTEM.</span>
+                <span className="text-[#00ed3f] [text-shadow:0_0_8px_#00ed3f66]">EIGHT STYLES.<br />ONE PAGE.<br />ZERO SLOP.</span>
               ) : isBrutal ? (
-                <span>THE SYSTEM<br />BEHIND THE<br />SYSTEM.</span>
+                <span>EIGHT STYLES.<br />ONE PAGE.<br />ZERO SLOP.</span>
               ) : isBauhaus ? (
-                <span className="uppercase">The<br />system<br />behind the<br />system.</span>
+                <span className="uppercase">Eight<br />styles.<br />one page.<br />zero slop.</span>
               ) : isMinimal ? (
-                <span className="uppercase font-normal">The system<br />behind the system.</span>
+                <span className="uppercase font-normal">Eight styles.<br />one page.<br />zero slop.</span>
               ) : (
                 <span>
-                  The system <br />
+                  Eight styles <br />
                   <span
                     className={cn(
                       isGlass ? "text-white/50" : isNeo ? "bg-[#74b9ff] px-1" : isSwiss ? "text-[#C8102E] font-light" : isMaximal ? "text-[#C8102E]" : "opacity-60"
@@ -376,7 +376,7 @@ export default function Home() {
             </h1>
 
             <p className={cn("mt-6 max-w-[48ch] text-[17px] leading-relaxed", muted, isFuturism && "font-mono text-sm leading-relaxed", isMinimal && "text-[15px] leading-relaxed")}>
-              FORMA keeps your tokens, components, and documentation in one honest place. No drift. No duplicate files. Just the source everyone pulls from — Figma, React, and native.
+              The Morphism gives any agent eight exact styles, four dials, and named anti-patterns. One style per page. No drift. No purple gradients.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -387,7 +387,7 @@ export default function Home() {
               </a>
               <a href="#showcase" className={btnGhost}>
                 <span className="inline-flex items-center gap-2">
-                  See how it works <ArrowUpRight className="h-3.5 w-3.5" />
+                  View recipes <ArrowUpRight className="h-3.5 w-3.5" />
                 </span>
               </a>
             </div>
@@ -397,7 +397,7 @@ export default function Home() {
                 <Check className="h-3.5 w-3.5" /> {isFuturism ? "SOC2 READY" : "SOC 2 ready"}
               </span>
               <span className="inline-flex items-center gap-1.5">
-                <Check className="h-3.5 w-3.5" /> {isFuturism ? "FIGMA + CODE SYNC" : "Figma to code sync"}
+                <Check className="h-3.5 w-3.5" /> {isFuturism ? "8 STYLES READY" : "Eight styles ready"}
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <Check className="h-3.5 w-3.5" /> No lock in. Export anytime.
@@ -416,12 +416,12 @@ export default function Home() {
                     <span className={cn("h-2.5 w-2.5 rounded-full", isFuturism ? "bg-[#ff8800]" : "bg-current opacity-20")} />
                     <span className={cn("h-2.5 w-2.5 rounded-full hidden sm:inline-block", isFuturism ? "bg-[#4466cc]" : "bg-current opacity-20")} />
                   </span>
-                  {isFuturism ? "FORMA_CANVAS.FRM  —  TOKENS: 847  —  SYNC: OK" : "forma.canvas — tokens 847 — sync ok"}
+                  {isFuturism ? "MORPHISM.SKILL  —  8 STYLES  —  0 SLOP" : "morphism.skill — 8 styles — zero slop"}
                 </span>
                 <span className={cn("hidden sm:inline", isGlass ? "text-white/40" : "")}>12:48 AM</span>
               </div>
 
-              {/* token table mock */}
+              {/* dial table mock */}
               <div className={cn("grid grid-cols-3 gap-2 text-xs", isFuturism && "font-mono text-[11px]")}>
                 {[
                   { k: "color.ink", v: "#1a1a1a", swatch: "bg-[#1a1a1a]" },
@@ -459,7 +459,7 @@ export default function Home() {
                                 : "bg-[#1a1a1a] text-white border-2 border-[#1a1a1a]"
                 )}
               >
-                <span>{isFuturism ? ">> SYNC COMPLETE — 0 DRIFT" : "Sync complete — 0 drift — 3 consumers updated"}</span>
+                <span>{isFuturism ? ">> 8 STYLES READY — 0 SLOP" : "Eight styles ready — pick one, ship it — 0 slop"}</span>
                 <span className={cn(isMinimal || isBrutal ? "underline underline-offset-4" : isGlass ? "rounded-full bg-black text-white px-3 py-1 text-xs" : "opacity-60")}>
                   {isFuturism ? "[OK]" : "View diff"}
                 </span>
@@ -491,8 +491,8 @@ export default function Home() {
                 <Shield className="h-4 w-4" />
               </span>
               <span>
-                <span className="block font-semibold leading-none">99.8% token coverage</span>
-                <span className={cn("text-[11px]", muted)}>Across Figma, code, and docs</span>
+                <span className="block font-semibold leading-none">8 styles · 4 dials</span>
+                <span className={cn("text-[11px]", muted)}>One style per page — never mix</span>
               </span>
             </div>
           </div>
@@ -509,32 +509,32 @@ export default function Home() {
                 Solutions
               </div>
               <h2 className={cn("mt-3 text-3xl lg:text-[40px] leading-none max-w-[14ch]", fontHeading, headingWeight)}>
-                {isFuturism ? "THREE PROTOCOLS." : isBrutal ? "THREE FIXES." : isMinimal ? "Three honest solutions." : isBauhaus ? "Three systems." : "Three places where systems break."}
+                {isFuturism ? "THREE PROTOCOLS." : isBrutal ? "THREE RULES." : isMinimal ? "Three honest rules." : isBauhaus ? "Three recipes." : "Three things the skill gets right."}
               </h2>
             </div>
-            <p className={cn("max-w-[44ch] text-sm leading-relaxed", muted)}>Most teams have three sources of truth. FORMA makes it one — and keeps it that way when the product moves.</p>
+            <p className={cn("max-w-[44ch] text-sm leading-relaxed", muted)}>Most AI output looks the same. The Morphism makes it intentional — one style per page, four dials, exact recipes.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
             {[
               {
                 n: "01",
-                title: "Tokens that travel",
-                desc: "Define once in FORMA. Publish to Figma variables, Style Dictionary, and Tailwind in one run. No manual copy. No stale JSON.",
+                title: "Exact recipes",
+                desc: "Eight exact CSS recipes with Tailwind v4 equivalents. No guessing. No drift. Copy, tune the dials, ship.",
                 icon: Layers,
                 accent: isNeo ? "bg-[#ffd23f]" : isBauhaus ? "bg-[#E2062C] text-[#F5F0E6]" : isFuturism ? "text-[#00ed3f] border-[#00ed3f]/30" : isMaximal ? "text-[#C8102E]" : "",
               },
               {
                 n: "02",
-                title: "Components with memory",
-                desc: "Every component knows its variants, a11y rules, and where it is used. Change one prop, see every instance that will shift.",
+                title: "Four dials",
+                desc: "DEPTH / SOFTNESS / TRANSLUCENCY / GLOW. Four dials gate every blur, radius, shadow, and glow. Tune one value, every surface updates.",
                 icon: Boxes,
                 accent: isNeo ? "bg-[#74b9ff]" : isBauhaus ? "bg-[#FFDD00] text-black" : isFuturism ? "text-[#ff8800] border-[#ff8800]/30" : isMaximal ? "text-[#1F4E79]" : "",
               },
               {
                 n: "03",
-                title: "Docs that stay true",
-                desc: "Docs generate from code. Props, tokens, and examples stay current because they are the same file your app imports.",
+                title: "Named tells",
+                desc: "THE PILL BADGE, THE EM-DASH, THE SOFT SHADOW. Every anti-pattern is named so the agent recognizes and avoids it.",
                 icon: FileText,
                 accent: isNeo ? "bg-[#ff6b6b] text-white" : isBauhaus ? "bg-[#00509E] text-white" : isFuturism ? "text-[#4466cc] border-[#4466cc]/30" : isMaximal ? "text-[#B08D00]" : "",
               },
@@ -569,10 +569,10 @@ export default function Home() {
               {isFuturism ? "ONE CANVAS.\nTWO READERS." : isMinimal ? "One canvas. Two readers." : "One canvas for design and code."}
             </h2>
             <p className={cn("mt-4 max-w-[48ch] text-sm leading-relaxed", muted)}>
-              Designers edit in a visual canvas. Engineers pull a typed package. Both point at the same tokens — so a color change is a pull request, not a Slack thread.
+              The agent reads the brief, picks one style, and dresses the shape. Glass floats over a rich background. Neo slabs with hard shadows. Swiss grids with opacity.
             </p>
             <ul className="mt-6 space-y-3 text-sm">
-              {["Figma variables two way sync", "Style Dictionary and Tailwind output", "Git history for every token change"].map((t) => (
+              {["Eight exact recipes — CSS-first, Tailwind v4 ready", "Four dials — DEPTH / SOFTNESS / TRANSLUCENCY / GLOW", "Named anti-patterns — THE PILL BADGE, THE SOFT SHADOW, and more"].map((t) => (
                 <li key={t} className="flex items-center gap-2.5">
                   <span className={cn("h-5 w-5 grid place-items-center", isGlass ? "rounded-full bg-white text-[#070b18]" : isNeo ? "bg-black text-white" : isSwiss ? "bg-[#C8102E] text-white" : isBauhaus ? "bg-black text-white" : isFuturism ? "border border-[#00ed3f] text-[#00ed3f]" : "bg-[#1a1a1a] text-white")}>
                     <Check className="h-3 w-3" />
@@ -582,9 +582,9 @@ export default function Home() {
               ))}
             </ul>
             <div className="mt-8 flex gap-3">
-              <a href="#cta" className={btnPrimary}>Try the canvas</a>
+              <a href="#cta" className={btnPrimary}>View recipes</a>
               <a href="#" className={cn("text-xs font-medium inline-flex items-center gap-1.5 hover:opacity-70", isFuturism && "font-mono uppercase tracking-wide text-[#00ed3f]")}>
-                Watch 60 second demo <ArrowRight className="h-3.5 w-3.5" />
+                Read the skill <ArrowRight className="h-3.5 w-3.5" />
               </a>
             </div>
           </div>
@@ -599,7 +599,7 @@ export default function Home() {
                   {[
                     { a: "color.ink", b: "→", c: "text.primary" },
                     { a: "color.paper", b: "→", c: "bg.surface" },
-                    { a: "space.4", b: "→", c: "card.padding" },
+                    { a: "dials", b: "→", c: "5 / 4 / 8 / 0" },
                   ].map((r) => (
                     <div key={r.a} className={cn("flex items-center justify-between p-2", isGlass ? "rounded-lg bg-white/5 border border-white/10" : isFuturism ? "border border-[#252525] bg-[#0D0D0D]" : "border border-black/10 bg-white")}>
                       <span>{r.a}</span>
@@ -612,15 +612,15 @@ export default function Home() {
               <div className="flex flex-col gap-4">
                 <div className={cn("p-4 flex-1", isGlass ? "rounded-xl bg-gradient-to-br from-violet-500/20 to-indigo-500/20 border border-white/10" : isNeo ? "bg-[#ffd23f] border-[2px] border-black" : isSwiss ? "bg-[#1c1917] text-white" : isBauhaus ? "bg-[#00509E] text-white border-[2px] border-black" : isFuturism ? "bg-[#00ed3f]/10 border border-[#00ed3f]/30" : isMinimal ? "border border-[#1a1a1a] bg-[#fafaf9]" : isBrutal ? "border border-black bg-[#E8E8E8]" : "bg-[#C8102E] text-white border-2 border-[#1a1a1a]")}>
                   <div className="text-xs opacity-70 mb-2">Component preview</div>
-                  <div className={cn("h-20 grid place-items-center text-sm font-semibold", isGlass ? "rounded-xl bg-white text-[#070b18]" : isNeo ? "bg-white border-[2px] border-black" : isSwiss ? "bg-white text-[#1c1917]" : "bg-white text-black", isBauhaus && "border-[2px] border-black", isFuturism && "bg-[#050505] text-[#00ed3f] border border-[#00ed3f]")}>Card · FORMA</div>
+                  <div className={cn("h-20 grid place-items-center text-sm font-semibold", isGlass ? "rounded-xl bg-white text-[#070b18]" : isNeo ? "bg-white border-[2px] border-black" : isSwiss ? "bg-white text-[#1c1917]" : "bg-white text-black", isBauhaus && "border-[2px] border-black", isFuturism && "bg-[#050505] text-[#00ed3f] border border-[#00ed3f]")}>Card · The Morphism</div>
                   <div className="mt-3 flex gap-2">
                     <span className={cn("h-2 flex-1", isGlass ? "rounded-full bg-white/60" : "bg-current opacity-20")} />
                     <span className={cn("h-2 w-12", isGlass ? "rounded-full bg-white/30" : "bg-current opacity-10")} />
                   </div>
                 </div>
                 <div className={cn("p-3 flex items-center justify-between text-xs", isGlass ? "rounded-xl bg-white/5 border border-white/10" : "border border-black/10 bg-white", isFuturism && "border-[#252525] bg-[#050505] font-mono")}>
-                  <span className={muted}>Consumers</span>
-                  <span className="font-bold">Figma · React · iOS</span>
+                  <span className={muted}>Agents</span>
+                  <span className="font-bold">Hermes · Claude · Cursor</span>
                 </div>
               </div>
             </div>
@@ -637,13 +637,13 @@ export default function Home() {
           </div>
           <div className="mt-6 grid lg:grid-cols-[0.9fr_1.1fr] gap-8 items-start">
             <h2 className={cn("text-3xl lg:text-[36px] leading-none max-w-[16ch]", fontHeading, headingWeight)}>
-              {isFuturism ? "FIELD REPORTS." : isMinimal ? "What teams say after the switch." : "Teams that stopped maintaining two systems."}
+              {isFuturism ? "FIELD REPORTS." : isMinimal ? "What teams say after shipping." : "Teams that stopped shipping slop."}
             </h2>
             <div className="grid sm:grid-cols-3 gap-4">
               {[
-                { q: "We cut handoff time by half. The token sync alone paid for the switch in three weeks.", n: "Priya Nair", r: "Design Lead, Flux" },
-                { q: "Finally a docs site our engineers link to without apologizing. It is just the code, rendered.", n: "Marco Chen", r: "CTO, Atlas Labs" },
-                { q: "Our brand audit took a morning instead of a week. Every color had a name and a place.", n: "Sofia Reyes", r: "Brand Ops, Ciel" },
+                { q: "Finally an agent that does not default to purple gradients. The dials actually mean something.", n: "Priya Nair", r: "Design Lead, Flux" },
+                { q: "Our landing stopped looking AI-generated on the first try. One style, exact recipe, done.", n: "Marco Chen", r: "CTO, Atlas Labs" },
+                { q: "The Before You Ship checklist caught the pill badge before we shipped it. Saved us a redesign.", n: "Sofia Reyes", r: "Brand Ops, Ciel" },
               ].map((t) => (
                 <div key={t.n} className={cn("p-5 flex flex-col gap-4", cardBase)}>
                   <div className="flex gap-1">
@@ -676,15 +676,15 @@ export default function Home() {
                 {isFuturism ? "WHY THIS\nHOLDS." : isMinimal ? "Why teams stay." : isBrutal ? "WHY THIS, NOT THAT." : "Why teams stay after the migration."}
               </h2>
               <p className={cn("mt-4 text-sm leading-relaxed max-w-[42ch]", isSwiss ? "text-white/60" : isGlass ? "text-[#070b18]/60" : "text-white/60", isFuturism && "font-mono text-xs")}>
-                Most tools add a layer. FORMA removes one. Your system lives where code lives — versioned, reviewed, and rolled back like anything else you ship.
+                Most skills add slop. The Morphism removes it. One style per page, four dials, exact recipes — versioned like code, shipped like taste.
               </p>
             </div>
 
             <div className="grid sm:grid-cols-3 gap-4">
               {[
-                { k: "12k", l: "components tracked", d: "Every variant and state, indexed and searchable." },
-                { k: "340", l: "teams", d: "From two person studios to platform teams of 80." },
-                { k: "99.8%", l: "token coverage", d: "Measured across Figma, code, and docs." },
+                { k: "08", l: "styles", d: "Glass, Futurism, Neubrutalism, Brutalism, Minimalism, Maximalism, Swiss, Bauhaus." },
+                { k: "04", l: "dials", d: "DEPTH / SOFTNESS / TRANSLUCENCY / GLOW. Every decision gated." },
+                { k: "∞", l: "zero slop", d: "Named tells kept out of every page. By design, not by luck." },
               ].map((s) => (
                 <div
                   key={s.k}
@@ -715,9 +715,9 @@ export default function Home() {
 
           <div className={cn("mt-10 grid md:grid-cols-3 gap-4 text-sm", isSwiss ? "text-white/70" : isGlass ? "text-[#070b18]/70" : "text-white/70", isFuturism && "font-mono text-xs")}>
             {[
-              { t: "Built on open standards", d: "Style Dictionary and Figma Variables. No proprietary token format." },
-              { t: "Versioned like code", d: "Every change is a commit. Roll back a color like you roll back a bug." },
-              { t: "Export anytime", d: "Your system is a package, not a prison. Take it with you." },
+              { t: "One style per page", d: "The skill refuses to mash glass with neo on one page. That is the whole point." },
+              { t: "No em-dash, no emoji", d: "Zero em-dashes anywhere visible. Zero emoji as icons. The skill enforces taste." },
+              { t: "Agent-agnostic", d: "Hermes, Claude Code, Codex, Cursor, Cline — one SKILL.md, thin entry files, any agent." },
             ].map((f) => (
               <div key={f.t} className={cn("flex gap-3 p-4", isGlass ? "rounded-xl bg-black/[0.04] border border-black/5" : isSwiss ? "border border-white/10" : isBauhaus ? "border-2 border-white/20" : isFuturism ? "border border-[#252525]" : "border border-white/10")}>
                 <Check className={cn("h-4 w-4 mt-0.5 shrink-0", isSwiss ? "text-[#C8102E]" : isBauhaus ? "text-[#FFDD00]" : isFuturism ? "text-[#00ed3f]" : "")} />
@@ -737,10 +737,10 @@ export default function Home() {
           <div className={cn("p-8 lg:p-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8", cardBase, isGlass && "bg-gradient-to-br from-white to-white/80 text-[#070b18] border-white", isSwiss && "bg-[#1c1917] text-white border-[#1c1917]", isFuturism && "border-[#00ed3f]/30 bg-[#0D0D0D]")}>
             <div className="max-w-[56ch]">
               <h2 className={cn("text-2xl lg:text-[36px] leading-none", fontHeading, isSwiss ? "font-light" : "font-bold", isFuturism && "font-mono text-[#00ed3f]", isMinimal ? "font-[Zodiak,serif] font-normal uppercase" : "")}>
-                {isFuturism ? "START WITH YOUR REAL SYSTEM." : isBrutal ? "START WITH WHAT YOU HAVE." : isMinimal ? "Start with what you have." : "Start with your real system."}
+                {isFuturism ? "START WITH YOUR BRIEF." : isBrutal ? "START WITH TASTE." : isMinimal ? "Start with taste." : "Start with your brief."}
               </h2>
               <p className={cn("mt-3 text-sm leading-relaxed", isGlass ? "text-[#070b18]/60" : isSwiss ? "text-white/60" : isFuturism ? "font-mono text-xs text-[#E0D5BE]/60" : muted)}>
-                Import your Figma file and see the drift in sixty seconds. No sales call to get a real answer.
+                Describe the page you want. The agent picks the style, sets four dials, and ships. One style per page. No mixing.
               </p>
             </div>
             <div className="flex flex-wrap gap-3 shrink-0">
@@ -769,11 +769,11 @@ export default function Home() {
 
           <div className="divide-y divide-black/10">
             {[
-              { q: "Does FORMA replace Figma?", a: "No. It sits beside it. Figma stays your canvas. FORMA is the source that Figma and code both pull from, so neither drifts." },
-              { q: "How does it stay in sync with code?", a: "A typed package. Tokens and component props publish to npm. Your app imports them. A drift check runs in CI and fails the build if Figma and code disagree." },
-              { q: "What about existing design systems?", a: "Import what you have. FORMA reads Figma Variables, Tailwind config, and Style Dictionary. It flags duplicates and suggests a single name." },
-              { q: "Is there a self hosted option?", a: "Yes. The sync engine runs as a single binary. Your tokens never leave your VPC if you do not want them to." },
-              { q: "What does it cost to start?", a: "Free for teams of up to 5. Paid when you need SSO, audit log, and the self hosted runner. No per seat surprise." },
+              { q: "Does it work with my existing stack?", a: "Yes. Next.js, Astro, Vite, Svelte, or plain HTML. Tailwind v4 or pure CSS. The recipes are CSS-first — the agent scans your package.json and preserves what is there." },
+              { q: "How does the agent pick a style?", a: "It reads the brief for five signals — page type, words used, references, audience, and existing brand — then declares a one-sentence Design Read before touching code." },
+              { q: "Is it just another UI kit?", a: "No. A kit gives you components. The Morphism gives you eight exact CSS recipes, four dials, and a pre-ship checklist so the agent knows when NOT to use a style." },
+              { q: "Can I use it without an agent?", a: "Yes. Paste templates/the-morphism.txt into any system prompt. Or npx the-morphism init for the full skill. Or npx skills add ensayiti/The-Morphism." },
+              { q: "What about a11y?", a: "Mandatory. Every recipe ships contrast, reduced-motion, and reduced-transparency fallbacks. If it fails the Before You Ship checklist, the agent is not done." },
             ].map((f, i) => (
               <button
                 key={f.q}
@@ -806,14 +806,14 @@ export default function Home() {
             <div className="grid lg:grid-cols-[1.2fr_1fr_1fr] gap-10">
               <div>
                 <div className="flex items-center gap-2 font-black uppercase text-xl">
-                  <span className="h-8 w-8 bg-[#E2062C] border-2 border-black" /> <span className="h-8 w-8 rounded-full bg-[#FFDD00] border-2 border-black" /> FORMA
+                  <span className="h-8 w-8 bg-[#E2062C] border-2 border-black" /> <span className="h-8 w-8 rounded-full bg-[#FFDD00] border-2 border-black" /> THE MORPHISM
                 </div>
-                <p className="mt-3 text-sm opacity-60 max-w-[32ch]">Design infrastructure for teams who ship with intent. Tokens, components, docs — one source.</p>
+                <p className="mt-3 text-sm opacity-60 max-w-[32ch]">A design skill for agents that refuses to look AI-generated. Eight styles. One page. Zero slop.</p>
               </div>
               <div className="grid grid-cols-2 gap-8 text-sm">
                 <div className="space-y-2">
-                  <span className="block font-bold uppercase tracking-wide text-xs">Product</span>
-                  <a href="#" className="block opacity-60 hover:opacity-100">Tokens</a>
+                  <span className="block font-bold uppercase tracking-wide text-xs">Skill</span>
+                  <a href="#" className="block opacity-60 hover:opacity-100">Styles</a>
                   <a href="#" className="block opacity-60 hover:opacity-100">Components</a>
                   <a href="#" className="block opacity-60 hover:opacity-100">Docs</a>
                 </div>
@@ -825,16 +825,16 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-col items-start lg:items-end justify-between gap-4">
-                <span className="text-xs font-bold uppercase tracking-wide">FORMA — 2026</span>
-                <span className="text-xs opacity-60">Built in public. No drift.</span>
+                <span className="text-xs font-bold uppercase tracking-wide">THE MORPHISM — 2026</span>
+                <span className="text-xs opacity-60">Built in public. Zero slop.</span>
               </div>
             </div>
           ) : isFuturism ? (
             <div className="font-mono text-xs">
               <div className="flex flex-col lg:flex-row justify-between gap-6">
                 <div>
-                  <div className="flex items-center gap-2 text-[#00ed3f] tracking-[0.16em]"> <span className="h-2 w-2 bg-[#00ed3f] shadow-[0_0_6px_#00ed3f]" /> FORMA.SYS // 2026</div>
-                  <p className="mt-2 opacity-50 max-w-[40ch]">Design infrastructure. Tokens and components versioned like code.</p>
+                  <div className="flex items-center gap-2 text-[#00ed3f] tracking-[0.16em]"> <span className="h-2 w-2 bg-[#00ed3f] shadow-[0_0_6px_#00ed3f]" /> MORPHISM.SYS // 2026</div>
+                  <p className="mt-2 opacity-50 max-w-[40ch]">Eight styles. Four dials. Zero slop. Versioned like code.</p>
                 </div>
                 <div className="flex gap-8 opacity-60">
                   <span>STATUS: ONLINE</span>
@@ -843,7 +843,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="mt-8 pt-6 border-t border-[#252525] flex flex-col sm:flex-row justify-between gap-3 opacity-40">
-                <span>© 2026 FORMA. No tracking. No drift.</span>
+                <span>© 2026 THE MORPHISM. No tracking. Zero slop.</span>
                 <span className="flex gap-4">
                   <a href="#" className="hover:text-[#00ed3f]">Privacy</a> <a href="#" className="hover:text-[#00ed3f]">Terms</a> <a href="#" className="hover:text-[#00ed3f]">Contact</a>
                 </span>
@@ -852,11 +852,11 @@ export default function Home() {
           ) : isSwiss ? (
             <div className="grid lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-10 text-sm">
               <div>
-                <span className="font-light text-lg tracking-tight">FORMA</span>
-                <p className="mt-2 text-[#1c1917]/60 max-w-[32ch] leading-relaxed">The system behind the system. Tokens, components, and docs that stay in sync.</p>
+                <span className="font-light text-lg tracking-tight">The Morphism</span>
+                <p className="mt-2 text-[#1c1917]/60 max-w-[32ch] leading-relaxed">Eight exact recipes. Four dials. Named anti-patterns. The agent reads the brief and ships with taste.</p>
               </div>
               {[
-                { h: "Product", l: ["Tokens", "Components", "Docs", "Changelog"] },
+                { h: "Skill", l: ["Styles", "Dials", "Recipes", "Changelog"] },
                 { h: "Company", l: ["Journal", "Careers", "Contact"] },
                 { h: "Legal", l: ["Privacy", "Terms"] },
               ].map((c) => (
@@ -874,19 +874,19 @@ export default function Home() {
             </div>
           ) : isMinimal ? (
             <div className="text-center">
-              <span className="font-[Zodiak,serif] uppercase tracking-[0.12em] text-sm">FORMA</span>
+              <span className="font-[Zodiak,serif] uppercase tracking-[0.12em] text-sm">The Morphism</span>
               <p className="mt-2 text-xs uppercase tracking-[0.12em] opacity-40">The quarterly for teams who ship — Issue 04, 2026</p>
               <div className="mt-6 flex justify-center gap-6 text-xs uppercase tracking-[0.1em]">
                 <a href="#" className="underline underline-offset-4">Journal</a>
                 <a href="#" className="underline underline-offset-4">Pricing</a>
                 <a href="#" className="underline underline-offset-4">Contact</a>
               </div>
-              <p className="mt-8 text-xs opacity-30">© 2026 FORMA. Set in Zodiak and Switzer. Printed in public.</p>
+              <p className="mt-8 text-xs opacity-30">© 2026 THE MORPHISM. Set in Zodiak and Switzer. Printed in public.</p>
             </div>
           ) : isBrutal ? (
             <div className="font-mono text-xs">
               <div className="flex flex-col lg:flex-row justify-between gap-6 border border-black p-4">
-                <span className="font-bold">FORMA — TOKENS / COMPONENTS / DOCS</span>
+                <span className="font-bold">THE MORPHISM — 8 STYLES / 4 DIALS / ZERO SLOP</span>
                 <span>© 2026 — NO TRACKING — <a href="#" className="underline">CONTACT</a></span>
               </div>
               <div className="mt-4 grid sm:grid-cols-3 gap-2">
@@ -899,13 +899,13 @@ export default function Home() {
             <div className="grid lg:grid-cols-[1.3fr_1fr_1fr] gap-10 text-sm">
               <div>
                 <span className={cn("flex items-center gap-2 font-bold", isNeo && "uppercase", isMaximal && "font-[Zodiak,serif] text-lg")}>
-                  {isNeo ? <Boxes className="h-5 w-5" /> : isMaximal ? <span className="h-6 w-6 border-2 border-double border-current grid place-items-center text-xs">F</span> : <Box className="h-5 w-5" />} FORMA
+                  {isNeo ? <Boxes className="h-5 w-5" /> : isMaximal ? <span className="h-6 w-6 border-2 border-double border-current grid place-items-center text-xs">F</span> : <Box className="h-5 w-5" />} THE MORPHISM
                 </span>
-                <p className={cn("mt-3 max-w-[32ch] leading-relaxed", muted)}>Design infrastructure for teams who ship with intent.</p>
-                <p className="mt-4 text-xs opacity-40">© 2026 FORMA. No drift.</p>
+                <p className={cn("mt-3 max-w-[32ch] leading-relaxed", muted)}>A design skill that refuses to look AI-generated. Eight styles, exact recipes, zero slop.</p>
+                <p className="mt-4 text-xs opacity-40">© 2026 THE MORPHISM. Zero slop.</p>
               </div>
               <div>
-                <span className="block text-xs font-semibold uppercase tracking-wide mb-3">Product</span>
+                <span className="block text-xs font-semibold uppercase tracking-wide mb-3">Skill</span>
                 <div className="space-y-2 opacity-70">
                   <a href="#" className="block hover:opacity-100">Tokens</a>
                   <a href="#" className="block hover:opacity-100">Components</a>
